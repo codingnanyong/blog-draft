@@ -1,25 +1,25 @@
 ---
-title: "Coding Dogam #01 — Starting the Coding Dogam"
+title: "Codigdex #01 — Starting the Codigdex"
 description: "A series that records the things I run into while developing, one specimen at a time. The first specimen is Git."
-tags: [git, coding-dogam, version-control]
+tags: [git, codigdex, version-control]
 date: 2026-09-03
 status: draft
 ---
 
-# Coding Dogam #01 — Starting the Coding Dogam
+# Codigdex #01 — Starting the Codigdex
 
 Every week, I discover, observe, and record a new specimen. This week's first encounter went like this.
 
-![First encounter with Git — Coding Dogam battle screen](./images/01-git-battle.png)
+![First encounter with Git — Codigdex battle screen](./images/01-git-battle.png)
 
 When you're developing, moments like these keep coming up:
 "I'm pretty sure I've seen this before…"
 "How did I fix this last time?"
 
 So I started this series.
-Not a neatly organized textbook, but a dogam — a field guide of things I've personally run into, recorded one by one.
+Not a neatly organized textbook, but a dex — a field guide of things I've personally run into, recorded one by one.
 
-I'm calling it **Coding Dogam**.
+I'm calling it **Codigdex**.
 Languages, errors, concepts, tools, even the messy detours —
 I want to discover, observe, and record the things I encounter while developing, one at a time.
 
@@ -116,7 +116,7 @@ Once I had it laid out like this, the initial confusion was gone, replaced by th
 
 ---
 
-## Coding Dogam notes
+## Codigdex notes
 
 Git started out feeling like a command-memorization game,
 but it turned out to be closer to a recording device that lets you rewind time.
