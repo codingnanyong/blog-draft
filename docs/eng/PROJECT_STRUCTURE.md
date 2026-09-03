@@ -7,19 +7,21 @@ posts/
   YYYY/
     MM/
       post-slug/
-        index.md
+        index.ko.md
+        index.en.md
         images/
           cover.webp
           diagram-01.webp
 templates/
-  post-template.md
+  post-template.ko.md
+  post-template.en.md
 ```
 
-Each post keeps its Markdown file and the images it uses together in one folder. Markdown references images with a relative path in the form `./images/filename`.
+Each post keeps its per-language Markdown files (`index.ko.md` for Velog, `index.en.md` for Medium) and the images they share together in one folder. Markdown references images with a relative path in the form `./images/filename`.
 
 ## Writing guide
 
-Start a new post by copying `templates/post-template.md`. The front matter includes:
+Start a new post by copying `templates/post-template.ko.md` (for Velog) and `templates/post-template.en.md` (for Medium). The front matter includes:
 
 - `title`, `description`, `tags`
 - `date` (YYYY-MM-DD), `status` (`draft` → updated after publishing)
