@@ -1,8 +1,8 @@
-# Velog Draft
+# Blog Draft
 
 **English** | [한국어](README.ko.md)
 
-A content repository for preparing one Velog technical blog post per week, reviewed by a human before publishing.
+A content repository for preparing one technical blog post per week, reviewed by a human before publishing on Velog (Korean) and Medium (English).
 
 ## Repository role
 
@@ -16,7 +16,7 @@ A content repository for preparing one Velog technical blog post per week, revie
 
 - One draft is prepared per week.
 - AI-generated content and images are always reviewed by a human before publishing.
-- Publishing to Velog is done manually.
+- The Korean draft is published on Velog and the English translation on Medium, both done manually.
 - Reviewed changes land through pull requests, in order: `feat/*` → `develop` → `main`.
 - An ongoing series spans multiple weeks; the full plan lives in the [roadmap](docs/eng/ROADMAP.md).
 
