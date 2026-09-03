@@ -16,3 +16,6 @@ Thumbs.db
 # Dependencies (if tooling is added later)
 node_modules/
 
+# Codex tool cache
+.codex-tmp/
+
