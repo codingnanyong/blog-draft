@@ -1,8 +1,8 @@
 # Roadmap / Series Plan
 
-## The "Coding Dogam" series concept
+## The "Codigdex" series concept
 
-Like a Pokédex, each series (`#number`) covers one technical "specimen." A specimen is learned step by step over several weeks, from the basics to practical use, and the final week wraps up by formally registering that specimen in the "Coding Dogam."
+Like a Pokédex, each series (`#number`) covers one technical "specimen." A specimen is learned step by step over several weeks, from the basics to practical use, and the final week wraps up by formally registering that specimen in the "Codigdex."
 
 ## #01 — Git (5-week plan)
 
@@ -14,7 +14,7 @@ Like a Pokédex, each series (`#number`) covers one technical "specimen." A spec
 | Week 4 | Remote repositories & rebase | COD-54 | Planned |
 | Week 5 | Collaboration workflow (wrap-up) | COD-55 | Planned |
 
-Each week follows the same process defined in [Git branch strategy](GIT_WORKFLOW.md) and [Content & publishing workflow](WORKFLOW.md). Once week 5 wraps up, the Git specimen is formally registered in the dogam, and topic selection begins for the next specimen (`#02`).
+Each week follows the same process defined in [Git branch strategy](GIT_WORKFLOW.md) and [Content & publishing workflow](WORKFLOW.md). Once week 5 wraps up, the Git specimen is formally registered in the Codigdex, and topic selection begins for the next specimen (`#02`).
 
 ## Criteria for picking the next specimen
 

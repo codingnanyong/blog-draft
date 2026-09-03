@@ -35,7 +35,7 @@ The body follows this default structure:
 
 ## Series & title convention
 
-A multi-week series states its series number in the title, e.g. `Coding Dogam #01 — Starting the Coding Dogam`. One `#number` represents one "specimen" (topic) and can span several weeks. See [Roadmap / series plan](ROADMAP.md) for how a series is run.
+A multi-week series states its series number in the title, e.g. `Codigdex #01 — Starting the Codigdex`. One `#number` represents one "specimen" (topic) and can span several weeks. See [Roadmap / series plan](ROADMAP.md) for how a series is run.
 
 ## Image rules
 
