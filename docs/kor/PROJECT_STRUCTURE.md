@@ -7,19 +7,21 @@ posts/
   YYYY/
     MM/
       post-slug/
-        index.md
+        index.ko.md
+        index.en.md
         images/
           cover.webp
           diagram-01.webp
 templates/
-  post-template.md
+  post-template.ko.md
+  post-template.en.md
 ```
 
-각 글은 Markdown 파일과 해당 글에서 사용하는 이미지를 하나의 폴더에 함께 보관합니다. Markdown에서는 `./images/파일명` 형태의 상대 경로를 사용합니다.
+각 글은 언어별 Markdown 파일(`index.ko.md` → Velog, `index.en.md` → Medium)과 두 언어가 공유하는 이미지를 하나의 폴더에 함께 보관합니다. Markdown에서는 `./images/파일명` 형태의 상대 경로를 사용합니다.
 
 ## 글 작성 가이드
 
-새 글은 `templates/post-template.md`를 복사해서 시작합니다. Front matter는 다음 필드를 포함합니다.
+새 글은 `templates/post-template.ko.md`(Velog 발행용)와 `templates/post-template.en.md`(Medium 발행용)를 각각 복사해서 시작합니다. Front matter는 다음 필드를 포함합니다.
 
 - `title`, `description`, `tags`
 - `date` (YYYY-MM-DD), `status` (`draft` → 발행 후 갱신)
