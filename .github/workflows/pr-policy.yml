@@ -25,8 +25,8 @@ jobs:
           set -euo pipefail
 
           if [[ "$BASE_REF" == "develop" ]]; then
-            [[ "$HEAD_REF" =~ ^feat/[a-z0-9]+-[0-9]+-[a-z0-9-]+$ ]] || {
-              echo "develop accepts only feat/<linear-id>-<slug> branches"
+            [[ "$HEAD_REF" =~ ^feat/[a-z0-9][a-z0-9-]*$ ]] || {
+              echo "develop accepts only feat/<slug> branches"
               exit 1
             }
             printf '%s' "$PR_BODY" | grep -Eiq 'Closes[[:space:]]+COD-[0-9]+' || {
@@ -56,18 +56,16 @@ jobs:
             const body = pr.body || "";
             const linearMatch = body.match(/\bCloses\s+(COD-\d+)\b/i);
             const githubMatch = body.match(/\bCloses\s+#(\d+)\b/i);
-            const branchMatch = pr.head.ref.match(/^feat\/(cod-\d+)-[a-z0-9-]+$/i);
             const titleMatch = pr.title.match(/^(COD-\d+)\b/i);
 
-            if (!linearMatch || !githubMatch || !branchMatch || !titleMatch) {
-              core.setFailed("PR title, branch, and body must contain the mirrored issue pair");
+            if (!linearMatch || !githubMatch || !titleMatch) {
+              core.setFailed("PR title and body must contain the mirrored issue pair (title: COD-n ..., body: Closes COD-n / Closes #n)");
               return;
             }
 
             const linearId = linearMatch[1].toUpperCase();
-            const ids = [branchMatch[1], titleMatch[1]].map((value) => value.toUpperCase());
-            if (ids.some((value) => value !== linearId)) {
-              core.setFailed(`Branch, title, and Linear close reference must all use ${linearId}`);
+            if (titleMatch[1].toUpperCase() !== linearId) {
+              core.setFailed(`Title and Linear close reference must both use ${linearId}`);
               return;
             }
 
@@ -88,6 +86,77 @@ jobs:
             if (issue.state !== "open") {
               core.setFailed(`#${issueNumber} must be open before the PR is merged`);
             }
+
+  auto-provision-issue:
+    if: github.event.action == 'opened' && github.base_ref == 'develop'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+      pull-requests: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      PR_NUMBER: ${{ github.event.pull_request.number }}
+      PR_TITLE: ${{ github.event.pull_request.title }}
+      PR_BODY: ${{ github.event.pull_request.body }}
+      PR_URL: ${{ github.event.pull_request.html_url }}
+    steps:
+      - name: Check if already compliant
+        id: check
+        run: |
+          if printf '%s' "$PR_BODY" | grep -Eiq 'Closes[[:space:]]+COD-[0-9]+' && \
+             printf '%s' "$PR_BODY" | grep -Eiq 'Closes[[:space:]]+#[0-9]+'; then
+            echo "needed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "needed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v6
+        if: steps.check.outputs.needed == 'true'
+        with:
+          fetch-depth: 1
+
+      - name: Create Linear issue
+        if: steps.check.outputs.needed == 'true'
+        id: linear
+        env:
+          LINEAR_API_KEY: ${{ secrets.LINEAR_API_KEY }}
+          LINEAR_TEAM_KEY: COD
+          LINEAR_PROJECT_SLUG: "296253ec777a"
+          LINEAR_PROJECT_NAME: "블로그 자동발행"
+          LINEAR_ISSUE_TITLE: ${{ github.event.pull_request.title }}
+          LINEAR_ISSUE_DESCRIPTION: "Auto-created for PR ${{ github.event.pull_request.html_url }}"
+        run: |
+          set -euo pipefail
+          out="$(python3 .github/scripts/create_linear_issue.py)"
+          echo "$out"
+          id=$(echo "$out" | grep -oE 'COD-[0-9]+' | head -n1)
+          [ -n "$id" ] || { echo "failed to parse created Linear issue id"; exit 1; }
+          echo "id=$id" >> "$GITHUB_OUTPUT"
+
+      - name: Create mirrored GitHub issue
+        if: steps.check.outputs.needed == 'true'
+        id: ghissue
+        run: |
+          set -euo pipefail
+          url=$(gh issue create --title "${{ steps.linear.outputs.id }} ${PR_TITLE}" \
+            --body "Mirrored from https://linear.app/codingnanyong/issue/${{ steps.linear.outputs.id }}. Auto-created for ${PR_URL}")
+          echo "$url"
+          num=$(echo "$url" | grep -oE '[0-9]+$')
+          echo "number=$num" >> "$GITHUB_OUTPUT"
+
+      - name: Update PR title and body with issue pair
+        if: steps.check.outputs.needed == 'true'
+        run: |
+          set -euo pipefail
+          id="${{ steps.linear.outputs.id }}"
+          num="${{ steps.ghissue.outputs.number }}"
+          newtitle="$PR_TITLE"
+          if [[ "$PR_TITLE" != ${id}* ]]; then
+            newtitle="${id} ${PR_TITLE}"
+          fi
+          newbody="$(printf '%s\n\nCloses %s\nCloses #%s' "$PR_BODY" "$id" "$num")"
+          gh pr edit "$PR_NUMBER" --title "$newtitle" --body "$newbody"
 
   close-mirrored-github-issue:
     if: >-
