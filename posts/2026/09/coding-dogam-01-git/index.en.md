@@ -112,7 +112,7 @@ So:
 
 Once I had it laid out like this, the initial confusion was gone, replaced by this feeling.
 
-![Git learning complete](./images/02-git-learning-complete.png)
+![Git learning complete](./images/02-git-learning-complete.en.png)
 
 ---
 
@@ -127,4 +127,4 @@ There's more to observe before I really understand Git as a specimen.
 That's it for the first observation log.
 Next time, I'll be encountering branches and merges.
 
-![Git observation log 1/5 — next up: Branch and Merge](./images/03-git-observation-1-of-5.png)
+![Git observation log 1/5 — next up: Branch and Merge](./images/03-git-observation-1-of-5.en.png)
