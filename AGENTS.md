@@ -45,13 +45,15 @@ This repository prepares a weekly technical-blog post for publication in Korean 
 
 ## PR & issue policy
 
-Every PR into `develop` is gated by CI (`.github/workflows/pr-policy.yml`) that requires a mirrored Linear/GitHub issue pair. Follow this exactly before opening a branch or PR:
+Every PR into `develop` is gated by CI (`.github/workflows/pr-policy.yml`) that requires a mirrored Linear/GitHub issue pair. Preferred (manual) procedure — do this before opening a branch or PR:
 
 1. Create a Linear issue in team `COD`, project "블로그 자동발행" (`mcp__claude_ai_Linear__save_issue` or the Linear UI). Note its identifier, e.g. `COD-80`.
 2. Create a mirrored GitHub issue in this repo titled `COD-<n> <same title>` (`gh issue create`). There is no automatic Linear→GitHub mirroring; do this manually every time.
-3. Branch: `feat/cod-<n>-<slug>` (must match `^feat/[a-z0-9]+-[0-9]+-[a-z0-9-]+$`).
-4. PR → base `develop`. Title starts with `COD-<n>`. Body must contain both `Closes COD-<n>` and `Closes #<github-issue-number>`, and the referenced GitHub issue's title must start with the same `COD-<n>`. A PR missing any of this fails CI immediately.
+3. Branch: `feat/cod-<n>-<slug>` (or any `feat/<slug>` — see fallback below).
+4. PR → base `develop`. Title starts with `COD-<n>`. Body must contain both `Closes COD-<n>` and `Closes #<github-issue-number>`, and the referenced GitHub issue's title must start with the same `COD-<n>`.
 5. `main` only accepts PRs from `develop` — no `validate-release` gate here (unlike other repos), since this repo has no version/release-tag convention; publishing to Velog/Medium is the "release."
+
+**Fallback**: if a PR is opened against `develop` from a plain `feat/<slug>` branch with no `Closes COD-n` / `Closes #n` in the body, the `auto-provision-issue` CI job creates the Linear issue and the mirrored GitHub issue itself and edits the PR's title/body to reference them — so skipping steps 1-2 is fine, CI catches it. This requires the `GH_PAT` repo secret (a fine-grained PAT with Contents/Issues/Pull-requests write, *not* the default `GITHUB_TOKEN`) — edits made with `GITHUB_TOKEN` don't retrigger workflow runs (GitHub's anti-recursion rule), so `validate-flow` would never re-check the fixed-up PR. If `GH_PAT` is missing/expired, do steps 1-2 manually instead.
 
 On merge into `develop`, CI auto-closes the mirrored GitHub issue; Linear's native GitHub integration then auto-transitions the Linear issue to Done. No manual status update needed after merge.
 
