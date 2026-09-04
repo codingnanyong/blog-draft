@@ -6,18 +6,20 @@
 posts/
   YYYY/
     MM/
-      post-slug/
+      NN-post-slug/
         index.ko.md
         index.en.md
         images/
-          cover.webp
-          diagram-01.webp
+          thumbnail.png
+          thumbnail.en.png
+          01-body-image.png
+          01-body-image.en.png
 templates/
   post-template.ko.md
   post-template.en.md
 ```
 
-Each post keeps its per-language Markdown files (`index.ko.md` for Velog, `index.en.md` for Medium) and the images they share together in one folder. Markdown references images with a relative path in the form `./images/filename`.
+Each post keeps its per-language Markdown files (`index.ko.md` for Velog, `index.en.md` for Medium) and localized images together in one folder. Folder names use the `NN-post-slug` format so posts sort in publication order within each month. Markdown references images with a relative path in the form `./images/filename`.
 
 ## Writing guide
 
@@ -40,5 +42,7 @@ A multi-week series states its series number in the title, e.g. `Codigdex #01 â€
 ## Image rules
 
 - Images are prepared separately, then committed together under an `images/` folder.
+- Use PNG as the default image format.
+- Keep the Korean base image and its composition-matched English localization in the same `images/` folder, adding the `.en.png` suffix to the English filename.
 - Write a short lead-in sentence before each image to keep the prose connected.
 - Always verify the committed files aren't corrupted (e.g. check the PNG signature) after pushing.

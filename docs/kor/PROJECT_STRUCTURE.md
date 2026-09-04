@@ -6,18 +6,20 @@
 posts/
   YYYY/
     MM/
-      post-slug/
+      NN-post-slug/
         index.ko.md
         index.en.md
         images/
-          cover.webp
-          diagram-01.webp
+          thumbnail.png
+          thumbnail.en.png
+          01-body-image.png
+          01-body-image.en.png
 templates/
   post-template.ko.md
   post-template.en.md
 ```
 
-각 글은 언어별 Markdown 파일(`index.ko.md` → Velog, `index.en.md` → Medium)과 두 언어가 공유하는 이미지를 하나의 폴더에 함께 보관합니다. Markdown에서는 `./images/파일명` 형태의 상대 경로를 사용합니다.
+각 글은 언어별 Markdown 파일(`index.ko.md` → Velog, `index.en.md` → Medium)과 언어별 이미지를 하나의 폴더에 함께 보관합니다. 폴더명은 월 안에서 글의 순서가 보이도록 `NN-post-slug` 형식을 사용합니다. Markdown에서는 `./images/파일명` 형태의 상대 경로를 사용합니다.
 
 ## 글 작성 가이드
 
@@ -40,5 +42,7 @@ templates/
 ## 이미지 규칙
 
 - 이미지는 별도로 준비한 뒤 `images/` 폴더에 함께 커밋합니다.
+- PNG 형식을 기본으로 사용합니다.
+- 한국어 기본 이미지와 구도를 맞춘 영어 현지화 이미지는 같은 `images/` 폴더에 두고, 영어 파일명에 `.en.png` 접미사를 붙입니다.
 - 각 이미지 삽입 전에는 문맥을 잇는 짧은 도입 문장을 작성합니다.
 - 파일이 손상되지 않았는지(PNG 시그니처 등) 커밋 후 반드시 확인합니다.
