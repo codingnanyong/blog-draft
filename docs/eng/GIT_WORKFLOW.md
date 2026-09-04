@@ -17,7 +17,7 @@ Direct pushes to `develop` and `main` are avoided; changes always land through a
 ## Branch names
 
 - Format: `feat/cod-<linear-id>-<slug>`
-- Example: `feat/cod-41-coding-dogam-git`
+- Example: `feat/cod-41-codigdex-git`
 - One branch corresponds to one week (i.e. one set of Linear sub-issues).
 
 ## Pull request rules

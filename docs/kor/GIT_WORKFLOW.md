@@ -17,7 +17,7 @@ feat/cod-<linear-id>-<slug>
 ## 브랜치 이름
 
 - 형식: `feat/cod-<linear-id>-<slug>`
-- 예시: `feat/cod-41-coding-dogam-git`
+- 예시: `feat/cod-41-codigdex-git`
 - 하나의 브랜치는 하나의 주차(=하나의 Linear 서브이슈 묶음)에 대응합니다.
 
 ## Pull Request 규칙
