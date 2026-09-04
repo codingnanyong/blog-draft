@@ -43,6 +43,18 @@ This repository prepares a weekly technical-blog post for publication in Korean 
 - After generating images, update the relevant Markdown image paths and meaningful alt text.
 - Confirm that every Markdown image reference resolves to an existing file.
 
+## PR & issue policy
+
+Every PR into `develop` is gated by CI (`.github/workflows/pr-policy.yml`) that requires a mirrored Linear/GitHub issue pair. Follow this exactly before opening a branch or PR:
+
+1. Create a Linear issue in team `COD`, project "블로그 자동발행" (`mcp__claude_ai_Linear__save_issue` or the Linear UI). Note its identifier, e.g. `COD-80`.
+2. Create a mirrored GitHub issue in this repo titled `COD-<n> <same title>` (`gh issue create`). There is no automatic Linear→GitHub mirroring; do this manually every time.
+3. Branch: `feat/cod-<n>-<slug>` (must match `^feat/[a-z0-9]+-[0-9]+-[a-z0-9-]+$`).
+4. PR → base `develop`. Title starts with `COD-<n>`. Body must contain both `Closes COD-<n>` and `Closes #<github-issue-number>`, and the referenced GitHub issue's title must start with the same `COD-<n>`. A PR missing any of this fails CI immediately.
+5. `main` only accepts PRs from `develop` — no `validate-release` gate here (unlike other repos), since this repo has no version/release-tag convention; publishing to Velog/Medium is the "release."
+
+On merge into `develop`, CI auto-closes the mirrored GitHub issue; Linear's native GitHub integration then auto-transitions the Linear issue to Done. No manual status update needed after merge.
+
 ## Editing constraints
 
 - Preserve frontmatter fields, document language, heading structure, and intentional links unless the requested task requires changing them.
