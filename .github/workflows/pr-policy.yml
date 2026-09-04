@@ -1,0 +1,133 @@
+name: PR policy
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened, closed]
+
+permissions:
+  contents: read
+
+jobs:
+  validate-flow:
+    if: github.event.action != 'closed' && github.event.pull_request.merged != true
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: read
+      pull-requests: read
+    steps:
+      - name: Validate branch flow and mirrored issue references
+        env:
+          BASE_REF: ${{ github.base_ref }}
+          HEAD_REF: ${{ github.head_ref }}
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: |
+          set -euo pipefail
+
+          if [[ "$BASE_REF" == "develop" ]]; then
+            [[ "$HEAD_REF" =~ ^feat/[a-z0-9]+-[0-9]+-[a-z0-9-]+$ ]] || {
+              echo "develop accepts only feat/<linear-id>-<slug> branches"
+              exit 1
+            }
+            printf '%s' "$PR_BODY" | grep -Eiq 'Closes[[:space:]]+COD-[0-9]+' || {
+              echo "PR must close a Linear issue, for example: Closes COD-123"
+              exit 1
+            }
+            printf '%s' "$PR_BODY" | grep -Eiq 'Closes[[:space:]]+#[0-9]+' || {
+              echo "PR must close the mirrored GitHub issue, for example: Closes #123"
+              exit 1
+            }
+          elif [[ "$BASE_REF" == "main" ]]; then
+            [[ "$HEAD_REF" == "develop" ]] || {
+              echo "main accepts PRs only from develop"
+              exit 1
+            }
+          else
+            echo "Unsupported PR base: $BASE_REF"
+            exit 1
+          fi
+
+      - name: Verify Linear and GitHub issue pair
+        if: github.base_ref == 'develop'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+            const body = pr.body || "";
+            const linearMatch = body.match(/\bCloses\s+(COD-\d+)\b/i);
+            const githubMatch = body.match(/\bCloses\s+#(\d+)\b/i);
+            const branchMatch = pr.head.ref.match(/^feat\/(cod-\d+)-[a-z0-9-]+$/i);
+            const titleMatch = pr.title.match(/^(COD-\d+)\b/i);
+
+            if (!linearMatch || !githubMatch || !branchMatch || !titleMatch) {
+              core.setFailed("PR title, branch, and body must contain the mirrored issue pair");
+              return;
+            }
+
+            const linearId = linearMatch[1].toUpperCase();
+            const ids = [branchMatch[1], titleMatch[1]].map((value) => value.toUpperCase());
+            if (ids.some((value) => value !== linearId)) {
+              core.setFailed(`Branch, title, and Linear close reference must all use ${linearId}`);
+              return;
+            }
+
+            const issueNumber = Number(githubMatch[1]);
+            const { data: issue } = await github.rest.issues.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issueNumber,
+            });
+            const issueLinearId = issue.title.match(/^(COD-\d+)\b/i)?.[1]?.toUpperCase();
+            if (issue.pull_request || issueLinearId !== linearId) {
+              core.setFailed(`#${issueNumber} is not the GitHub mirror for ${linearId}`);
+              return;
+            }
+            if (pr.merged) {
+              return;
+            }
+            if (issue.state !== "open") {
+              core.setFailed(`#${issueNumber} must be open before the PR is merged`);
+            }
+
+  close-mirrored-github-issue:
+    if: >-
+      github.event.action == 'closed' &&
+      github.event.pull_request.merged == true &&
+      github.base_ref == 'develop'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+      pull-requests: read
+    steps:
+      - name: Close the mirrored GitHub issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+            const body = pr.body || "";
+            const linearId = body.match(/\bCloses\s+(COD-\d+)\b/i)?.[1]?.toUpperCase();
+            const issueNumber = Number(body.match(/\bCloses\s+#(\d+)\b/i)?.[1]);
+            if (!linearId || !issueNumber) {
+              core.setFailed("Merged PR is missing its mirrored issue references");
+              return;
+            }
+
+            const { data: issue } = await github.rest.issues.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issueNumber,
+            });
+            const issueLinearId = issue.title.match(/^(COD-\d+)\b/i)?.[1]?.toUpperCase();
+            if (issue.pull_request || issueLinearId !== linearId) {
+              core.setFailed(`#${issueNumber} is not the GitHub mirror for ${linearId}`);
+              return;
+            }
+
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issueNumber,
+              state: "closed",
+              state_reason: "completed",
+            });
