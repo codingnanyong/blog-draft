@@ -19,7 +19,7 @@ Per [docs/kor/WORKFLOW.md](docs/kor/WORKFLOW.md) / [docs/eng/WORKFLOW.md](docs/e
    → Velog/Medium 발행 & 로그 업데이트 (publish — human, manual)
 ```
 
-Branch naming and PR conventions for step 4 are in [docs/kor/GIT_WORKFLOW.md](docs/kor/GIT_WORKFLOW.md) (`feat/cod-<linear-id>-<slug>` → `develop` → `main`). As `AGENTS.md` states, actually creating the PR/merging/publishing still requires the user's explicit go-ahead — Claude drafts and revises, the user decides when it moves forward.
+Branch naming and PR conventions for step 4 are in [docs/kor/GIT_WORKFLOW.md](docs/kor/GIT_WORKFLOW.md) (`feat/<slug>` → automated Draft PR → `develop` → `main`). As `AGENTS.md` states, pushing the branch (which triggers PR creation), merging, and publishing still require the user's explicit go-ahead — Claude drafts and revises, the user decides when it moves forward.
 
 ## Other AI tooling
 
