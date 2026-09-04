@@ -22,7 +22,7 @@ status: draft
 첫 번째 대상은,
 개발을 시작하면 거의 제일 먼저 만나게 되는 **Git**이다.
 
-![Git과의 첫 조우 — 코딩 도감 배틀 화면](./images/01-git-battle.png)
+![야생의 Git과 첫 조우 — 코딩 도감 배틀 화면](./images/01-git-encounter.v2.png)
 
 ---
 
@@ -86,6 +86,8 @@ Git은 파일을 관리하는 도구가 아니라
 즉, add는 스테이징이고
 commit이 진짜 기록이다.
 
+![Git의 세 구역 — 작업 폴더, 스테이징, 로컬 저장소](./images/02-git-three-areas.v2.png)
+
 ---
 
 ## 관찰 3 — Git과 GitHub는 다르다
@@ -100,6 +102,8 @@ commit이 진짜 기록이다.
 - Git 없이 GitHub ❌
 - Git은 혼자 써도 ⭕
 
+![Git의 기본 흐름 — add, commit, push](./images/03-git-basic-flow.v2.png)
+
 ---
 
 ## 요약 정리
@@ -109,9 +113,7 @@ commit이 진짜 기록이다.
 - Git과 GitHub는 역할이 다르다
 - 개념 없이 쓰면, 언젠가 꼭 사고 난다
 
-여기까지 정리하고 나니, 처음의 막막함은 사라지고 이런 기분이 들었다.
-
-![Git 학습 완료](./images/02-git-learning-complete.png)
+여기까지 정리하고 나니, 처음의 막막함은 사라지고 Git이 어떻게 기록을 만드는지 흐름이 보이기 시작했다.
 
 ---
 
@@ -127,4 +129,4 @@ Git이라는 개체를 제대로 이해하려면 더 관찰해야 할 것이 남
 우선 첫 번째 관찰 기록은 여기까지.
 다음 관찰에서는 브랜치와 머지를 만나보려고 한다.
 
-![Git 관찰 기록 1/5 — 다음 관찰은 Branch와 Merge](./images/03-git-observation-1-of-5.png)
+![Git 관찰 기록 1/5 — 다음 관찰은 Branch와 Merge](./images/04-git-observation-1-of-5.v2.png)
