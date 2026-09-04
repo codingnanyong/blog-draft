@@ -16,7 +16,7 @@ status: draft
 
 내용을 작성합니다.
 
-![이미지 설명](./images/example.webp)
+![이미지 설명](./images/01-body-image.png)
 
 ## 마치며
 
