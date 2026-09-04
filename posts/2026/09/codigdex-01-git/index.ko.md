@@ -3,7 +3,7 @@ title: "코딩 도감 #01 — 코딩 도감을 시작하며"
 description: "개발하며 마주친 것들을 하나씩 기록하는 코딩 도감 시리즈. 첫 번째 개체는 Git."
 tags: [git, 코딩도감, 버전관리]
 date: 2026-09-03
-status: draft
+status: published
 ---
 
 # 코딩 도감 #01 — 코딩 도감을 시작하며
@@ -86,6 +86,8 @@ Git은 파일을 관리하는 도구가 아니라
 즉, add는 스테이징이고
 commit이 진짜 기록이다.
 
+이 세 구역을 그림으로 그리면 이렇다.
+
 ![Git의 세 구역 — 작업 폴더, 스테이징, 로컬 저장소](./images/02-git-three-areas.v2.png)
 
 ---
@@ -101,6 +103,8 @@ commit이 진짜 기록이다.
 
 - Git 없이 GitHub ❌
 - Git은 혼자 써도 ⭕
+
+이 기본 흐름을 그림으로 정리하면 이렇다.
 
 ![Git의 기본 흐름 — add, commit, push](./images/03-git-basic-flow.v2.png)
 
