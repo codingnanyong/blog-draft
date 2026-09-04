@@ -3,7 +3,7 @@ title: "Codigdex #01 — Starting the Codigdex"
 description: "A series that records the things I run into while developing, one specimen at a time. The first specimen is Git."
 tags: [git, codigdex, version-control]
 date: 2026-09-03
-status: draft
+status: published
 ---
 
 # Codigdex #01 — Starting the Codigdex
@@ -87,6 +87,8 @@ But in reality:
 In other words, add is staging,
 and commit is the actual record.
 
+Laid out visually, the three areas look like this:
+
 ![Git's three areas — working directory, staging area, and local repository](./images/02-git-three-areas.en.v2.png)
 
 ---
@@ -102,6 +104,8 @@ So:
 
 - No Git, no GitHub ❌
 - Git works fine on its own ⭕
+
+Put together, the basic flow looks like this:
 
 ![Git's basic flow — add, commit, and push](./images/03-git-basic-flow.en.v2.png)
 
