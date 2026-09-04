@@ -14,13 +14,15 @@ jobs:
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_BODY: ${{ github.event.pull_request.body }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
           PR_URL: ${{ github.event.pull_request.html_url }}
           BASE_BRANCH: ${{ github.event.pull_request.base.ref }}
           HEAD_BRANCH: ${{ github.event.pull_request.head.ref }}
           MERGED_BY: ${{ github.event.pull_request.merged_by.login }}
         run: |
-          linear_id=$(echo "$HEAD_BRANCH" | grep -oiE 'cod-[0-9]+' | head -n1 | tr '[:lower:]' '[:upper:]')
+          linear_id=$(printf '%s\n%s\n%s' "$PR_TITLE" "$PR_BODY" "$HEAD_BRANCH" | \
+            grep -oiE 'cod-[0-9]+' | head -n1 | tr '[:lower:]' '[:upper:]')
           linear_line=""
           if [ -n "$linear_id" ]; then
             linear_line="\n• Linear: <https://linear.app/codingnanyong/issue/${linear_id}|${linear_id}>"

@@ -45,15 +45,18 @@ This repository prepares a weekly technical-blog post for publication in Korean 
 
 ## PR & issue policy
 
-Every PR into `develop` is gated by CI (`.github/workflows/pr-policy.yml`) that requires a mirrored Linear/GitHub issue pair. Preferred (manual) procedure — do this before opening a branch or PR:
+Every PR into `develop` is gated by CI (`.github/workflows/pr-policy.yml`) and requires a mirrored Linear/GitHub issue pair. The normal path is automated:
 
-1. Create a Linear issue in team `COD`, project "블로그 자동발행" (`mcp__claude_ai_Linear__save_issue` or the Linear UI). Note its identifier, e.g. `COD-80`.
-2. Create a mirrored GitHub issue in this repo titled `COD-<n> <same title>` (`gh issue create`). There is no automatic Linear→GitHub mirroring; do this manually every time.
-3. Branch: `feat/cod-<n>-<slug>` (or any `feat/<slug>` — see fallback below).
-4. PR → base `develop`. Title starts with `COD-<n>`. Body must contain both `Closes COD-<n>` and `Closes #<github-issue-number>`, and the referenced GitHub issue's title must start with the same `COD-<n>`.
-5. `main` only accepts PRs from `develop` — no `validate-release` gate here (unlike other repos), since this repo has no version/release-tag convention; publishing to Velog/Medium is the "release."
+1. Create a branch named `feat/<slug>` and push it to `origin`.
+2. `.github/workflows/prepare-feature-pr.yml` finds or creates a Linear issue in team `COD`, project "블로그 자동발행".
+3. The workflow finds or creates the matching GitHub issue, then opens a Draft PR into `develop`.
+4. The PR title starts with `COD-<n>`. Its body contains both `Closes COD-<n>` and `Closes #<github-issue-number>`.
+5. `.github/workflows/pr-policy.yml` validates the branch flow and issue pair without creating or editing them.
+6. `main` only accepts PRs from `develop`. Publishing to Velog/Medium is the release and remains manual.
 
-**Fallback**: if a PR is opened against `develop` from a plain `feat/<slug>` branch with no `Closes COD-n` / `Closes #n` in the body, the `auto-provision-issue` CI job creates the Linear issue and the mirrored GitHub issue itself and edits the PR's title/body to reference them — so skipping steps 1-2 is fine, CI catches it. This requires the `GH_PAT` repo secret (a fine-grained PAT with Contents/Issues/Pull-requests write, *not* the default `GITHUB_TOKEN`) — edits made with `GITHUB_TOKEN` don't retrigger workflow runs (GitHub's anti-recursion rule), so `validate-flow` would never re-check the fixed-up PR. If `GH_PAT` is missing/expired, do steps 1-2 manually instead.
+Automation uses `LINEAR_API_KEY` and `GH_PAT` repository secrets. `GH_PAT` must be able to read contents and write issues/pull requests; using it to create the PR lets PR checks start automatically. Provisioning is keyed by `repository:branch`, so another push or a manual rerun reuses completed Linear/GitHub records after a partial failure. A branch named `feat/cod-<n>-<slug>` reuses that existing Linear issue when it belongs to the configured team and project.
+
+If automation fails, rerun `Prepare feature PR` with the existing branch. Manual repair remains supported: create the Linear issue, create an open GitHub issue whose title starts with the same `COD-<n>`, then open a PR with both closing references. Do not create a second issue pair for the same branch.
 
 On merge into `develop`, CI auto-closes the mirrored GitHub issue; Linear's native GitHub integration then auto-transitions the Linear issue to Done. No manual status update needed after merge.
 
