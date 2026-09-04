@@ -16,7 +16,7 @@ Describe the background and what the reader will get out of the post.
 
 Write the content.
 
-![Image description](./images/example.webp)
+![Image description](./images/01-body-image.png)
 
 ## Closing
 
