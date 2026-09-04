@@ -10,7 +10,7 @@ status: draft
 
 Every week, I discover, observe, and record a new specimen. This week's first encounter went like this.
 
-![First encounter with Git — Codigdex battle screen](./images/01-git-battle.png)
+![A wild Git appears — Codigdex battle screen](./images/01-git-encounter.en.v2.png)
 
 When you're developing, moments like these keep coming up:
 "I'm pretty sure I've seen this before…"
@@ -87,6 +87,8 @@ But in reality:
 In other words, add is staging,
 and commit is the actual record.
 
+![Git's three areas — working directory, staging area, and local repository](./images/02-git-three-areas.en.v2.png)
+
 ---
 
 ## Observation 3 — Git and GitHub are different
@@ -101,6 +103,8 @@ So:
 - No Git, no GitHub ❌
 - Git works fine on its own ⭕
 
+![Git's basic flow — add, commit, and push](./images/03-git-basic-flow.en.v2.png)
+
 ---
 
 ## Summary
@@ -110,9 +114,7 @@ So:
 - Git and GitHub play different roles
 - Use it without understanding the concepts, and you will get burned eventually
 
-Once I had it laid out like this, the initial confusion was gone, replaced by this feeling.
-
-![Git learning complete](./images/02-git-learning-complete.en.png)
+Once I had it laid out like this, the initial confusion faded and I could finally see how Git builds a record of changes.
 
 ---
 
@@ -127,4 +129,4 @@ There's more to observe before I really understand Git as a specimen.
 That's it for the first observation log.
 Next time, I'll be encountering branches and merges.
 
-![Git observation log 1/5 — next up: Branch and Merge](./images/03-git-observation-1-of-5.en.png)
+![Git observation log 1/5 — next up: Branch and Merge](./images/04-git-observation-1-of-5.en.v2.png)
