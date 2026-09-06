@@ -2,8 +2,8 @@
 title: "코딩 도감 #01 — Branch와 Merge, 평행세계를 다루는 법"
 description: "코딩 도감 시리즈 Git 편 2주차. 브랜치로 평행세계를 만들고, merge로 다시 합치는 법을 관찰한다."
 tags: [git, 코딩도감, branch, merge]
-date: 2026-09-10
-status: draft
+date: 2026-09-07
+status: published
 ---
 
 # 코딩 도감 #01 — Branch와 Merge, 평행세계를 다루는 법
