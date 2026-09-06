@@ -10,7 +10,7 @@
 
 ## Weekly cycle
 
-One draft is prepared per week. Each week follows the same six-step process tracked in Linear.
+One draft is prepared per week. Each week follows the same seven-step process tracked in Linear.
 
 ```
 Pick a topic
@@ -22,7 +22,7 @@ Write the draft (Claude)
 User review & feedback
    │
    ▼
-Push to GitHub (feat branch → PR)
+Push to GitHub (feat branch → PR) + Google Drive backup
    │
    ▼
 Merge PR (develop)
@@ -35,6 +35,7 @@ Publish on Velog (Korean) / Medium (English) & update the log
 - Images are prepared separately and placed in the draft with a short lead-in sentence for context.
 - The Korean draft (`index.ko.md`) is published on Velog; the English translation (`index.en.md`) is published on Medium. The English translation isn't required every week — it can be done selectively per installment.
 - Publishing on either platform is done manually; the log (Notion Sprint Tracker) is updated right after.
+- **Google Drive backup**: at the same point content is pushed to GitHub, save that week's `index.ko.md`/`index.en.md` as plain markdown (not converted to Google Docs — conversion breaks markdown syntax) under `My Drive/Developer/Project/Blog/2026/09/<repo folder name>/`. Images are not uploaded by Claude directly due to size — drag the local `images/` folder into the same location by hand.
 
 ## Branch integration
 
@@ -42,6 +43,6 @@ Reviewed changes are merged from a `feat/*` branch into `develop` through a pull
 
 ## Tracking progress
 
-- Linear: a parent issue per week plus 6 standard sub-issues track progress.
+- Linear: a parent issue per week plus 7 standard sub-issues track progress.
 - Notion Sprint Tracker: each week is registered as one sprint with its objective, duration, and deliverables.
 - Slack (#velog-automation): status notifications for draft prep, sync, and publish failures.
