@@ -24,16 +24,57 @@ This repository prepares a weekly technical-blog post for publication in Korean 
 
 ## Image deliverables
 
-- Every weekly post requires four images per language by default: one thumbnail and three body illustrations.
-- If an existing draft already contains a different number of explicit image slots, follow the draft rather than removing or inventing slots.
-- When both Korean and English posts exist, create matching localized image sets. Keep composition and visual meaning consistent while localizing only the visible copy.
-- Generate raster artwork with the `imagegen` skill and use existing series images as visual references.
-- Preserve the established visual identity: crisp retro 16-bit pixel art, warm cream background, near-black outlines, burnt Git-orange accents, restrained brown details, and a nostalgic RPG field-guide mood.
-- Preserve recurring character continuity: the orange specimen creature and the pixel-art explorer should remain recognizable across posts.
-- Thumbnails must use a wide landscape composition, large readable title text, strong hierarchy, and safe margins suitable for Velog and Medium cards.
-- Body illustrations should explain or dramatize the nearby section rather than repeat the thumbnail.
-- Avoid photorealism, glossy 3D, neon colors, gradients, corporate logos, watermarks, tiny decorative copy, and unnecessary interface clutter.
-- Treat all visible image text as exact copy. Verify Korean spelling, English spelling, punctuation, series number, observation number, and next-topic labels before accepting an image.
+Every weekly post requires five images per language: one thumbnail plus four numbered body illustrations (`01` through `04`). Do not interpret this as four images including the thumbnail.
+
+### Mandatory reference workflow
+
+- Use the `imagegen` skill for every series image.
+- Before generating anything, inspect the approved images from the preceding weeks with `view_image`. Do not rely on a prose-only description of the style.
+- Pass the matching approved images as strict visual references when generating each numbered asset. State in the prompt that their layout, whitespace, pixel density, recurring characters, palette, typography, and UI structure are templates to preserve rather than loose inspiration.
+- Prefer these canonical references while the Git series is active:
+  - Thumbnail: the most recently approved `thumbnail*.png` plus `posts/2026/09/01-codigdex-01-git/images/thumbnail.v2.png`.
+  - `01`: `posts/2026/09/01-codigdex-01-git/images/01-git-encounter.v2.png` and `posts/2026/09/02-codigdex-01-branch-merge/images/01-branch-merge-encounter.png`.
+  - `02`: `posts/2026/09/01-codigdex-01-git/images/02-git-three-areas.v2.png` and `posts/2026/09/02-codigdex-01-branch-merge/images/02-branch-parallel-worlds.png`.
+  - `03`: `posts/2026/09/01-codigdex-01-git/images/03-git-basic-flow.v2.png` and `posts/2026/09/02-codigdex-01-branch-merge/images/03-merge-timelines.png`.
+  - `04`: `posts/2026/09/01-codigdex-01-git/images/04-git-observation-1-of-5.v2.png` and `posts/2026/09/02-codigdex-01-branch-merge/images/04-observation-2-of-5.png`.
+- When a later image is explicitly approved by the user, treat it as an additional reference for the same numbered role.
+
+### Visual identity
+
+- Preserve the established sparse retro 16-bit pixel-art identity: warm cream background, generous negative space, thick near-black pixel outlines, burnt Git-orange accents, restrained brown details, and simple black-and-cream RPG interface panels.
+- Preserve the recurring explorer: orange cap, orange jacket, backpack, black hair, usually seen from behind or in profile while holding a field guide.
+- Preserve the recurring Git specimen language: a simple friendly burnt-orange creature with white eyes and branch-node antennae. Adapt its silhouette to the week's concept without replacing it with a different art direction.
+- Keep subjects simple and readable at blog width. Match the relatively flat, clean compositions of the approved references.
+- Avoid photorealism, glossy 3D, neon colors, gradients, dramatic lighting, painterly rendering, dense textures, oversized monsters, detailed rooms, bookshelves, crowded desks, elaborate landscapes, and unnecessary props.
+- Never add corporate logos, watermarks, decorative pseudo-code, or tiny unreadable interface copy.
+
+### Numbered image templates
+
+- `thumbnail`: wide landscape near `1.91:1`. Use a large readable series/topic title and one clear scene. Preserve safe margins for Velog and Medium cards. A thumbnail may be more detailed than the body images, but it must use the same characters and palette.
+- `01 — encounter`: square `1:1` and intentionally sparse. Reproduce the classic RPG battle screen: specimen name, `Lv.<week>`, and one HP bar at the upper left; explorer at the lower left; one or two simple topic specimens at the upper right; one large double-border dialogue box across the bottom. Do not add scenery, an infographic, a command menu, a desk, or extra panels.
+- `02 — first concept`: square `1:1` teaching card. Use one thin double-border title panel at the top, a simple two- or three-part comparison in the center, and one short caption panel at the bottom. Use large icons, a small recurring explorer/specimen pair, and generous cream space.
+- `03 — second concept or process`: square `1:1` timeline or flow scene. Use one framed title at the top, one large central timeline/process diagram with the explorer participating, and one short takeaway panel at the bottom. Keep it instructional and uncluttered rather than turning it into another battle screen.
+- `04 — observation log`: square `1:1` and must reproduce the established Codigdex registration UI. Use a thick black/orange outer frame, black header with `관찰 기록 <week>/<total>` or its English localization, specimen window on the left, type and result panels on the right, a progress bar with exactly the current number of slots filled, the explorer recording notes, and a full-width black bottom panel that previews the confirmed next topic.
+
+### Localization and text validation
+
+- Generate the Korean asset first. Then create the English version as a `text-localization` edit of the accepted Korean image so composition, characters, icons, and spacing remain unchanged.
+- For a localization edit, explicitly instruct the image tool to change only the requested text and preserve every other pixel-level design decision.
+- Use the same filenames with `.en.png` for English assets.
+- List every visible string verbatim in the prompt. Require no other readable text.
+- Verify every result visually before saving. Check Hangul, English spelling, punctuation, series number, `Lv` number, observation fraction, progress slots, branch labels, and next-topic text.
+- Reject and regenerate an image when text is misspelled, Hangul is malformed, the English composition drifts from Korean, the wrong number of progress slots is filled, or the numbered template is not followed.
+- Keep captions short enough to fit the established pixel typography. Prefer one concise sentence or phrase over dense explanatory copy.
+
+### Generation and acceptance sequence
+
+1. Read the Korean and English drafts and identify the exact paragraph each image supports.
+2. Confirm the week number, total observation count, and next topic from the roadmap.
+3. Plan the thumbnail and all four numbered images before generating the first asset.
+4. Generate one distinct asset per image-generation call; do not substitute a single batch prompt for different roles.
+5. Inspect each Korean output, localize the accepted version to English, and inspect the localized output again.
+6. Save only accepted outputs into the post's `images/` directory and update both Markdown files.
+7. Confirm that each language has one thumbnail and exactly four numbered body-image references, unless the user explicitly requests a different count.
 
 ## Image files and Markdown
 
