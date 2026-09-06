@@ -12,6 +12,7 @@ This repository prepares a weekly technical-blog post for publication in Korean 
 4. Create or update the English version as a natural localization, preserving the Korean article's meaning, structure, code, and image sequence.
 5. Check technical claims and commands for accuracy. Do not invent personal experiences or results that the user did not provide.
 6. Keep `status: draft` until the user explicitly approves publication.
+7. When the post is ready to push to GitHub, also back it up to Google Drive: save `index.ko.md`/`index.en.md` as plain markdown (not converted to Google Docs — conversion breaks markdown syntax) under `My Drive/Developer/Project/Blog/2026/09/<repo folder name>/`, matching the repo's folder name exactly. Do not upload the `images/` folder yourself (each post's images are tens of MB combined, too large for this tool's per-call payload) — tell the user to drag the local `images/` folder into the same Drive location instead.
 
 ## Codigdex series voice
 
