@@ -30,6 +30,10 @@ The user has picked Docker as the next specimen. Below is a proposed curriculum 
 
 Once this 5-week breakdown is confirmed, Linear issues (parent + standard sub-issues) and Notion sprints will be created.
 
+## #03 candidate (under consideration)
+
+- Kubernetes — the user is considering this as the specimen after Docker (#02). Not yet confirmed; the weekly breakdown will be discussed once #02 wraps up.
+
 ## Criteria for picking the next specimen
 
 - A technology or tool used repeatedly in practice, worth revisiting from the basics
