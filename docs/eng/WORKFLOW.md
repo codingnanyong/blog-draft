@@ -10,7 +10,7 @@
 
 ## Weekly cycle
 
-One draft is prepared per week. Each week follows the same seven-step process tracked in Linear.
+One draft is prepared per week, and **publish day is every Monday**. Each week follows the same seven-step process tracked in Linear.
 
 ```
 Pick a topic
@@ -35,6 +35,7 @@ Publish on Velog (Korean) / Medium (English) & update the log
 - Images are prepared separately and placed in the draft with a short lead-in sentence for context.
 - The Korean draft (`index.ko.md`) is published on Velog; the English translation (`index.en.md`) is published on Medium. The English translation isn't required every week — it can be done selectively per installment.
 - Publishing on either platform is done manually; the log (Notion Sprint Tracker) is updated right after.
+- Set a draft's frontmatter `date` to the actual upcoming Monday it's scheduled to publish.
 - **Google Drive backup**: at the same point content is pushed to GitHub, save that week's `index.ko.md`/`index.en.md` as plain markdown (not converted to Google Docs — conversion breaks markdown syntax) under `My Drive/Developer/Project/Blog/2026/09/<repo folder name>/`. Images are not uploaded by Claude directly due to size — drag the local `images/` folder into the same location by hand.
 
 ## Branch integration
