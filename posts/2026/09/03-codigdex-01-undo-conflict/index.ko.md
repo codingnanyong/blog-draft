@@ -2,7 +2,7 @@
 title: "코딩 도감 #01 — 되돌리기와 Merge Conflict, 실수와 마주하는 법"
 description: "코딩 도감 시리즈 Git 편 3주차. reset·revert·restore로 되돌리는 법과, merge conflict를 직접 해결하는 법을 관찰한다."
 tags: [git, 코딩도감, reset, revert, merge conflict]
-date: 2026-09-17
+date: 2026-09-14
 status: draft
 ---
 

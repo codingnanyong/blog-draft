@@ -2,7 +2,7 @@
 title: "Codigdex #01 — Undoing Things and Merge Conflicts, Facing Your Mistakes"
 description: "Week 3 of the Codigdex series' Git chapter. Observing how to undo with reset, revert, and restore, and how to resolve a merge conflict head-on."
 tags: [git, codigdex, reset, revert, merge conflict]
-date: 2026-09-17
+date: 2026-09-14
 status: draft
 ---
 
