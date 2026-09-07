@@ -71,6 +71,7 @@ Posts publish weekly on Monday. The timeline below assumes each specimen runs 5 
 
 - **Within 2026**: `#01` Git (published/drafted, through ~09-28) → `#02` Docker (through ~11-02) → `#03` CI/CD (through ~12-07, assuming 5 weeks) → `#04` Kubernetes weeks 1-3 (~12-14 to ~12-28, with the rest rolling into the next year under a 5-week assumption)
 - **From 2027 on**: `#04` Kubernetes wraps up (~01-11) → then the Data Engineer track proceeds in sequence (`#05` Airflow → `#06` Kafka → `#07` dbt → `#08` Medallion Architecture on PostgreSQL+TimescaleDB). Track specimens may run longer than 5 weeks (especially the closing capstone), so exact completion dates will be recalculated once each specimen is confirmed.
+- **Total material on hand (estimate)**: assuming 5 weeks each, `#01`-`#08` (confirmed/proposed) add up to roughly 40 weeks (2026-09 through 2027-06). Adding the `#09`+ broader candidate pool (9 categories), each turned into its own 3-5 week specimen, adds roughly another 27-45 weeks — putting **enough weekly material on hand to run through roughly early-to-mid 2028** (about 1.4-1.6 years from today). How many specimens the `#09`+ categories end up splitting (or merging) into is still undecided, so the actual total will shift.
 
 ## Criteria for picking the next specimen
 
