@@ -32,13 +32,13 @@ Once this 5-week breakdown is confirmed, Linear issues (parent + standard sub-is
 
 ## #03 candidate (under consideration)
 
-- Kubernetes — the user is considering this as the specimen after Docker (#02). Not yet confirmed; the weekly breakdown will be discussed once #02 wraps up.
+- Kubernetes — the user is considering this as the specimen after Docker (#02). Not yet confirmed; the weekly breakdown will be discussed once #02 wraps up. Fine to run longer than 5 weeks given how much ground it covers.
 
 ## Criteria for picking the next specimen
 
 - A technology or tool used repeatedly in practice, worth revisiting from the basics
-- A topic with enough of a learning curve to split into roughly 4-5 weeks
 - A topic that naturally splits into a "basics → applied → collaboration/real-world" three-stage structure, like Git
+- Week count isn't fixed at 5 — scale it to the specimen's actual learning curve (more than 5 weeks is fine for a bigger topic)
 
 ## Where it's tracked
 
