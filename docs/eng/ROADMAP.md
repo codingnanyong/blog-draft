@@ -30,9 +30,13 @@ The user has picked Docker as the next specimen. Below is a proposed curriculum 
 
 Once this 5-week breakdown is confirmed, Linear issues (parent + standard sub-issues) and Notion sprints will be created.
 
-## #03 candidate (under consideration)
+## #03 — CI/CD (GitHub Actions) (order confirmed, curriculum TBD)
 
-- Kubernetes — the user is considering this as the specimen after Docker (#02). Not yet confirmed; the weekly breakdown will be discussed once #02 wraps up. Fine to run longer than 5 weeks given how much ground it covers.
+Confirmed as the specimen after Docker (#02). Automating the build/deploy of the images made in Docker follows naturally right after it, and it also picks up directly where the Git series' last week (PR → Review → Merge) left off. This repo's own automation (Linear/GitHub integration, PR policy) can serve as real material. Weekly curriculum not yet discussed.
+
+## #04 candidate (under consideration)
+
+- Kubernetes — the user is considering this as the specimen after CI/CD (#03). Not yet confirmed; the weekly breakdown will be discussed once #03 wraps up. Fine to run longer than 5 weeks given how much ground it covers.
 
 ## Criteria for picking the next specimen
 
