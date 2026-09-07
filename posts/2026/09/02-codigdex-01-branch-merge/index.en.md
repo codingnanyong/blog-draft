@@ -2,8 +2,8 @@
 title: "Codigdex #01 — Branch and Merge, Handling Parallel Worlds"
 description: "Week 2 of the Codigdex series' Git chapter. Observing how branches create parallel worlds, and how merge brings them back together."
 tags: [git, codigdex, branch, merge]
-date: 2026-09-10
-status: draft
+date: 2026-09-07
+status: published
 ---
 
 # Codigdex #01 — Branch and Merge, Handling Parallel Worlds
