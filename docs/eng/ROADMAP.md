@@ -6,15 +6,33 @@ Like a Pokédex, each series (`#number`) covers one technical "specimen." A spec
 
 ## #01 — Git (5-week plan)
 
-| Week | Topic | Linear | Status |
-| --- | --- | --- | --- |
-| Week 1 | Git basics — first encounter | COD-41 | Published |
-| Week 2 | Git branching and merging | COD-42 | Upcoming |
-| Week 3 | Undoing changes & merge conflicts | COD-53 | Planned |
-| Week 4 | Remote repositories & rebase | COD-54 | Planned |
-| Week 5 | Collaboration workflow (wrap-up) | COD-55 | Planned |
+| Week | Topic | Publish Date | Linear | Status |
+| --- | --- | --- | --- | --- |
+| Week 1 | Git basics — first encounter | 2026-09-03 | COD-41 | Published |
+| Week 2 | Git branching and merging | 2026-09-07 | COD-42 | Published |
+| Week 3 | Undoing changes & merge conflicts | 2026-09-14 | COD-53 | Drafted (awaiting publish) |
+| Week 4 | Remote repositories & rebase | 2026-09-21 | COD-54 | Drafted |
+| Week 5 | Collaboration workflow (wrap-up) | 2026-09-28 | COD-55 | Drafted |
 
 Each week follows the same process defined in [Git branch strategy](GIT_WORKFLOW.md) and [Content & publishing workflow](WORKFLOW.md). Once week 5 wraps up, the Git specimen is formally registered in the Codigdex, and topic selection begins for the next specimen (`#02`).
+
+## #02 — Docker (5-week plan, draft)
+
+The user has picked Docker as the next specimen. Below is a proposed curriculum following the same "basics → applied → collaboration/real-world" three-stage structure as Git — not yet confirmed.
+
+| Week | Topic | Publish Date | Linear | Status |
+| --- | --- | --- | --- | --- |
+| Week 1 | Docker basics — first encounter (images, containers, Dockerfile) | 2026-10-05 | TBD | Proposed |
+| Week 2 | Building images & layers (writing a Dockerfile, layer caching, multi-stage builds) | 2026-10-12 | TBD | Proposed |
+| Week 3 | Volumes & networking (data persistence, container-to-container communication) | 2026-10-19 | TBD | Proposed |
+| Week 4 | Docker Compose (multi-container orchestration) | 2026-10-26 | TBD | Proposed |
+| Week 5 | Real-world collaboration workflow (registries, CI/CD integration, wrap-up registration) | 2026-11-02 | TBD | Proposed |
+
+Once this 5-week breakdown is confirmed, Linear issues (parent + standard sub-issues) and Notion sprints will be created.
+
+## #03 candidate (under consideration)
+
+- Kubernetes — the user is considering this as the specimen after Docker (#02). Not yet confirmed; the weekly breakdown will be discussed once #02 wraps up.
 
 ## Criteria for picking the next specimen
 
@@ -24,5 +42,5 @@ Each week follows the same process defined in [Git branch strategy](GIT_WORKFLOW
 
 ## Where it's tracked
 
-- Linear: a parent issue per week (e.g. COD-42, COD-53-55) plus 6 standard sub-issues
+- Linear: a parent issue per week (e.g. COD-42, COD-53-55) plus 7 standard sub-issues
 - Notion Sprint Tracker: each week is registered as Sprint 02-05 with its objective, duration, and deliverables
