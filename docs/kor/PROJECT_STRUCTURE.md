@@ -6,7 +6,7 @@
 posts/
   YYYY/
     MM/
-      NN-post-slug/
+      #NNN_post-slug/
         index.ko.md
         index.en.md
         images/
@@ -19,7 +19,7 @@ templates/
   post-template.en.md
 ```
 
-각 글은 언어별 Markdown 파일(`index.ko.md` → Velog, `index.en.md` → Medium)과 언어별 이미지를 하나의 폴더에 함께 보관합니다. 폴더명은 월 안에서 글의 순서가 보이도록 `NN-post-slug` 형식을 사용합니다. Markdown에서는 `./images/파일명` 형태의 상대 경로를 사용합니다.
+각 글은 언어별 Markdown 파일(`index.ko.md` → Velog, `index.en.md` → Medium)과 언어별 이미지를 하나의 폴더에 함께 보관합니다. 폴더명은 해당 주차 개체의 코딩 도감 번호(세 자리, 게임 codigdex의 `dexNumber`와 동일)를 접두사로 붙인 `#NNN_post-slug` 형식을 사용합니다(예: `#001_git`). 셸에서는 경로를 따옴표로 감쌉니다. Markdown에서는 `./images/파일명` 형태의 상대 경로를 사용합니다.
 
 ## 글 작성 가이드
 

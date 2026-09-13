@@ -3,7 +3,7 @@ title: "Codigdex #01 — Undoing Things and Merge Conflicts, Facing Your Mistake
 description: "Week 3 of the Codigdex series' Git chapter. Observing how to undo with reset, revert, and restore, and how to resolve a merge conflict head-on."
 tags: [git, codigdex, reset, revert, merge conflict]
 date: 2026-09-14
-status: draft
+status: published
 ---
 
 # Codigdex #01 — Undoing Things and Merge Conflicts, Facing Your Mistakes
@@ -18,6 +18,7 @@ This week, it's time to face both head-on.
 
 ## Specimen info
 
+- Dex number: No.003 Conflict Rewinder
 - Name: Reset, Revert, Restore, Merge Conflict
 - Classification: Git's undo tools, plus the collision every collaborator eventually runs into
 - Encounter rate: Very high (mistakes always happen, and conflicts arrive sooner or later once you collaborate)
