@@ -6,7 +6,7 @@
 posts/
   YYYY/
     MM/
-      NN-post-slug/
+      #NNN_post-slug/
         index.ko.md
         index.en.md
         images/
@@ -19,7 +19,7 @@ templates/
   post-template.en.md
 ```
 
-Each post keeps its per-language Markdown files (`index.ko.md` for Velog, `index.en.md` for Medium) and localized images together in one folder. Folder names use the `NN-post-slug` format so posts sort in publication order within each month. Markdown references images with a relative path in the form `./images/filename`.
+Each post keeps its per-language Markdown files (`index.ko.md` for Velog, `index.en.md` for Medium) and localized images together in one folder. Folder names use the `#NNN_post-slug` format, where `NNN` is the three-digit Codigdex dex number of that week's specimen (the same `dexNumber` as the codigdex game), e.g. `#001_git`. Quote these paths in a shell, since `#` otherwise starts a comment. Markdown references images with a relative path in the form `./images/filename`.
 
 ## Writing guide
 

@@ -16,6 +16,7 @@ Four observations in, I've run into nearly every major Git tool: commits, branch
 
 ## Specimen info
 
+- Dex number: No.005 Workflow Guardian
 - Name: Collaboration Workflow (Issue → Branch → Commit → PR → Review → Merge)
 - Classification: Team-level Git working procedure
 - Encounter rate: Very high (shows up without exception on any team project)
@@ -98,10 +99,10 @@ Learning each Git command one at a time made them feel like independent tools. S
 
 Five weeks ago, Git was just a set of commands to memorize. Now it looks like one complete flow: leaving a record (commit), spinning up parallel worlds (branch), merging them back (merge), undoing mistakes (reset/revert/restore), resolving collisions (conflict), talking to a remote (fetch/pull/push), restacking history (rebase), and finally, getting reviewed together with a team (PR/review).
 
-So this time, specially, Git gets officially registered into the Codigdex.
+So this time, specially, registering the final stage, No.005 Workflow Guardian, fills in the whole Git chapter of the Codigdex, starting from No.001.
 
 ![Codigdex registration complete — No.001 Git](./images/05-git-registration-complete.en.png)
 
-Choosing the next specimen starts now. What will Codigdex #02 be observing?
+The next specimen is Codigdex #02: Linux. All those Git commands had to run somewhere — so next, it's time to observe what's on the other side of the terminal, starting with the shell.
 
 ![Collaboration workflow observation log 5/5 — next: choosing Codigdex #02's topic](./images/04-observation-5-of-5.en.png)
