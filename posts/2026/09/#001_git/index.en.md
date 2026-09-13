@@ -30,6 +30,7 @@ pretty much the first thing anyone runs into once they start developing.
 
 ## Specimen info
 
+- Dex number: No.001 Git Sprout
 - Name: Git
 - Classification: Version control system
 - Encounter rate: Very high
