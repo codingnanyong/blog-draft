@@ -16,6 +16,7 @@ After facing undoing changes and merge conflicts last week, it hit me that every
 
 ## Specimen info
 
+- Dex number: No.004 Remote Rebaser
 - Name: Remote, Rebase
 - Classification: Remote collaboration feature + commit-history restructuring feature
 - Encounter rate: Very high (used daily on collaborative projects)
