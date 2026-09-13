@@ -33,11 +33,11 @@ Every weekly post requires five images per language: one thumbnail plus four num
 - Before generating anything, inspect the approved images from the preceding weeks with `view_image`. Do not rely on a prose-only description of the style.
 - Pass the matching approved images as strict visual references when generating each numbered asset. State in the prompt that their layout, whitespace, pixel density, recurring characters, palette, typography, and UI structure are templates to preserve rather than loose inspiration.
 - Prefer these canonical references while the Git series is active:
-  - Thumbnail: the most recently approved `thumbnail*.png` plus `posts/2026/09/01-codigdex-01-git/images/thumbnail.v2.png`.
-  - `01`: `posts/2026/09/01-codigdex-01-git/images/01-git-encounter.v2.png` and `posts/2026/09/02-codigdex-01-branch-merge/images/01-branch-merge-encounter.png`.
-  - `02`: `posts/2026/09/01-codigdex-01-git/images/02-git-three-areas.v2.png` and `posts/2026/09/02-codigdex-01-branch-merge/images/02-branch-parallel-worlds.png`.
-  - `03`: `posts/2026/09/01-codigdex-01-git/images/03-git-basic-flow.v2.png` and `posts/2026/09/02-codigdex-01-branch-merge/images/03-merge-timelines.png`.
-  - `04`: `posts/2026/09/01-codigdex-01-git/images/04-git-observation-1-of-5.v2.png` and `posts/2026/09/02-codigdex-01-branch-merge/images/04-observation-2-of-5.png`.
+  - Thumbnail: the most recently approved `thumbnail*.png` plus `posts/2026/09/#001_git/images/thumbnail.v2.png`.
+  - `01`: `posts/2026/09/#001_git/images/01-git-encounter.v2.png` and `posts/2026/09/#002_branch-merge/images/01-branch-merge-encounter.png`.
+  - `02`: `posts/2026/09/#001_git/images/02-git-three-areas.v2.png` and `posts/2026/09/#002_branch-merge/images/02-branch-parallel-worlds.png`.
+  - `03`: `posts/2026/09/#001_git/images/03-git-basic-flow.v2.png` and `posts/2026/09/#002_branch-merge/images/03-merge-timelines.png`.
+  - `04`: `posts/2026/09/#001_git/images/04-git-observation-1-of-5.v2.png` and `posts/2026/09/#002_branch-merge/images/04-observation-2-of-5.png`.
 - When a later image is explicitly approved by the user, treat it as an additional reference for the same numbered role.
 
 ### Visual identity
