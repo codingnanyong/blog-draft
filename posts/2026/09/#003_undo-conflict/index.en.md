@@ -83,7 +83,7 @@ Git is essentially raising its hand and saying "this part was changed differentl
 
 Opening the file shows both sides marked out like this:
 
-```bash
+```text
 <<<<<<< HEAD
 const greeting = "안녕하세요";
 =======
