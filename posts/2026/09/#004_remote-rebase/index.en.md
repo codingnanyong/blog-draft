@@ -40,7 +40,7 @@ Whenever something went wrong, I just kept hitting `git pull` and hoping for the
 
 The first thing I sorted out was that local and remote aren't always connected in real time. If I want to know the remote's latest state, I have to ask first.
 
-```
+```bash
 git fetch    # check the remote's latest state only (doesn't touch my work yet)
 git pull     # fetch + merge into my branch, in one step
 git push     # upload my commits to the remote
@@ -60,7 +60,7 @@ That's also what untangled the `origin/main` confusion. `origin/main` is a local
 
 I learned there's another way to combine timelines besides merge: rebase.
 
-```
+```bash
 git switch feature/login
 git rebase main
 ```
@@ -79,7 +79,7 @@ Why a changed commit hash is dangerous only really sank in after making the mist
 
 If you rebase a branch that's already been pushed and pulled by someone else, your local history and the remote history split into completely different commits. Pushing after that gets rejected by Git, and forcing it through with `--force` breaks alignment with everyone else's local history.
 
-```
+```bash
 git push --force-with-lease   # if you must force-push anyway, use this instead of plain --force
 ```
 

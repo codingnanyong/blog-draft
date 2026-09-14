@@ -56,7 +56,7 @@ Once work on a branch is done, it doesn't go straight into `main` — a Pull Req
 
 ![From PR to merge — Feature, PR, Review, Main](./images/03-pr-review-merge.en.png)
 
-```
+```text
 Work & commit on a feature branch
         │
         ▼

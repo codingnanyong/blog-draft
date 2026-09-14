@@ -56,7 +56,7 @@ status: draft
 
 ![PR에서 Merge까지 — Feature, PR, Review, Main](./images/03-pr-review-merge.png)
 
-```
+```text
 feature 브랜치에서 작업 & commit
         │
         ▼
