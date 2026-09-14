@@ -42,7 +42,7 @@ If I'd known `git merge --abort` existed as an escape hatch, I wouldn't have had
 
 The first thing I sorted out was this: `reset`, `revert`, and `restore` all get lumped together as "undoing," but they actually operate on different things.
 
-```
+```bash
 git reset --soft HEAD~1    # undoes only the commit; changes stay staged
 git reset --mixed HEAD~1   # default. unstages too, but file contents stay in the working directory
 git reset --hard HEAD~1    # deletes the commit AND the changes entirely (hard to recover — be careful)
@@ -69,7 +69,7 @@ Once it really sank in that `reset --hard` truly deletes unbacked-up changes, I 
 
 The situation I could only guess at in last week's observation 3, I finally ran into directly. When two branches each change the same line of the same file in different ways and you try to merge, this happens:
 
-```
+```bash
 git switch main
 git merge feature/login
 # Auto-merging src/login.js
@@ -83,7 +83,7 @@ Git is essentially raising its hand and saying "this part was changed differentl
 
 Opening the file shows both sides marked out like this:
 
-```
+```bash
 <<<<<<< HEAD
 const greeting = "안녕하세요";
 =======
@@ -99,7 +99,7 @@ Everything from `HEAD` down to `=======` is the content of the branch I'm curren
 
 Actually resolving a conflict turned out to be simpler than it looked. The procedure comes down to this.
 
-```
+```bash
 # 1. Read the markers and decide what to keep (keep both, keep one, or write something new)
 # 2. Remove the <<<<<<<, =======, >>>>>>> markers entirely, leaving only the final content
 # 3. Tell Git this file is resolved
@@ -113,7 +113,7 @@ git merge --continue
 
 And if partway through I decide this merge isn't worth it after all, I can always back out.
 
-```
+```bash
 git merge --abort   # fully returns to the state right before the merge started
 ```
 

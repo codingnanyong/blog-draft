@@ -42,7 +42,7 @@ status: published
 
 가장 먼저 정리한 건 이거였다. `reset`, `revert`, `restore`는 전부 "되돌린다"고 뭉뚱그려 부르지만, 실제로 건드리는 대상이 다르다.
 
-```
+```bash
 git reset --soft HEAD~1    # 커밋만 취소, 변경 내용은 staging에 그대로
 git reset --mixed HEAD~1   # 기본값. staging까지 해제, 파일 내용은 working directory에 남음
 git reset --hard HEAD~1    # 커밋과 변경 내용을 전부 삭제 (복구 어려움, 주의)
@@ -69,7 +69,7 @@ git restore --staged <file># staging만 해제, 파일 내용은 그대로
 
 지난주 관찰 3에서 짐작만 했던 상황을 이번엔 직접 겪었다. 두 브랜치가 같은 파일의 같은 줄을 서로 다르게 고쳐놓고 merge를 시도하면 이런 일이 벌어진다.
 
-```
+```bash
 git switch main
 git merge feature/login
 # Auto-merging src/login.js
@@ -83,7 +83,7 @@ Git이 "이 부분은 두 브랜치가 서로 다르게 고쳐서, 어느 쪽이
 
 파일을 열어보면 이렇게 마커로 양쪽 내용이 표시돼 있다.
 
-```
+```bash
 <<<<<<< HEAD
 const greeting = "안녕하세요";
 =======
@@ -99,7 +99,7 @@ const greeting = "Hello";
 
 conflict 해결 자체는 생각보다 단순했다. 절차로 정리하면 이렇다.
 
-```
+```bash
 # 1. 마커를 보고 어느 내용을 남길지 결정 (둘 다 살릴 수도, 하나만 고를 수도, 새로 쓸 수도 있다)
 # 2. <<<<<<<, =======, >>>>>>> 마커를 전부 지우고 최종 내용만 남긴다
 # 3. Git에게 "이 파일은 해결했다"고 알린다
@@ -113,7 +113,7 @@ git merge --continue
 
 만약 도중에 "역시 이 merge는 아니다" 싶으면 언제든 되돌아갈 수 있다.
 
-```
+```bash
 git merge --abort   # merge 시작 전 상태로 완전히 복귀
 ```
 
