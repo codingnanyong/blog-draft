@@ -21,6 +21,7 @@ This repository prepares a weekly technical-blog post for publication in Korean 
 - Explain the mental model before listing commands.
 - Keep headings, specimen information, observations, summary, and the closing Codigdex note consistent with nearby posts.
 - Korean naming uses `코딩 도감`; English naming uses `Codigdex`.
+- Write dex numbers in uppercase as `NO.001` in Markdown (not `No.001`, which renders oddly on the publishing platforms).
 - Preserve continuity with the previous observation and preview the next one only when the roadmap or user confirms it.
 
 ## Image deliverables
@@ -55,7 +56,7 @@ Every weekly post requires five images per language: one thumbnail plus four num
 - `01 — encounter`: square `1:1` and intentionally sparse. Reproduce the classic RPG battle screen: specimen name, `Lv.<week>`, and one HP bar at the upper left; explorer at the lower left; one or two simple topic specimens at the upper right; one large double-border dialogue box across the bottom. Do not add scenery, an infographic, a command menu, a desk, or extra panels.
 - `02 — first concept`: square `1:1` teaching card. Use one thin double-border title panel at the top, a simple two- or three-part comparison in the center, and one short caption panel at the bottom. Use large icons, a small recurring explorer/specimen pair, and generous cream space.
 - `03 — second concept or process`: square `1:1` timeline or flow scene. Use one framed title at the top, one large central timeline/process diagram with the explorer participating, and one short takeaway panel at the bottom. Keep it instructional and uncluttered rather than turning it into another battle screen.
-- `04 — registration card`: square `1:1` and must end every weekly post with the established Codigdex registration UI. Every weekly `No.00x` subject is an individual registered specimen; do not label this image as an observation log. Use a thick black/orange outer frame, black `코딩 도감 등록` header or its English localization, specimen window on the left, number/name plus type and trait panels on the right, an approval stamp, a progress bar with exactly the current number of chapter slots filled, the explorer recording notes, and a full-width black bottom panel declaring that week's registration complete. On the final week, the bottom panel declares the whole chapter complete. Keep any next-topic preview in the article prose before this final image so the post visually ends on registration.
+- `04 — registration card`: square `1:1` and must end every weekly post with the established Codigdex registration UI. Every weekly `NO.00x` subject is an individual registered specimen; do not label this image as an observation log. Use a thick black/orange outer frame, black `코딩 도감 등록` header or its English localization, specimen window on the left, number/name plus type and trait panels on the right, an approval stamp, a progress bar with exactly the current number of chapter slots filled, the explorer recording notes, and a full-width black bottom panel declaring that week's registration complete. On the final week, the bottom panel declares the whole chapter complete. Keep any next-topic preview in the article prose before this final image so the post visually ends on registration.
 
 ### Localization and text validation
 

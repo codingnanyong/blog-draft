@@ -1,6 +1,6 @@
 ---
 title: "코딩 도감 #01 — 협업 워크플로우, 그리고 Git 챕터 완성"
-description: "코딩 도감 시리즈 Git 편 마지막 주차. Issue·Branch·Commit·PR·Review·Merge로 이어지는 협업 워크플로우를 관찰하고, No.005 워크플로 수호자를 등록해 Git 챕터를 완성한다."
+description: "코딩 도감 시리즈 Git 편 마지막 주차. Issue·Branch·Commit·PR·Review·Merge로 이어지는 협업 워크플로우를 관찰하고, NO.005 워크플로 수호자를 등록해 Git 챕터를 완성한다."
 tags: [git, 코딩도감, 협업, pull request]
 date: 2026-09-28
 status: draft
@@ -16,7 +16,7 @@ status: draft
 
 ## 개체 정보
 
-- 도감 번호: No.005 워크플로 수호자
+- 도감 번호: NO.005 워크플로 수호자
 - 이름: 협업 워크플로우 (Issue → Branch → Commit → PR → Review → Merge)
 - 분류: 팀 단위 Git 작업 절차
 - 출현 빈도: 매우 높음 (팀 프로젝트라면 예외 없이 등장)
@@ -101,6 +101,6 @@ Git 명령어를 하나씩 배울 땐 각각 독립된 도구처럼 느껴졌는
 
 다음 챕터는 코딩 도감 #02 Linux다. Git으로 기록을 남기던 그 명령어들이 실제로 어디서 실행되고 있었는지, 이번엔 터미널 너머의 셸부터 관찰해 볼 차례다.
 
-그 전에, Git 챕터의 마지막 개체를 코딩 도감에 등록한다. **No.005 워크플로 수호자** — 기록을 연결하고, 협업을 지킨다. 이로써 No.001 깃새싹부터 이어 온 Git 챕터 다섯 칸이 모두 채워졌다.
+그 전에, Git 챕터의 마지막 개체를 코딩 도감에 등록한다. **NO.005 워크플로 수호자** — 기록을 연결하고, 협업을 지킨다. 이로써 NO.001 깃새싹부터 이어 온 Git 챕터 다섯 칸이 모두 채워졌다.
 
-![코딩 도감 등록 카드 — No.005 워크플로 수호자, 분류: 팀 Git 작업 절차, 특성: 기록을 연결하고 협업을 지킨다, Git 챕터 5/5 등록 완료](./images/04-workflow-guardian-registration.png)
+![코딩 도감 등록 카드 — NO.005 워크플로 수호자, 분류: 팀 Git 작업 절차, 특성: 기록을 연결하고 협업을 지킨다, Git 챕터 5/5 등록 완료](./images/04-workflow-guardian-registration.png)

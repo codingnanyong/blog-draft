@@ -37,7 +37,7 @@ The body follows this default structure:
 
 ## Series & title convention
 
-A multi-week series states its series number in the title, e.g. `Codigdex #01 — Starting the Codigdex`. One `#number` represents one "chapter" (topic) spanning several weeks, and each week observes one dex-numbered specimen such as `No.001` and registers it at the end of the post. See [Roadmap / series plan](ROADMAP.md) for how a series is run.
+A multi-week series states its series number in the title, e.g. `Codigdex #01 — Starting the Codigdex`. One `#number` represents one "chapter" (topic) spanning several weeks, and each week observes one dex-numbered specimen such as `NO.001` and registers it at the end of the post. See [Roadmap / series plan](ROADMAP.md) for how a series is run.
 
 ## Image rules
 
