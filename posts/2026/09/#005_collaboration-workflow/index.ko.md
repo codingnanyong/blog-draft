@@ -1,14 +1,14 @@
 ---
-title: "코딩 도감 #01 — 협업 워크플로우, 그리고 Git 등록 완료"
-description: "코딩 도감 시리즈 Git 편 마지막 주차. Issue·Branch·Commit·PR·Review·Merge로 이어지는 협업 워크플로우를 관찰하고, Git을 도감에 정식 등록한다."
+title: "코딩 도감 #01 — 협업 워크플로우, 그리고 Git 챕터 완성"
+description: "코딩 도감 시리즈 Git 편 마지막 주차. Issue·Branch·Commit·PR·Review·Merge로 이어지는 협업 워크플로우를 관찰하고, No.005 워크플로 수호자를 등록해 Git 챕터를 완성한다."
 tags: [git, 코딩도감, 협업, pull request]
 date: 2026-09-28
 status: draft
 ---
 
-# 코딩 도감 #01 — 협업 워크플로우, 그리고 Git 등록 완료
+# 코딩 도감 #01 — 협업 워크플로우, 그리고 Git 챕터 완성
 
-지난 네 번의 관찰로 commit, branch, merge, 되돌리기, merge conflict, 원격 저장소, rebase까지 Git의 주요 도구를 거의 다 마주쳤다. 이번이 Git 개체의 마지막 관찰이다. 이 도구들이 실제 팀에서 어떻게 하나의 흐름으로 이어지는지 보고, Git을 코딩 도감에 정식으로 등록할 차례다.
+지난 네 번의 관찰로 commit, branch, merge, 되돌리기, merge conflict, 원격 저장소, rebase까지 Git의 주요 도구를 거의 다 마주쳤다. 이번이 Git 챕터의 마지막 관찰이다. 이 도구들이 실제 팀에서 어떻게 하나의 흐름으로 이어지는지 보고, 마지막 개체를 등록해 Git 챕터를 완성할 차례다.
 
 ![협업 워크플로우의 등장 — 코딩 도감 배틀 화면](./images/01-team-workflow-encounter.png)
 
@@ -99,10 +99,8 @@ Git 명령어를 하나씩 배울 땐 각각 독립된 도구처럼 느껴졌는
 
 5주 전, Git은 그냥 명령어를 외워서 쓰는 도구였다. 이제는 기록(commit)을 남기고, 평행세계(branch)를 만들고, 다시 합치고(merge), 실수를 되돌리고(reset/revert/restore), 충돌을 해결하고(conflict), 원격과 대화하고(fetch/pull/push), 이력을 다시 쌓고(rebase), 마지막으로 팀과 함께 검토받는(PR/review) 하나의 완결된 흐름으로 보인다.
 
-그래서 이번엔 특별히, 마지막 단계인 No.005 워크플로 수호자를 등록하면서 No.001부터 이어 온 Git 챕터를 코딩 도감에 모두 채운다.
+다음 챕터는 코딩 도감 #02 Linux다. Git으로 기록을 남기던 그 명령어들이 실제로 어디서 실행되고 있었는지, 이번엔 터미널 너머의 셸부터 관찰해 볼 차례다.
 
-![코딩 도감 등록 완료 — No.005 워크플로 수호자](./images/05-git-registration-complete.png)
+그 전에, Git 챕터의 마지막 개체를 코딩 도감에 등록한다. **No.005 워크플로 수호자** — 기록을 연결하고, 협업을 지킨다. 이로써 No.001 깃새싹부터 이어 온 Git 챕터 다섯 칸이 모두 채워졌다.
 
-다음 개체는 코딩 도감 #02 Linux다. Git으로 기록을 남기던 그 명령어들이 실제로 어디서 실행되고 있었는지, 이번엔 터미널 너머의 셸부터 관찰해 볼 차례다.
-
-![협업 워크플로우 관찰 기록 5/5 — 다음: 코딩 도감 #02 Linux](./images/04-observation-5-of-5.png)
+![코딩 도감 등록 카드 — No.005 워크플로 수호자, 분류: 팀 Git 작업 절차, 특성: 기록을 연결하고 협업을 지킨다, Git 챕터 5/5 등록 완료](./images/04-workflow-guardian-registration.png)

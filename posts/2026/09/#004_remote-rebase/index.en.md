@@ -101,6 +101,8 @@ So the rule I settled on is simple. **A local branch only I've seen is fair game
 
 This time I really understood that a remote repository isn't just "a warehouse for storing code." Fetch, pull, and push are a way of talking that assumes I and the remote can be at different points in history, and rebase is a tool for restacking that history into whatever shape I want.
 
-Four observations in, I feel like I've mostly figured out Git as a specimen. For the last observation, it's time to put all of this inside a real team-collaboration workflow — and officially register Git into the Codigdex.
+Four observations in, the Git chapter has just one slot left. For the last observation, it's time to put everything so far inside a real team-collaboration workflow.
 
-![Remote/Rebase observation log 4/5 — next up: the collaboration workflow](./images/04-observation-4-of-5.en.png)
+Before that, the fourth specimen goes into the Codigdex. **No.004 Remote Rebaser** — syncs remotes, rebuilds history.
+
+![Codigdex registration card — No.004 Remote Rebaser, type: remote and history rebuild, trait: syncs remotes and rebuilds history, Git chapter 4/5](./images/04-remote-rebaser-registration.en.png)

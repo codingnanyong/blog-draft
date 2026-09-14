@@ -129,9 +129,11 @@ Git started out feeling like a command-memorization game,
 but it turned out to be closer to a recording device that lets you rewind time.
 
 I still haven't fully gotten used to branches or merges.
-There's more to observe before I really understand Git as a specimen.
-
-That's it for the first observation log.
+There's more to observe before the Git chapter is filled in.
 Next time, I'll be encountering branches and merges.
 
-![Git observation log 1/5 — next up: Branch and Merge](./images/04-git-observation-1-of-5.en.v2.png)
+Before that, I'm registering what this first observation turned up in the Codigdex.
+**No.001 Git Sprout** — records change.
+That fills the first of five slots in the Git chapter.
+
+![Codigdex registration card — No.001 Git Sprout, type: version control system, trait: records change, Git chapter 1/5](./images/04-git-sprout-registration.en.png)

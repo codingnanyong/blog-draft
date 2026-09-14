@@ -1,14 +1,14 @@
 ---
-title: "Codigdex #01 — The Collaboration Workflow, and Git's Registration"
-description: "The final week of the Codigdex series' Git chapter. Observing the Issue -> Branch -> Commit -> PR -> Review -> Merge workflow, and officially registering Git into the dex."
+title: "Codigdex #01 — The Collaboration Workflow, and a Complete Git Chapter"
+description: "The final week of the Codigdex series' Git chapter. Observing the Issue -> Branch -> Commit -> PR -> Review -> Merge workflow, and registering No.005 Workflow Guardian to complete the Git chapter."
 tags: [git, codigdex, collaboration, pull request]
 date: 2026-09-28
 status: draft
 ---
 
-# Codigdex #01 — The Collaboration Workflow, and Git's Registration
+# Codigdex #01 — The Collaboration Workflow, and a Complete Git Chapter
 
-Four observations in, I've run into nearly every major Git tool: commits, branches, merges, undoing changes, merge conflicts, remotes, and rebase. This is the last observation for Git as a specimen. Time to see how all these tools come together into one flow on a real team, and officially register Git into the Codigdex.
+Four observations in, I've run into nearly every major Git tool: commits, branches, merges, undoing changes, merge conflicts, remotes, and rebase. This is the last observation in the Git chapter. Time to see how all these tools come together into one flow on a real team, and register the final specimen to complete the Git chapter.
 
 ![The collaboration workflow appears — Codigdex battle screen](./images/01-team-workflow-encounter.en.png)
 
@@ -99,10 +99,8 @@ Learning each Git command one at a time made them feel like independent tools. S
 
 Five weeks ago, Git was just a set of commands to memorize. Now it looks like one complete flow: leaving a record (commit), spinning up parallel worlds (branch), merging them back (merge), undoing mistakes (reset/revert/restore), resolving collisions (conflict), talking to a remote (fetch/pull/push), restacking history (rebase), and finally, getting reviewed together with a team (PR/review).
 
-So this time, specially, registering the final stage, No.005 Workflow Guardian, fills in the whole Git chapter of the Codigdex, starting from No.001.
+The next chapter is Codigdex #02: Linux. All those Git commands had to run somewhere — so next, it's time to observe what's on the other side of the terminal, starting with the shell.
 
-![Codigdex registration complete — No.005 Workflow Guardian](./images/05-git-registration-complete.en.png)
+Before that, the last specimen of the Git chapter goes into the Codigdex. **No.005 Workflow Guardian** — connects records, guards teamwork. With it, all five slots of the Git chapter, starting from No.001 Git Sprout, are filled.
 
-The next specimen is Codigdex #02: Linux. All those Git commands had to run somewhere — so next, it's time to observe what's on the other side of the terminal, starting with the shell.
-
-![Collaboration workflow observation log 5/5 — next: Codigdex #02 Linux](./images/04-observation-5-of-5.en.png)
+![Codigdex registration card — No.005 Workflow Guardian, type: team Git workflow, trait: connects records and guards teamwork, Git chapter 5/5 complete](./images/04-workflow-guardian-registration.en.png)
