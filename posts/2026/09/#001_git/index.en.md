@@ -48,7 +48,7 @@ Honestly, my first impression of Git was something like this.
 
 I was just memorizing this sequence and running it:
 
-```
+```bash
 git add .
 git commit -m "message"
 git push
