@@ -40,7 +40,7 @@ status: draft
 
 가장 먼저 정리한 건 로컬과 원격이 항상 실시간으로 연결돼 있는 게 아니라는 점이었다. 원격의 최신 상태를 알고 싶으면 내가 먼저 물어봐야 한다.
 
-```
+```bash
 git fetch    # 원격의 최신 상태만 확인 (내 작업물엔 아직 반영 안 함)
 git pull     # fetch + 내 브랜치에 병합까지 한 번에
 git push     # 내 커밋을 원격에 업로드
@@ -60,7 +60,7 @@ git push     # 내 커밋을 원격에 업로드
 
 merge 말고 이력을 합치는 또 다른 방법이 rebase라는 걸 알게 됐다.
 
-```
+```bash
 git switch feature/login
 git rebase main
 ```
@@ -79,7 +79,7 @@ merge가 두 타임라인을 그대로 두고 합치는 merge commit을 만드�
 
 이미 `push`해서 다른 사람이 pull받아 간 브랜치를 rebase하면, 내 로컬 이력과 원격 이력이 완전히 다른 커밋들로 갈라진다. 그 상태로 push하려면 Git이 거부하고, `--force`로 밀어붙이면 다른 사람의 로컬 이력과 어긋나버린다.
 
-```
+```bash
 git push --force-with-lease   # 그래도 강제로 올려야 한다면, 최소한 이 옵션으로
 ```
 
