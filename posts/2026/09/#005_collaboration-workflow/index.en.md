@@ -1,14 +1,14 @@
 ---
-title: "Codigdex #01 — The Collaboration Workflow, and Git's Registration"
-description: "The final week of the Codigdex series' Git chapter. Observing the Issue -> Branch -> Commit -> PR -> Review -> Merge workflow, and officially registering Git into the dex."
+title: "Codigdex #01 — The Collaboration Workflow, and a Complete Git Chapter"
+description: "The final week of the Codigdex series' Git chapter. Observing the Issue -> Branch -> Commit -> PR -> Review -> Merge workflow, and registering No.005 Workflow Guardian to complete the Git chapter."
 tags: [git, codigdex, collaboration, pull request]
 date: 2026-09-28
 status: draft
 ---
 
-# Codigdex #01 — The Collaboration Workflow, and Git's Registration
+# Codigdex #01 — The Collaboration Workflow, and a Complete Git Chapter
 
-Four observations in, I've run into nearly every major Git tool: commits, branches, merges, undoing changes, merge conflicts, remotes, and rebase. This is the last observation for Git as a specimen. Time to see how all these tools come together into one flow on a real team, and officially register Git into the Codigdex.
+Four observations in, I've run into nearly every major Git tool: commits, branches, merges, undoing changes, merge conflicts, remotes, and rebase. This is the last observation in the Git chapter. Time to see how all these tools come together into one flow on a real team, and register the final specimen to complete the Git chapter.
 
 ![The collaboration workflow appears — Codigdex battle screen](./images/01-team-workflow-encounter.en.png)
 

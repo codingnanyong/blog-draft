@@ -1,14 +1,14 @@
 ---
-title: "코딩 도감 #01 — 협업 워크플로우, 그리고 Git 등록 완료"
-description: "코딩 도감 시리즈 Git 편 마지막 주차. Issue·Branch·Commit·PR·Review·Merge로 이어지는 협업 워크플로우를 관찰하고, Git을 도감에 정식 등록한다."
+title: "코딩 도감 #01 — 협업 워크플로우, 그리고 Git 챕터 완성"
+description: "코딩 도감 시리즈 Git 편 마지막 주차. Issue·Branch·Commit·PR·Review·Merge로 이어지는 협업 워크플로우를 관찰하고, No.005 워크플로 수호자를 등록해 Git 챕터를 완성한다."
 tags: [git, 코딩도감, 협업, pull request]
 date: 2026-09-28
 status: draft
 ---
 
-# 코딩 도감 #01 — 협업 워크플로우, 그리고 Git 등록 완료
+# 코딩 도감 #01 — 협업 워크플로우, 그리고 Git 챕터 완성
 
-지난 네 번의 관찰로 commit, branch, merge, 되돌리기, merge conflict, 원격 저장소, rebase까지 Git의 주요 도구를 거의 다 마주쳤다. 이번이 Git 개체의 마지막 관찰이다. 이 도구들이 실제 팀에서 어떻게 하나의 흐름으로 이어지는지 보고, Git을 코딩 도감에 정식으로 등록할 차례다.
+지난 네 번의 관찰로 commit, branch, merge, 되돌리기, merge conflict, 원격 저장소, rebase까지 Git의 주요 도구를 거의 다 마주쳤다. 이번이 Git 챕터의 마지막 관찰이다. 이 도구들이 실제 팀에서 어떻게 하나의 흐름으로 이어지는지 보고, 마지막 개체를 등록해 Git 챕터를 완성할 차례다.
 
 ![협업 워크플로우의 등장 — 코딩 도감 배틀 화면](./images/01-team-workflow-encounter.png)
 
