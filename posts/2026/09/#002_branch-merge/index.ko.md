@@ -114,4 +114,6 @@ git log --oneline --graph --all
 
 다만 merge 도중 두 세계가 같은 곳을 건드리면 무슨 일이 벌어지는지는 아직 제대로 겪어보지 못했다. 다음 관찰에서는 되돌리기(`reset`/`revert`/`checkout`)와 merge conflict를 직접 마주해볼 차례다.
 
-![Branch와 Merge 관찰 기록 2/5 — 다음 관찰은 되돌리기와 충돌](./images/04-observation-2-of-5.png)
+그 전에, 이번에 관찰한 개체를 코딩 도감에 등록한다. **No.002 브랜치 쌍둥이** — 갈라지고 다시 합친다. Git 챕터도 두 칸째가 채워졌다.
+
+![코딩 도감 등록 카드 — No.002 브랜치 쌍둥이, 분류: 평행 작업 관리, 특성: 갈라지고 다시 합친다, Git 챕터 2/5](./images/04-branch-twins-registration.png)

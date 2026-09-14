@@ -37,7 +37,7 @@ Every weekly post requires five images per language: one thumbnail plus four num
   - `01`: `posts/2026/09/#001_git/images/01-git-encounter.v2.png` and `posts/2026/09/#002_branch-merge/images/01-branch-merge-encounter.png`.
   - `02`: `posts/2026/09/#001_git/images/02-git-three-areas.v2.png` and `posts/2026/09/#002_branch-merge/images/02-branch-parallel-worlds.png`.
   - `03`: `posts/2026/09/#001_git/images/03-git-basic-flow.v2.png` and `posts/2026/09/#002_branch-merge/images/03-merge-timelines.png`.
-  - `04`: `posts/2026/09/#001_git/images/04-git-observation-1-of-5.v2.png` and `posts/2026/09/#002_branch-merge/images/04-observation-2-of-5.png`.
+  - `04`: `posts/2026/09/#001_git/images/04-git-sprout-registration.png` and `posts/2026/09/#002_branch-merge/images/04-branch-twins-registration.png`.
 - When a later image is explicitly approved by the user, treat it as an additional reference for the same numbered role.
 
 ### Visual identity
@@ -55,7 +55,7 @@ Every weekly post requires five images per language: one thumbnail plus four num
 - `01 — encounter`: square `1:1` and intentionally sparse. Reproduce the classic RPG battle screen: specimen name, `Lv.<week>`, and one HP bar at the upper left; explorer at the lower left; one or two simple topic specimens at the upper right; one large double-border dialogue box across the bottom. Do not add scenery, an infographic, a command menu, a desk, or extra panels.
 - `02 — first concept`: square `1:1` teaching card. Use one thin double-border title panel at the top, a simple two- or three-part comparison in the center, and one short caption panel at the bottom. Use large icons, a small recurring explorer/specimen pair, and generous cream space.
 - `03 — second concept or process`: square `1:1` timeline or flow scene. Use one framed title at the top, one large central timeline/process diagram with the explorer participating, and one short takeaway panel at the bottom. Keep it instructional and uncluttered rather than turning it into another battle screen.
-- `04 — observation log`: square `1:1` and must reproduce the established Codigdex registration UI. Use a thick black/orange outer frame, black header with `관찰 기록 <week>/<total>` or its English localization, specimen window on the left, type and result panels on the right, a progress bar with exactly the current number of slots filled, the explorer recording notes, and a full-width black bottom panel that previews the confirmed next topic.
+- `04 — registration card`: square `1:1` and must end every weekly post with the established Codigdex registration UI. Every weekly `No.00x` subject is an individual registered specimen; do not label this image as an observation log. Use a thick black/orange outer frame, black `코딩 도감 등록` header or its English localization, specimen window on the left, number/name plus type and trait panels on the right, an approval stamp, a progress bar with exactly the current number of chapter slots filled, the explorer recording notes, and a full-width black bottom panel declaring that week's registration complete. On the final week, the bottom panel declares the whole chapter complete. Keep any next-topic preview in the article prose before this final image so the post visually ends on registration.
 
 ### Localization and text validation
 
@@ -63,14 +63,14 @@ Every weekly post requires five images per language: one thumbnail plus four num
 - For a localization edit, explicitly instruct the image tool to change only the requested text and preserve every other pixel-level design decision.
 - Use the same filenames with `.en.png` for English assets.
 - List every visible string verbatim in the prompt. Require no other readable text.
-- Verify every result visually before saving. Check Hangul, English spelling, punctuation, series number, `Lv` number, observation fraction, progress slots, branch labels, and next-topic text.
+- Verify every result visually before saving. Check Hangul, English spelling, punctuation, specimen number, `Lv` number, chapter fraction, progress slots, branch labels, and registration-completion text.
 - Reject and regenerate an image when text is misspelled, Hangul is malformed, the English composition drifts from Korean, the wrong number of progress slots is filled, or the numbered template is not followed.
 - Keep captions short enough to fit the established pixel typography. Prefer one concise sentence or phrase over dense explanatory copy.
 
 ### Generation and acceptance sequence
 
 1. Read the Korean and English drafts and identify the exact paragraph each image supports.
-2. Confirm the week number, total observation count, and next topic from the roadmap.
+2. Confirm the specimen number, current/total chapter count, and next topic from the roadmap.
 3. Plan the thumbnail and all four numbered images before generating the first asset.
 4. Generate one distinct asset per image-generation call; do not substitute a single batch prompt for different roles.
 5. Inspect each Korean output, localize the accepted version to English, and inspect the localized output again.

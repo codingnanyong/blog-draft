@@ -112,6 +112,8 @@ Only after seeing branches split and rejoin with this command did the difference
 
 Before I knew about branches, I thought Git was "one straight line." Now I see Git is closer to a tool that lets you freely spin up parallel worlds and merge the verified ones back in.
 
-I still haven't really experienced what happens when two worlds touch the same spot during a merge. Next observation, it's time to face reset/revert/checkout and merge conflicts head-on.
+I still haven't really experienced what happens when two worlds touch the same spot during a merge, though. Next observation, it's time to face reset/revert/checkout and merge conflicts head-on.
 
-![Branch and Merge observation log 2/5 — next up: undoing changes and conflicts](./images/04-observation-2-of-5.en.png)
+Before that, this week's specimen goes into the Codigdex. **No.002 Branch Twins** — splits and merges again. That's the second slot of the Git chapter filled.
+
+![Codigdex registration card — No.002 Branch Twins, type: parallel work, trait: splits and merges again, Git chapter 2/5](./images/04-branch-twins-registration.en.png)

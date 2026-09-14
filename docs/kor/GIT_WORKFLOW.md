@@ -8,13 +8,13 @@
 
 바이너리 파일(이미지 등)은 텍스트 편집기 기반 커밋으로 손상될 수 있으므로, GitHub의 "Upload files" 업로드 화면(또는 동등한 바이너리 안전 경로)을 사용해 커밋합니다. 커밋 후에는 raw 파일의 시그니처를 확인해 손상 여부를 검증합니다.
 
-### `main` PR과 개체 단위 Release
+### `main` PR과 챕터 단위 Release
 
 `develop` → `main` PR은 검토가 끝난 원고를 모아서 반영하는 용도이며, 주차별 PR에는 release 게이트가 없습니다. 병합 후 Velog/Medium에 수동으로 발행하고 Notion Sprint Tracker에 로그를 남깁니다.
 
-태그와 GitHub Release는 **하나의 개체(`#번호`)의 모든 주차 원고가 `main`에 반영됐을 때** 한 번 발행합니다.
+태그와 GitHub Release는 **하나의 챕터(`#번호`)의 모든 주차 원고가 `main`에 반영됐을 때** 한 번 발행합니다.
 
-- 태그 이름: `codigdex-<개체 번호 두 자리>-<개체 슬러그>` (예: `codigdex-01-git`, `codigdex-02-linux`)
-- 태그 대상: 해당 개체의 마지막 원고가 반영된 `main` 병합 커밋
-- Release 제목: `코딩 도감 #NN <개체명> — 도감 등록 완료`
-- Release 본문: 주차별 글 폴더와 도감 번호 목록, 다음 개체 예고
+- 태그 이름: `codigdex-<챕터 번호 두 자리>-<챕터 슬러그>` (예: `codigdex-01-git`, `codigdex-02-linux`)
+- 태그 대상: 해당 챕터의 마지막 원고가 반영된 `main` 병합 커밋
+- Release 제목: `코딩 도감 #NN <챕터명> — 도감 등록 완료`
+- Release 본문: 주차별 글 폴더와 도감 번호 목록, 다음 챕터 예고
