@@ -36,7 +36,7 @@ My first impression of branches was something like this.
 
 For now I just did what I was told:
 
-```
+```bash
 git checkout -b feature/my-work
 ```
 
@@ -54,7 +54,7 @@ A branch isn't a copy of files — it's **a separate commit timeline inside the 
 - Creating a new branch spins off another timeline that branches from that point
 - The two timelines don't affect each other — whatever I do on the `feature` branch, `main` stays exactly as it was
 
-```
+```bash
 git branch feature/login       # just create the branch
 git switch feature/login       # move to the branch
 # or in one step
@@ -71,7 +71,7 @@ Once I understood that, the answer to "why split into branches" came naturally: 
 
 Once work on a branch is done, that timeline needs to be merged back into the original branch. That's merge.
 
-```
+```bash
 git switch main
 git merge feature/login
 ```
@@ -91,7 +91,7 @@ After doing a few merges, I noticed the result isn't always identical.
 - **Fast-forward merge**: if `main` hasn't changed at all since the branch split off, Git just moves the pointer forward. No new commit is created.
 - **3-way merge**: if `main` also picked up other commits in the meantime, Git compares the changes against the two branches' common ancestor and creates a new **merge commit**.
 
-```
+```bash
 git log --oneline --graph --all
 ```
 

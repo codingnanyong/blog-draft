@@ -36,7 +36,7 @@ status: published
 
 일단은 시키는 대로
 
-```
+```bash
 git checkout -b feature/my-work
 ```
 
@@ -54,7 +54,7 @@ git checkout -b feature/my-work
 - 새 브랜치를 만들면 그 시점부터 갈라지는 또 다른 타임라인이 생긴다
 - 두 타임라인은 서로 영향을 주지 않는다 — 내가 `feature` 브랜치에서 무슨 짓을 해도 `main`은 그대로다
 
-```
+```bash
 git branch feature/login       # 브랜치 생성만
 git switch feature/login       # 브랜치로 이동
 # 또는 한 번에
@@ -71,7 +71,7 @@ git switch -c feature/login
 
 브랜치에서 작업을 끝내면, 이제 그 타임라인을 원래 브랜치에 합쳐야 한다. 그게 merge다.
 
-```
+```bash
 git switch main
 git merge feature/login
 ```
@@ -91,7 +91,7 @@ merge를 몇 번 해보니, 결과가 매번 똑같지 않다는 걸 알게 됐�
 - **Fast-forward merge**: `main`이 갈라진 이후로 전혀 변경되지 않았다면, Git은 그냥 포인터만 앞으로 옮긴다. 새로운 커밋이 생기지 않는다.
 - **3-way merge**: `main`도 그 사이에 다른 커밋이 쌓였다면, Git은 두 브랜치의 공통 조상을 기준으로 변경사항을 비교해서 **merge commit**을 새로 만든다.
 
-```
+```bash
 git log --oneline --graph --all
 ```
 
