@@ -101,8 +101,8 @@ Git 명령어를 하나씩 배울 땐 각각 독립된 도구처럼 느껴졌는
 
 그래서 이번엔 특별히, 마지막 단계인 No.005 워크플로 수호자를 등록하면서 No.001부터 이어 온 Git 챕터를 코딩 도감에 모두 채운다.
 
-![코딩 도감 등록 완료 — No.001 Git](./images/05-git-registration-complete.png)
+![코딩 도감 등록 완료 — No.005 워크플로 수호자](./images/05-git-registration-complete.png)
 
 다음 개체는 코딩 도감 #02 Linux다. Git으로 기록을 남기던 그 명령어들이 실제로 어디서 실행되고 있었는지, 이번엔 터미널 너머의 셸부터 관찰해 볼 차례다.
 
-![협업 워크플로우 관찰 기록 5/5 — 다음: 코딩 도감 #02 주제 선정](./images/04-observation-5-of-5.png)
+![협업 워크플로우 관찰 기록 5/5 — 다음: 코딩 도감 #02 Linux](./images/04-observation-5-of-5.png)
