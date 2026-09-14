@@ -16,5 +16,6 @@ A tag and GitHub Release are published once **every weekly draft of one chapter 
 
 - Tag name: `codigdex-<two-digit chapter number>-<chapter slug>` (e.g. `codigdex-01-git`, `codigdex-02-linux`)
 - Tag target: the `main` merge commit that brought in that chapter's last draft
-- Release title: `Codigdex #NN <chapter> — Registration Complete`
-- Release notes: each week's post folder and dex number, plus the next chapter preview
+- Release title: `Codigdex #NN <chapter> — Chapter Complete`
+- Release notes: a table of each week's registered specimen (dex number `NO.00x`, name, trait, post title, folder, publish date, status), operating rules that changed during the chapter, the next chapter preview, and a short English summary
+- If drafts from the same chapter land on `main` again after tagging, move the tag to the latest `main` merge commit and refresh the release notes too

@@ -16,7 +16,7 @@ After facing undoing changes and merge conflicts last week, it hit me that every
 
 ## Specimen info
 
-- Dex number: No.004 Remote Rebaser
+- Dex number: NO.004 Remote Rebaser
 - Name: Remote, Rebase
 - Classification: Remote collaboration feature + commit-history restructuring feature
 - Encounter rate: Very high (used daily on collaborative projects)
@@ -103,6 +103,6 @@ This time I really understood that a remote repository isn't just "a warehouse f
 
 Four observations in, the Git chapter has just one slot left. For the last observation, it's time to put everything so far inside a real team-collaboration workflow.
 
-Before that, the fourth specimen goes into the Codigdex. **No.004 Remote Rebaser** — syncs remotes, rebuilds history.
+Before that, the fourth specimen goes into the Codigdex. **NO.004 Remote Rebaser** — syncs remotes, rebuilds history.
 
-![Codigdex registration card — No.004 Remote Rebaser, type: remote and history rebuild, trait: syncs remotes and rebuilds history, Git chapter 4/5](./images/04-remote-rebaser-registration.en.png)
+![Codigdex registration card — NO.004 Remote Rebaser, type: remote and history rebuild, trait: syncs remotes and rebuilds history, Git chapter 4/5](./images/04-remote-rebaser-registration.en.png)

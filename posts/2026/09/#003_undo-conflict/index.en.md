@@ -18,7 +18,7 @@ This week, it's time to face both head-on.
 
 ## Specimen info
 
-- Dex number: No.003 Conflict Rewinder
+- Dex number: NO.003 Conflict Rewinder
 - Name: Reset, Revert, Restore, Merge Conflict
 - Classification: Git's undo tools, plus the collision every collaborator eventually runs into
 - Encounter rate: Very high (mistakes always happen, and conflicts arrive sooner or later once you collaborate)
@@ -137,6 +137,6 @@ Sorting out the undo commands noticeably shrank my fear of making mistakes — k
 
 Everything so far has happened entirely on my own machine. Starting next week, the stage gets bigger — it's time to observe exchanging code with other people through a remote repository, and cleaning up commit history with rebase.
 
-Before the stage changes, this specimen goes into the Codigdex. **No.003 Conflict Rewinder** — rewinds mistakes, resolves conflicts. The Git chapter is now past the halfway mark.
+Before the stage changes, this specimen goes into the Codigdex. **NO.003 Conflict Rewinder** — rewinds mistakes, resolves conflicts. The Git chapter is now past the halfway mark.
 
-![Codigdex registration card — No.003 Conflict Rewinder, type: undo and conflicts, trait: rewinds mistakes and resolves conflicts, Git chapter 3/5](./images/04-conflict-rewinder-registration.en.png)
+![Codigdex registration card — NO.003 Conflict Rewinder, type: undo and conflicts, trait: rewinds mistakes and resolves conflicts, Git chapter 3/5](./images/04-conflict-rewinder-registration.en.png)
