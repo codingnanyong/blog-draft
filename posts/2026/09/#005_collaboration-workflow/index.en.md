@@ -101,8 +101,8 @@ Five weeks ago, Git was just a set of commands to memorize. Now it looks like on
 
 So this time, specially, registering the final stage, No.005 Workflow Guardian, fills in the whole Git chapter of the Codigdex, starting from No.001.
 
-![Codigdex registration complete — No.001 Git](./images/05-git-registration-complete.en.png)
+![Codigdex registration complete — No.005 Workflow Guardian](./images/05-git-registration-complete.en.png)
 
 The next specimen is Codigdex #02: Linux. All those Git commands had to run somewhere — so next, it's time to observe what's on the other side of the terminal, starting with the shell.
 
-![Collaboration workflow observation log 5/5 — next: choosing Codigdex #02's topic](./images/04-observation-5-of-5.en.png)
+![Collaboration workflow observation log 5/5 — next: Codigdex #02 Linux](./images/04-observation-5-of-5.en.png)
