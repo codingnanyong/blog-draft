@@ -1,6 +1,6 @@
 ---
 title: "Codigdex #01 — The Collaboration Workflow, and a Complete Git Chapter"
-description: "The final week of the Codigdex series' Git chapter. Observing the Issue -> Branch -> Commit -> PR -> Review -> Merge workflow, and registering No.005 Workflow Guardian to complete the Git chapter."
+description: "The final week of the Codigdex series' Git chapter. Observing the Issue -> Branch -> Commit -> PR -> Review -> Merge workflow, and registering NO.005 Workflow Guardian to complete the Git chapter."
 tags: [git, codigdex, collaboration, pull request]
 date: 2026-09-28
 status: draft
@@ -16,7 +16,7 @@ Four observations in, I've run into nearly every major Git tool: commits, branch
 
 ## Specimen info
 
-- Dex number: No.005 Workflow Guardian
+- Dex number: NO.005 Workflow Guardian
 - Name: Collaboration Workflow (Issue → Branch → Commit → PR → Review → Merge)
 - Classification: Team-level Git working procedure
 - Encounter rate: Very high (shows up without exception on any team project)
@@ -101,6 +101,6 @@ Five weeks ago, Git was just a set of commands to memorize. Now it looks like on
 
 The next chapter is Codigdex #02: Linux. All those Git commands had to run somewhere — so next, it's time to observe what's on the other side of the terminal, starting with the shell.
 
-Before that, the last specimen of the Git chapter goes into the Codigdex. **No.005 Workflow Guardian** — connects records, guards teamwork. With it, all five slots of the Git chapter, starting from No.001 Git Sprout, are filled.
+Before that, the last specimen of the Git chapter goes into the Codigdex. **NO.005 Workflow Guardian** — connects records, guards teamwork. With it, all five slots of the Git chapter, starting from NO.001 Git Sprout, are filled.
 
-![Codigdex registration card — No.005 Workflow Guardian, type: team Git workflow, trait: connects records and guards teamwork, Git chapter 5/5 complete](./images/04-workflow-guardian-registration.en.png)
+![Codigdex registration card — NO.005 Workflow Guardian, type: team Git workflow, trait: connects records and guards teamwork, Git chapter 5/5 complete](./images/04-workflow-guardian-registration.en.png)

@@ -18,7 +18,7 @@ This week's observation log starts here.
 
 ## Specimen info
 
-- Dex number: No.002 Branch Twins
+- Dex number: NO.002 Branch Twins
 - Name: Branch, Merge
 - Classification: Git's parallel-work management feature
 - Encounter rate: Very high (essential on collaborative projects)
@@ -114,6 +114,6 @@ Before I knew about branches, I thought Git was "one straight line." Now I see G
 
 I still haven't really experienced what happens when two worlds touch the same spot during a merge, though. Next observation, it's time to face reset/revert/checkout and merge conflicts head-on.
 
-Before that, this week's specimen goes into the Codigdex. **No.002 Branch Twins** — splits and merges again. That's the second slot of the Git chapter filled.
+Before that, this week's specimen goes into the Codigdex. **NO.002 Branch Twins** — splits and merges again. That's the second slot of the Git chapter filled.
 
-![Codigdex registration card — No.002 Branch Twins, type: parallel work, trait: splits and merges again, Git chapter 2/5](./images/04-branch-twins-registration.en.png)
+![Codigdex registration card — NO.002 Branch Twins, type: parallel work, trait: splits and merges again, Git chapter 2/5](./images/04-branch-twins-registration.en.png)

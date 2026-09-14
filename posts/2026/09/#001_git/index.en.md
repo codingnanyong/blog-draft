@@ -30,7 +30,7 @@ pretty much the first thing anyone runs into once they start developing.
 
 ## Specimen info
 
-- Dex number: No.001 Git Sprout
+- Dex number: NO.001 Git Sprout
 - Name: Git
 - Classification: Version control system
 - Encounter rate: Very high
@@ -133,7 +133,7 @@ There's more to observe before the Git chapter is filled in.
 Next time, I'll be encountering branches and merges.
 
 Before that, I'm registering what this first observation turned up in the Codigdex.
-**No.001 Git Sprout** — records change.
+**NO.001 Git Sprout** — records change.
 That fills the first of five slots in the Git chapter.
 
-![Codigdex registration card — No.001 Git Sprout, type: version control system, trait: records change, Git chapter 1/5](./images/04-git-sprout-registration.en.png)
+![Codigdex registration card — NO.001 Git Sprout, type: version control system, trait: records change, Git chapter 1/5](./images/04-git-sprout-registration.en.png)
