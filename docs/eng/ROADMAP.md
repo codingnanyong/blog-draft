@@ -2,7 +2,7 @@
 
 ## The "Codigdex" series concept
 
-Like a Pokédex, each series (`#number`) covers one technical "specimen." A specimen is learned step by step over several weeks, from the basics to practical use, and the final week wraps up by formally registering that specimen in the "Codigdex."
+Like a Pokédex, each series (`#number`) is one technology **chapter**. Each week within a chapter observes a distinct specimen such as `No.001` or `No.002`, then formally registers that specimen in the Codigdex at the very end of the post. The final week registers its own specimen and also marks the whole chapter complete.
 
 > **Week count isn't fixed at 5.** Each specimen's week table below is the specific breakdown decided for that specimen, and it's re-decided per specimen based on its learning curve. See [Criteria for picking the next specimen](#criteria-for-picking-the-next-specimen) for details.
 
@@ -18,7 +18,7 @@ The user (codingnanyong) works as a Data Engineer, and specimen selection for th
 | Week 4 | Remote repositories & rebase | 2026-09-21 | COD-54 | Drafted |
 | Week 5 | Collaboration workflow (wrap-up) | 2026-09-28 | COD-55 | Drafted |
 
-Each week follows the same process defined in [Git branch strategy](GIT_WORKFLOW.md) and [Content & publishing workflow](WORKFLOW.md). Once week 5 wraps up, the Git specimen is formally registered in the Codigdex, and the series moves on to the next specimen, `#02` Linux.
+Each week follows the same process defined in [Git branch strategy](GIT_WORKFLOW.md) and [Content & publishing workflow](WORKFLOW.md). No.001 through No.005 are registered individually at the end of their respective posts; once week 5 is registered, the Git chapter is complete and the series moves on to the next chapter, `#02` Linux.
 
 ## #02 — Linux (draft — proposed 5 weeks, not confirmed)
 

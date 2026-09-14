@@ -137,4 +137,6 @@ Sorting out the undo commands noticeably shrank my fear of making mistakes — k
 
 Everything so far has happened entirely on my own machine. Starting next week, the stage gets bigger — it's time to observe exchanging code with other people through a remote repository, and cleaning up commit history with rebase.
 
-![Undo and conflict-resolution observation log 3/5](./images/04-conflict-resolution.en.png)
+Before the stage changes, this specimen goes into the Codigdex. **No.003 Conflict Rewinder** — rewinds mistakes, resolves conflicts. The Git chapter is now past the halfway mark.
+
+![Codigdex registration card — No.003 Conflict Rewinder, type: undo and conflicts, trait: rewinds mistakes and resolves conflicts, Git chapter 3/5](./images/04-conflict-rewinder-registration.en.png)
