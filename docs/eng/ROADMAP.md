@@ -15,7 +15,7 @@ The user (codingnanyong) works as a Data Engineer, and chapter selection for thi
 | Week 1 | Git basics — first encounter | 2026-09-03 | COD-41 | Published |
 | Week 2 | Git branching and merging | 2026-09-07 | COD-42 | Published |
 | Week 3 | Undoing changes & merge conflicts | 2026-09-14 | COD-53 | Published |
-| Week 4 | Remote repositories & rebase | 2026-09-21 | COD-54 | Drafted |
+| Week 4 | Remote repositories & rebase | 2026-09-21 | COD-54 | Published |
 | Week 5 | Collaboration workflow (wrap-up) | 2026-09-28 | COD-55 | Drafted |
 
 Each week follows the same process defined in [Git branch strategy](GIT_WORKFLOW.md) and [Content & publishing workflow](WORKFLOW.md). NO.001 through NO.005 are registered individually at the end of their respective posts; once week 5 is registered, the Git chapter is complete and the series moves on to the next chapter, `#02` Linux.
