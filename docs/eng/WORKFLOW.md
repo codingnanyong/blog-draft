@@ -36,7 +36,7 @@ Publish on Velog (Korean) / Medium (English) & update the log
 - The Korean draft (`index.ko.md`) is published on Velog; the English translation (`index.en.md`) is published on Medium. The English translation isn't required every week — it can be done selectively per installment.
 - Publishing on either platform is done manually; the log (Notion Sprint Tracker) is updated right after.
 - Set a draft's frontmatter `date` to the actual upcoming Monday it's scheduled to publish.
-- **Google Drive backup**: at the same point content is pushed to GitHub, save that week's `index.ko.md`/`index.en.md` as plain markdown (not converted to Google Docs — conversion breaks markdown syntax) under `My Drive/Developer/Project/Blog/2026/09/<repo folder name>/`. Images are not uploaded by Claude directly due to size — drag the local `images/` folder into the same location by hand.
+- **Google Drive backup**: at the same point content is pushed to GitHub, save that week's `index.ko.md`/`index.en.md` as plain markdown (not converted to Google Docs — conversion breaks markdown syntax) under `My Drive/Developer/Project/codigdex-blog/2026/09/<repo folder name>/`. Images are not uploaded by Claude directly due to size — drag the local `images/` folder into the same location by hand.
 
 ## Branch integration
 
@@ -46,4 +46,4 @@ Reviewed changes are merged from a `feat/*` branch into `develop` through a pull
 
 - Linear: a parent issue per week plus 7 standard sub-issues track progress.
 - Notion Sprint Tracker: each week is registered as one sprint with its objective, duration, and deliverables.
-- Slack (#velog-automation): status notifications for draft prep, sync, and publish failures.
+- Slack (#codigdex-blog): status notifications for draft prep, sync, and publish failures.
