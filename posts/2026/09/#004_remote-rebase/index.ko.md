@@ -3,7 +3,7 @@ title: "코딩 도감 #01 — 원격 저장소와 Rebase, 이력을 다시 쌓�
 description: "코딩 도감 시리즈 Git 편 4주차. fetch·pull·push로 원격과 대화하는 법과, rebase로 커밋 이력을 다시 쌓는 법을 관찰한다."
 tags: [git, 코딩도감, remote, rebase]
 date: 2026-09-21
-status: draft
+status: published
 ---
 
 # 코딩 도감 #01 — 원격 저장소와 Rebase, 이력을 다시 쌓는 법

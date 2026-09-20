@@ -3,7 +3,7 @@ title: "Codigdex #01 — Remotes and Rebase, Rebuilding History"
 description: "Week 4 of the Codigdex series' Git chapter. Observing how to talk to a remote with fetch, pull, and push, and how to rebuild commit history with rebase."
 tags: [git, codigdex, remote, rebase]
 date: 2026-09-21
-status: draft
+status: published
 ---
 
 # Codigdex #01 — Remotes and Rebase, Rebuilding History
