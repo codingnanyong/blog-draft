@@ -36,7 +36,7 @@ Velog(한국어) / Medium(영어) 발행 & 로그 업데이트
 - 한국어 원고(`index.ko.md`)는 Velog에, 영어 번역본(`index.en.md`)은 Medium에 발행합니다. 영어 번역은 매주 필수는 아니며, 회차별로 선별해 진행할 수 있습니다.
 - 두 플랫폼 모두 최종 발행은 수동으로 진행하며, 발행 후 로그(Notion Sprint Tracker)를 갱신합니다.
 - 초안 frontmatter의 `date`는 실제 발행 예정 월요일 날짜로 설정합니다.
-- **Google Drive 백업**: GitHub에 반영하는 시점에 같은 주차의 `index.ko.md`/`index.en.md`를 `My Drive/Developer/Project/Blog/2026/09/<저장소 폴더명>/`에 원본 마크다운 그대로 저장합니다 (Google Docs로 변환하지 않음 — 변환 시 마크다운 문법이 깨짐). 이미지는 용량 문제로 Claude가 직접 업로드하지 않고, 로컬 `images/` 폴더를 같은 위치로 드래그하여 사람이 직접 옮깁니다.
+- **Google Drive 백업**: GitHub에 반영하는 시점에 같은 주차의 `index.ko.md`/`index.en.md`를 `My Drive/Developer/Project/codigdex-blog/2026/09/<저장소 폴더명>/`에 원본 마크다운 그대로 저장합니다 (Google Docs로 변환하지 않음 — 변환 시 마크다운 문법이 깨짐). 이미지는 용량 문제로 Claude가 직접 업로드하지 않고, 로컬 `images/` 폴더를 같은 위치로 드래그하여 사람이 직접 옮깁니다.
 
 ## 브랜치 반영
 
@@ -46,4 +46,4 @@ Velog(한국어) / Medium(영어) 발행 & 로그 업데이트
 
 - Linear: 주차별 부모 이슈 + 7개 표준 서브이슈로 진행 상황을 관리합니다.
 - Notion Sprint Tracker: 각 주차를 하나의 Sprint로 등록해 목표·기간·산출물을 관리합니다.
-- Slack (#velog-automation): 초안 준비/동기화/발행 실패 등 상태 알림을 전달합니다.
+- Slack (#codigdex-blog): 초안 준비/동기화/발행 실패 등 상태 알림을 전달합니다.
