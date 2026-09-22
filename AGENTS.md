@@ -101,6 +101,8 @@ Automation uses `LINEAR_API_KEY` and `GH_PAT` repository secrets. `GH_PAT` must 
 
 If automation fails, rerun `Prepare feature PR` with the existing branch. Manual repair remains supported: create the Linear issue, create an open GitHub issue whose title starts with the same `COD-<n>`, then open a PR with both closing references. Do not create a second issue pair for the same branch.
 
+Every issue belongs to a Linear cycle. Team `COD` runs one-week cycles starting Monday 00:00 KST, and the weekly parent issue is assigned to the cycle in which its draft is written — not the cycle containing its Monday publish date, which is the next cycle's first day. The `Prepare feature PR` automation assigns each issue it creates to the active cycle. See [docs/kor/WORKFLOW.md](docs/kor/WORKFLOW.md) / [docs/eng/WORKFLOW.md](docs/eng/WORKFLOW.md) for the full rule.
+
 On merge into `develop`, CI auto-closes the mirrored GitHub issue; Linear's native GitHub integration then auto-transitions the Linear issue to Done. No manual status update needed after merge.
 
 ## Editing constraints

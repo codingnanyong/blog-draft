@@ -38,12 +38,22 @@ Publish on Velog (Korean) / Medium (English) & update the log
 - Set a draft's frontmatter `date` to the actual upcoming Monday it's scheduled to publish.
 - **Google Drive backup**: at the same point content is pushed to GitHub, save that week's `index.ko.md`/`index.en.md` as plain markdown (not converted to Google Docs — conversion breaks markdown syntax) under `My Drive/Developer/Project/codigdex-blog/2026/09/<repo folder name>/`. Images are not uploaded by Claude directly due to size — drag the local `images/` folder into the same location by hand.
 
+## Running on Linear cycles
+
+The weekly repeating process runs on Linear cycles. Team `COD` uses one-week cycles that **start Monday 00:00 KST and end on Sunday**.
+
+- **One cycle = one weekly post.** The week's parent issue and its sub-issues belong to the cycle in which the **draft is written**. Publish day (Monday) is the first day of the next cycle, so only the publish sub-issue carries over.
+  - Example: `#005` (publishes 2026-09-28) belongs to Cycle 3 (09/21-09/27), and its `Publish on Velog/Medium` sub-issue is completed in Cycle 4.
+- New issues land in whichever cycle is active when they are created. Issues created by the `Prepare feature PR` automation set the active cycle explicitly.
+- Unfinished issues roll over to the next cycle when a cycle closes. A whole parent issue rolling over is the signal that the week slipped.
+- Cycles are shared across team `COD`, so issues from other projects appear in the same cycle. Filter the cycle view by the `블로그 자동발행` project to see only blog progress.
+
 ## Branch integration
 
 Reviewed changes are merged from a `feat/*` branch into `develop` through a pull request, then from `develop` into `main` through another pull request. See [Git branch strategy](GIT_WORKFLOW.md) for details.
 
 ## Tracking progress
 
-- Linear: a parent issue per week plus 7 standard sub-issues track progress.
+- Linear: a parent issue per week plus its standard sub-issues track progress, and each week is assigned to a cycle.
 - Notion Sprint Tracker: each week is registered as one sprint with its objective, duration, and deliverables.
 - Slack (#codigdex-blog): status notifications for draft prep, sync, and publish failures.

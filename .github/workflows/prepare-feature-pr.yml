@@ -131,6 +131,7 @@ jobs:
           echo "id=$(jq -r '.identifier' <<< "$result")" >> "$GITHUB_OUTPUT"
           echo "url=$(jq -r '.url' <<< "$result")" >> "$GITHUB_OUTPUT"
           echo "action=$(jq -r '.action' <<< "$result")" >> "$GITHUB_OUTPUT"
+          echo "cycle=$(jq -r '.cycle // "none"' <<< "$result")" >> "$GITHUB_OUTPUT"
 
       - name: Ensure mirrored GitHub issue
         if: steps.existing_pr.outputs.found == 'false'
@@ -277,6 +278,7 @@ jobs:
           PR_URL: ${{ steps.pull_request.outputs.url }}
           LINEAR_ID: ${{ steps.linear.outputs.id }}
           LINEAR_ACTION: ${{ steps.linear.outputs.action }}
+          LINEAR_CYCLE: ${{ steps.linear.outputs.cycle }}
           GITHUB_ISSUE_URL: ${{ steps.github_issue.outputs.url }}
           GITHUB_ISSUE_ACTION: ${{ steps.github_issue.outputs.action }}
         run: |
@@ -285,7 +287,7 @@ jobs:
             if [[ -n "$EXISTING_PR_URL" ]]; then
               echo "Existing PR: $EXISTING_PR_URL"
             else
-              echo "Linear: $LINEAR_ID ($LINEAR_ACTION)"
+              echo "Linear: $LINEAR_ID ($LINEAR_ACTION, cycle $LINEAR_CYCLE)"
               echo "GitHub mirror: $GITHUB_ISSUE_URL ($GITHUB_ISSUE_ACTION)"
               echo "Draft PR: $PR_URL"
             fi
