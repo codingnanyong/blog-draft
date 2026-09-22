@@ -46,6 +46,8 @@ The weekly repeating process runs on Linear cycles. Team `COD` uses one-week cyc
   - Example: `#005` (publishes 2026-09-28) belongs to Cycle 3 (09/21-09/27), and its `Publish on Velog/Medium` sub-issue is completed in Cycle 4.
 - New issues land in whichever cycle is active when they are created. Issues created by the `Prepare feature PR` automation set the active cycle explicitly.
 - Unfinished issues roll over to the next cycle when a cycle closes. A whole parent issue rolling over is the signal that the week slipped.
+- **Work that belongs to a week reuses that week's issue.** Small changes attached to the week in progress — a doc fix, a replaced image — go on a `feat/cod-<n>-<slug>` branch. The automation then reuses `COD-<n>` instead of creating a new issue, which keeps the cycle organized by week and keeps the workspace issue count from growing for no reason. Only work independent of the week gets a fresh issue via `feat/<slug>`.
+- The Linear free plan caps **active (non-archived) issues at 250**. Once that cap is reached, `Prepare feature PR` fails at the issue-creation step with `USAGE_LIMIT_EXCEEDED` and no PR is opened. Archive the issues of finished weeks periodically.
 - Cycles are shared across team `COD`, so issues from other projects appear in the same cycle. Filter the cycle view by the `블로그 자동발행` project to see only blog progress.
 
 ## Branch integration
