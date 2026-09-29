@@ -105,6 +105,28 @@ Every issue belongs to a Linear cycle. Team `COD` runs one-week cycles starting 
 
 On merge into `develop`, CI auto-closes the mirrored GitHub issue; Linear's native GitHub integration then auto-transitions the Linear issue to Done. No manual status update needed after merge.
 
+### PR metadata
+
+Every PR — `feat/*` → `develop` and `develop` → `main` alike — carries labels, a milestone, and an assignee. `.github/workflows/pr-metadata.yml` applies them on open, edit, and push, and fails the check when it cannot:
+
+- **Title type**: the title (after the optional `COD-<n>`) must start with a Conventional Commit prefix, which maps to exactly one type label: `content:` → `type: content`, `docs:` → `type: docs`, `feat:` → `type: feature`, `fix:` → `type: fix`, `ci:` → `type: ci`, `chore:` → `type: chore`, `test:` → `type: test`. Titles for `develop` → `main` sync PRs follow the same rule (e.g. `content: sync week 5 published status to main`).
+- **Flow label**: `flow: feature` for PRs into `develop`, `flow: sync` for PRs into `main`.
+- **Milestone**: the chapter in progress — the open milestone named `코딩 도감 #NN <chapter>` with the nearest due date (due date = the chapter's last publish Monday). One milestone per chapter; create the next chapter's milestone when its roadmap is set, and close the current one when its chapter release is cut.
+- **Assignee**: the repository owner (`codingnanyong`).
+- The mirrored GitHub issue gets the same type label, milestone, and assignee.
+
+When a `feat/*` PR merges into `develop`, the same workflow deletes the head branch. Repository-wide auto-delete stays off on purpose, because it would also delete `develop` when a sync PR merges into `main`.
+
+### After publishing
+
+Merging a PR does not mean the post is live. When the user reports that a week's post is published, finish all of these in the same turn:
+
+1. Linear: set that week's `Velog·Medium 발행 & 로그 업데이트` sub-issue and the week's parent to Done.
+2. Notion Sprint Tracker: set the week's row to `Status = Completed` and `Completion % = 1`. The percentage is not synced from Linear.
+3. Git: flip both drafts to `status: published`, update the roadmap row, and send it through the normal `feat` → `develop` → `main` flow.
+4. On the chapter's final week, move the `codigdex-<NN>-<slug>` tag to the `main` merge commit, refresh the release notes, and close the chapter milestone.
+5. Check `git branch -a` for leftover local or remote `feat/*` branches.
+
 ## Editing constraints
 
 - Preserve frontmatter fields, document language, heading structure, and intentional links unless the requested task requires changing them.
