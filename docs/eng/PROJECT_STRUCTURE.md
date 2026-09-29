@@ -21,6 +21,17 @@ templates/
 
 Each post keeps its per-language Markdown files (`index.ko.md` for Velog, `index.en.md` for Medium) and localized images together in one folder. Folder names use the `#NNN_post-slug` format, where `NNN` is the three-digit Codigdex dex number of that week's specimen (the same `dexNumber` as the codigdex game), e.g. `#001_git`. Quote these paths in a shell, since `#` otherwise starts a comment. Markdown references images with a relative path in the form `./images/filename`.
 
+## Agent configuration (`.claude/`)
+
+The rules Claude Code follows here are split into folders by role, which keeps `CLAUDE.md` short. Codex reads `AGENTS.md`, which points it to the same rule files.
+
+| Folder | Role | Examples |
+| --- | --- | --- |
+| `.claude/rules/` | Rules, one topic per file | `series-voice.md`, `images.md`, `git-pr-policy.md`, `tracking.md` |
+| `.claude/skills/` | Step-by-step procedures | `weekly-post`, `weekly-images`, `publish-followup`, `chapter-release` |
+| `.claude/hooks/` | Must-never rules blocked in code (wired in `.claude/settings.json`) | no direct push to `develop`/`main`, no overwriting images, no `No.001` casing |
+| `.claude/agents/` | Subagents for long-output work | `post-checker`, `tracker-auditor` |
+
 ## Writing guide
 
 Start a new post by copying `templates/post-template.ko.md` (for Velog) and `templates/post-template.en.md` (for Medium). The front matter includes:

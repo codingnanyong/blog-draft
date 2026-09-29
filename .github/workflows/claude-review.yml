@@ -26,7 +26,7 @@ jobs:
             REPO: ${{ github.repository }}
             PR NUMBER: ${{ github.event.pull_request.number }}
 
-            This repo (see AGENTS.md and docs/kor|eng/*.md) is a personal
+            This repo (see AGENTS.md, .claude/rules/*.md, and docs/kor|eng/*.md) is a personal
             weekly technical-blog draft pipeline, not a software project.
             Review the changed files in this PR with that in mind:
 
@@ -39,7 +39,7 @@ jobs:
             3. **Image references** - every ./images/... path referenced in
                the Markdown actually exists among the changed/existing files;
                no broken links.
-            4. **Editing constraints from AGENTS.md** - no unauthorized
+            4. **Editing constraints from .claude/rules/** (authority, post-files) - no unauthorized
                overwriting of existing images, no unrelated frontmatter or
                heading changes, status stays `draft` unless the PR explicitly
                says otherwise.

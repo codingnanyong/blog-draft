@@ -1,26 +1,46 @@
-# Claude's Role in This Repository
+# blog-draft
 
-This repo is a content pipeline for **codingnanyong**'s weekly technical blog: draft in Markdown here, human review, then publish to Velog (Korean) and Medium (English).
+Content pipeline for **codingnanyong**'s weekly technical blog, the **코딩 도감 / Codigdex** series. Drafts are written in Markdown here, reviewed by the user, and published every Monday to Velog (Korean) and Medium (English).
 
-@AGENTS.md
-
-The rules above (`AGENTS.md`) are the single source of truth for how any agent — Claude or Codex — should operate in this repo: weekly workflow steps, Codigdex series voice, image deliverables, and editing constraints. Keep that file up to date rather than duplicating its content here; this file only adds Claude-specific framing that doesn't belong in a tool-agnostic rules file.
-
-## Where Claude fits in the pipeline
-
-Per [docs/kor/WORKFLOW.md](docs/kor/WORKFLOW.md) / [docs/eng/WORKFLOW.md](docs/eng/WORKFLOW.md), each week is tracked in Linear as 6 sub-issues. Claude's job is step 2:
-
-```
-주제 선정 (topic selection — human)
-   → 초안 작성 (draft writing — Claude)
-   → 사용자 검토 & 피드백 반영 (user review & feedback — human, with Claude revising)
-   → GitHub 반영 (feat branch → PR)
-   → PR 병합 (develop)
-   → Velog/Medium 발행 & 로그 업데이트 (publish — human, manual)
+```text
+주제 선정 (topic — user)
+   → 초안 작성 (draft — Claude)                  ← skill: weekly-post, weekly-images
+   → 사용자 검토 & 피드백 반영 (review — user, Claude revises)
+   → GitHub 반영 (feat branch → Draft PR)        ← push only with the user's go-ahead
+   → PR 병합 (develop → main)                    ← the user merges
+   → Velog/Medium 발행 & 로그 업데이트 (user)    ← skill: publish-followup
 ```
 
-Branch naming and PR conventions for step 4 are in [docs/kor/GIT_WORKFLOW.md](docs/kor/GIT_WORKFLOW.md) (`feat/<slug>` → automated Draft PR → `develop` → `main`). As `AGENTS.md` states, pushing the branch (which triggers PR creation), merging, and publishing still require the user's explicit go-ahead — Claude drafts and revises, the user decides when it moves forward.
+The user decides when anything moves forward. Claude drafts, revises, and prepares; pushes, merges, tag moves, and publishing wait for the user.
 
-## Other AI tooling
+## Where things live
 
-Codex (OpenAI's CLI) is also used in this repo; it reads `AGENTS.md` directly (its cache is gitignored at `.codex-tmp/`). Claude Code does not read `AGENTS.md` automatically on its own — the `@AGENTS.md` import above is what pulls those rules into Claude's context.
+| Folder | What | Loaded |
+| --- | --- | --- |
+| `.claude/rules/` | One topic per file: `authority`, `series-voice`, `post-files`, `images`, `git-pr-policy`, `tracking` | Automatically; path-scoped ones when matching files are touched |
+| `.claude/skills/` | Procedures: `weekly-post`, `weekly-images`, `publish-followup`, `chapter-release` | On demand |
+| `.claude/hooks/` | Hard guards wired in `.claude/settings.json`: no direct push to `develop`/`main`, no force push, no committing `.env`, confirm push/merge/release; no overwriting images, `NO.001` casing, confirm `status: published` | Every tool call |
+| `.claude/agents/` | Long-output work: `post-checker` (one post folder), `tracker-auditor` (Git vs Linear vs Notion) | Delegated |
+| `docs/kor`, `docs/eng` | Human-facing docs: `WORKFLOW`, `GIT_WORKFLOW`, `ROADMAP`, `PROJECT_STRUCTURE` | Read when needed |
+| `AGENTS.md` | Entry point for Codex, which doesn't load `.claude/`; it points to the same rule files | Codex only |
+
+When a rule changes, edit the file in `.claude/rules/` (and the docs if it's user-facing). Don't restate it here or in `AGENTS.md`.
+
+## Frequent commands
+
+```bash
+# Tracker state (blog-only Linear issues + Notion sprints); needs .env
+python .claude/skills/publish-followup/scripts/tracker.py status
+# After the user reports week N published (parent issue COD-<n>)
+python .claude/skills/publish-followup/scripts/tracker.py publish COD-<n> <N>
+
+# Branch/PR state
+git fetch --prune && git branch -a -vv
+gh pr list --state open
+git log --oneline origin/main..origin/develop     # anything waiting for a main sync?
+
+# Post folders start with '#', so quote them
+ls "posts/2026/09/#005_collaboration-workflow/images"
+```
+
+`.env` (gitignored) holds `LINEAR_API_KEY`, `NOTION_API_KEY`, `GH_PAT`, `SLACK_WEBHOOK_URL`, and more; never print or commit it.

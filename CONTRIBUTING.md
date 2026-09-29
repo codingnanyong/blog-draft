@@ -14,7 +14,7 @@
 4. PR 제목은 `COD-<n>`으로 시작, 본문에 `Closes COD-<n>`과 `Closes #<n>` 포함
 5. `main`은 `develop`에서만
 
-자세한 내용은 [AGENTS.md](AGENTS.md#pr--issue-policy) 참고.
+자세한 내용은 [.claude/rules/git-pr-policy.md](.claude/rules/git-pr-policy.md) 참고.
 
 ## English
 
@@ -30,4 +30,4 @@ Every PR into `develop` requires a mirrored Linear/GitHub issue pair (CI-enforce
 4. PR title starts with `COD-<n>`; body includes both `Closes COD-<n>` and `Closes #<n>`
 5. `main` only accepts PRs from `develop`
 
-See [AGENTS.md](AGENTS.md#pr--issue-policy) for details.
+See [.claude/rules/git-pr-policy.md](.claude/rules/git-pr-policy.md) for details.
