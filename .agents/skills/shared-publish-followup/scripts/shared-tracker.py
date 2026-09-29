@@ -1,8 +1,8 @@
 """Blog tracker helper for Linear (project 블로그 자동발행) and the Notion Sprint Tracker.
 
 Usage (from the repo root, which holds .env):
-  python .claude/skills/publish-followup/scripts/tracker.py status
-  python .claude/skills/publish-followup/scripts/tracker.py publish COD-55 5
+  python .agents/skills/shared-publish-followup/scripts/shared-tracker.py status
+  python .agents/skills/shared-publish-followup/scripts/shared-tracker.py publish COD-55 5
 
 `status` lists open blog Linear issues and the blog Notion sprint rows.
 `publish <parent> <sprint>` marks the week's publish sub-issue and its parent Done,

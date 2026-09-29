@@ -6,7 +6,7 @@ paths:
 
 # Series image rules
 
-The step-by-step generation procedure is the `weekly-images` skill. This file holds the rules every image must meet.
+The step-by-step generation procedure is the `shared-weekly-images` skill. This file holds the rules every image must meet.
 
 ## Visual identity
 

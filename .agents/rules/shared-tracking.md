@@ -25,4 +25,4 @@ Linear team `COD` cycles and the Notion Sprint Tracker are shared with other pro
 
 ## After the user reports a post published
 
-Run the `publish-followup` skill in the same turn. It covers Linear, Notion, the Git status flip, the chapter tag and milestone, and the branch check.
+Run the `shared-publish-followup` skill in the same turn. It covers Linear, Notion, the Git status flip, the chapter tag and milestone, and the branch check.

@@ -5,19 +5,13 @@
       {
         "matcher": "Bash",
         "hooks": [
-          {
-            "type": "command",
-            "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/guard_bash.py\""
-          }
+          { "type": "command", "command": "sh \"$CLAUDE_PROJECT_DIR/.agents/hooks/shared-run.sh\" claude-guard bash" }
         ]
       },
       {
         "matcher": "Write|Edit|MultiEdit",
         "hooks": [
-          {
-            "type": "command",
-            "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/guard_posts.py\""
-          }
+          { "type": "command", "command": "sh \"$CLAUDE_PROJECT_DIR/.agents/hooks/shared-run.sh\" claude-guard edit" }
         ]
       }
     ]

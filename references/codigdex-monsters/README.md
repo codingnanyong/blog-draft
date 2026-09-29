@@ -6,4 +6,4 @@
 - 챕터마다 대표 표본(`*-specimen.png`)과 Lv.1~Lv.5 진화 단계가 있고, 일부 챕터에는 진화 시트(`*-evolution-sheet-v1.png`)가 함께 있습니다.
 - 전체 한눈에 보기: `all-monster-evolution-guide-v1.png`
 
-게임 화면용 원본이라 블로그 이미지 템플릿(크림 배경, RPG 패널 구성 등)과는 다릅니다. 블로그 글에 넣을 때는 이 원본을 캐릭터 참고로만 쓰고, 이미지는 `.claude/rules/images.md`의 이미지 규칙에 맞게 새로 그려 각 글의 `images/` 폴더에 둡니다.
+게임 화면용 원본이라 블로그 이미지 템플릿(크림 배경, RPG 패널 구성 등)과는 다릅니다. 블로그 글에 넣을 때는 이 원본을 캐릭터 참고로만 쓰고, 이미지는 `.agents/rules/shared-images.md`의 이미지 규칙에 맞게 새로 그려 각 글의 `images/` 폴더에 둡니다.

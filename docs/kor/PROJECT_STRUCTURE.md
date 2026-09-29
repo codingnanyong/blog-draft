@@ -15,26 +15,28 @@ posts/
           01-body-image.png
           01-body-image.en.png
 templates/
-  post-template.ko.md
-  post-template.en.md
+  shared-post-template.ko.md
+  shared-post-template.en.md
 ```
 
 각 글은 언어별 Markdown 파일(`index.ko.md` → Velog, `index.en.md` → Medium)과 언어별 이미지를 하나의 폴더에 함께 보관합니다. 폴더명은 해당 주차 개체의 코딩 도감 번호(세 자리, 게임 codigdex의 `dexNumber`와 동일)를 접두사로 붙인 `#NNN_post-slug` 형식을 사용합니다(예: `#001_git`). 셸에서는 경로를 따옴표로 감쌉니다. Markdown에서는 `./images/파일명` 형태의 상대 경로를 사용합니다.
 
-## 에이전트 설정 (`.claude/`)
+## 에이전트 설정 (`.agents/`)
 
-Claude Code가 이 저장소에서 따르는 규칙은 `CLAUDE.md`를 짧게 유지하기 위해 역할별 폴더로 나눠 둡니다. Codex는 `AGENTS.md`를 읽고, 거기서 안내하는 같은 규칙 파일을 따릅니다.
+Claude와 Codex가 이 저장소에서 함께 따르는 규칙은 `.agents/` 아래에 역할별로 나눠 둡니다. Codex는 `AGENTS.md`, Claude Code는 `CLAUDE.md`에서 같은 공용 자산을 참조합니다.
 
 | 폴더 | 역할 | 예 |
 | --- | --- | --- |
-| `.claude/rules/` | 주제 하나당 파일 하나인 규칙 | `series-voice.md`, `images.md`, `git-pr-policy.md`, `tracking.md` |
-| `.claude/skills/` | 순서가 있는 절차 | `weekly-post`, `weekly-images`, `publish-followup`, `chapter-release` |
-| `.claude/hooks/` | 절대 어기면 안 되는 규칙을 코드로 차단 (`.claude/settings.json`에 연결) | `develop`/`main` 직접 push 차단, 기존 이미지 덮어쓰기 차단, `No.001` 표기 차단 |
-| `.claude/agents/` | 출력이 긴 작업을 맡는 서브에이전트 | `post-checker`, `tracker-auditor` |
+| `.agents/rules/` | 주제 하나당 파일 하나인 공용 규칙 | `shared-series-voice.md`, `shared-images.md`, `shared-git-pr-policy.md`, `shared-tracking.md` |
+| `.agents/skills/` | 공용 절차 | `shared-weekly-post`, `shared-weekly-images`, `shared-publish-followup`, `shared-chapter-release` |
+| `.agents/hooks/` | 절대 어기면 안 되는 규칙을 코드로 차단 (`.claude/settings.json`에 연결) | `shared-guards.py`, `shared-git-hook.py`, `claude-guard.py` |
+| `.agents/agents/` | Claude 전용 서브에이전트 | `claude-post-checker.md`, `claude-tracker-auditor.md` |
+
+지원 자산은 Claude·Codex 공용이면 기본적으로 `shared-<name>`, 특정 에이전트 전용이면 `claude-<name>` 또는 `codex-<name>`을 사용합니다. 스킬과 플러그인은 하위 폴더명에 접두사를 붙이고, `README.md`, `SKILL.md`, 필수 매니페스트 이름은 유지합니다.
 
 ## 글 작성 가이드
 
-새 글은 `templates/post-template.ko.md`(Velog 발행용)와 `templates/post-template.en.md`(Medium 발행용)를 각각 복사해서 시작합니다. Front matter는 다음 필드를 포함합니다.
+새 글은 `templates/shared-post-template.ko.md`(Velog 발행용)와 `templates/shared-post-template.en.md`(Medium 발행용)를 각각 복사해서 시작합니다. Front matter는 다음 필드를 포함합니다.
 
 - `title`, `description`, `tags`
 - `date` (YYYY-MM-DD), `status` (`draft` → 발행 후 갱신)

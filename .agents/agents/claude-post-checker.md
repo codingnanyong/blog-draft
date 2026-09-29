@@ -1,5 +1,5 @@
 ---
-name: post-checker
+name: claude-post-checker
 description: Mechanical pre-review of one weekly post folder (frontmatter, dex numbers, KO/EN parity, image count and paths). Use after drafting or revising a week's post, or before pushing it, and pass the folder path. Returns a short pass/fail list instead of dumping file contents.
 tools: Read, Grep, Glob, Bash
 model: sonnet
@@ -7,7 +7,7 @@ model: sonnet
 
 You check one Codigdex post folder, `posts/YYYY/MM/#NNN_<slug>/`, against the repo rules and report only findings. Do not edit files.
 
-The rules are in `.claude/rules/post-files.md`, `series-voice.md`, and `images.md`; read them first.
+The rules are in `.agents/rules/shared-post-files.md`, `shared-series-voice.md`, and `shared-images.md`; read them first.
 
 Check each item and mark it ✅ or ❌ with a one-line reason and `file:line`:
 

@@ -2,26 +2,33 @@
 
 This repository prepares a weekly technical-blog post, the **코딩 도감 / Codigdex** series. Each post is published in Korean on Velog and in English on Medium, every Monday. Every deliverable stays a reviewable draft until the user explicitly requests publication.
 
-The detailed rules live in `.claude/rules/`, one topic per file. Claude Code loads them automatically; other agents (Codex) must **read the relevant file before starting** the task:
+The detailed shared rules live in `.agents/rules/`, one topic per file. Every agent must **read the relevant file before starting** the task:
 
 | Task | Read first |
 | --- | --- |
-| Anything | `.claude/rules/authority.md` |
-| Writing or editing a post, templates, or roadmap | `.claude/rules/series-voice.md`, `.claude/rules/post-files.md` |
-| Generating or replacing images | `.claude/rules/images.md`, then follow `.claude/skills/weekly-images/SKILL.md` |
-| Branches, commits, PRs, releases | `.claude/rules/git-pr-policy.md` |
-| Linear, Notion, Slack, Drive | `.claude/rules/tracking.md` |
+| Anything | `.agents/rules/shared-authority.md` |
+| Writing or editing a post, templates, or roadmap | `.agents/rules/shared-series-voice.md`, `.agents/rules/shared-post-files.md` |
+| Generating or replacing images | `.agents/rules/shared-images.md`, then follow `.agents/skills/shared-weekly-images/SKILL.md` |
+| Branches, commits, PRs, releases | `.agents/rules/shared-git-pr-policy.md` |
+| Linear, Notion, Slack, Drive | `.agents/rules/shared-tracking.md` |
 
-Step-by-step procedures are in `.claude/skills/*/SKILL.md`:
+Step-by-step procedures are in `.agents/skills/*/SKILL.md`:
 
-- `weekly-post`: draft a week.
-- `weekly-images`: produce the five images per language.
-- `publish-followup`: close out a published week.
-- `chapter-release`: tag a finished chapter.
+- `shared-weekly-post`: draft a week.
+- `shared-weekly-images`: produce the five images per language.
+- `shared-publish-followup`: close out a published week.
+- `shared-chapter-release`: tag a finished chapter.
+
+## Support asset naming
+
+- Use `shared-<name>` for assets shared by Claude and Codex; this is the default.
+- Use `claude-<name>` or `codex-<name>` only for agent-specific assets.
+- Apply the prefix to ordinary files and to skill or plugin folder names.
+- Keep required entrypoint and manifest names such as `README.md` and `SKILL.md` unchanged.
 
 ## Rules that must never be broken
 
-Claude Code enforces these with hooks (`.claude/hooks/`). Other agents are not covered by those hooks and must follow them by hand:
+Claude Code enforces these with shared hooks under `.agents/hooks/`, wired through `.claude/settings.json`. Other agents must also follow them directly:
 
 - Never publish, upload, push, open or merge a PR, move tags, or message external services without the user's explicit go-ahead.
 - Never push directly to `develop` or `main`, force-push, commit `.env`, or skip git hooks.

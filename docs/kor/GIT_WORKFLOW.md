@@ -1,12 +1,12 @@
 # Git 브랜치 전략
 
-브랜치 흐름, 브랜치 이름, PR 규칙, Linear 연동 등 기본 정책은 [`.claude/rules/git-pr-policy.md`](../../.claude/rules/git-pr-policy.md)를 따릅니다 (repo-template과 공유하는 범용 정책이라 여기서 중복 설명하지 않습니다).
+브랜치 흐름, 브랜치 이름, PR 규칙, Linear 연동 등 기본 정책은 [`.agents/rules/shared-git-pr-policy.md`](../../.agents/rules/shared-git-pr-policy.md)를 따릅니다 (repo-template과 공유하는 범용 정책이라 여기서 중복 설명하지 않습니다).
 
 ## 이 저장소 고유 사항
 
 ### PR 라벨·마일스톤·담당자
 
-모든 PR(`feat/*` → `develop`, `develop` → `main`)에는 `.github/workflows/pr-metadata.yml`이 자동으로 메타데이터를 붙입니다. 붙일 수 없으면 체크가 실패합니다. 규칙 원문은 [`.claude/rules/git-pr-policy.md`의 PR metadata](../../.claude/rules/git-pr-policy.md#pr-metadata-automated)에 있습니다.
+모든 PR(`feat/*` → `develop`, `develop` → `main`)에는 `.github/workflows/pr-metadata.yml`이 자동으로 메타데이터를 붙입니다. 붙일 수 없으면 체크가 실패합니다. 규칙 원문은 [`.agents/rules/shared-git-pr-policy.md`의 PR metadata](../../.agents/rules/shared-git-pr-policy.md#pr-metadata-automated)에 있습니다.
 
 | 항목 | 규칙 |
 | --- | --- |

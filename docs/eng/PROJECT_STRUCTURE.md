@@ -15,26 +15,28 @@ posts/
           01-body-image.png
           01-body-image.en.png
 templates/
-  post-template.ko.md
-  post-template.en.md
+  shared-post-template.ko.md
+  shared-post-template.en.md
 ```
 
 Each post keeps its per-language Markdown files (`index.ko.md` for Velog, `index.en.md` for Medium) and localized images together in one folder. Folder names use the `#NNN_post-slug` format, where `NNN` is the three-digit Codigdex dex number of that week's specimen (the same `dexNumber` as the codigdex game), e.g. `#001_git`. Quote these paths in a shell, since `#` otherwise starts a comment. Markdown references images with a relative path in the form `./images/filename`.
 
-## Agent configuration (`.claude/`)
+## Agent configuration (`.agents/`)
 
-The rules Claude Code follows here are split into folders by role, which keeps `CLAUDE.md` short. Codex reads `AGENTS.md`, which points it to the same rule files.
+The rules shared by Claude and Codex are split by role under `.agents/`. Codex reads `AGENTS.md`, while Claude Code reads `CLAUDE.md`; both point to the same shared assets.
 
 | Folder | Role | Examples |
 | --- | --- | --- |
-| `.claude/rules/` | Rules, one topic per file | `series-voice.md`, `images.md`, `git-pr-policy.md`, `tracking.md` |
-| `.claude/skills/` | Step-by-step procedures | `weekly-post`, `weekly-images`, `publish-followup`, `chapter-release` |
-| `.claude/hooks/` | Must-never rules blocked in code (wired in `.claude/settings.json`) | no direct push to `develop`/`main`, no overwriting images, no `No.001` casing |
-| `.claude/agents/` | Subagents for long-output work | `post-checker`, `tracker-auditor` |
+| `.agents/rules/` | Shared rules, one topic per file | `shared-series-voice.md`, `shared-images.md`, `shared-git-pr-policy.md`, `shared-tracking.md` |
+| `.agents/skills/` | Shared step-by-step procedures | `shared-weekly-post`, `shared-weekly-images`, `shared-publish-followup`, `shared-chapter-release` |
+| `.agents/hooks/` | Must-never rules blocked in code (wired in `.claude/settings.json`) | `shared-guards.py`, `shared-git-hook.py`, `claude-guard.py` |
+| `.agents/agents/` | Claude-only subagents for long-output work | `claude-post-checker.md`, `claude-tracker-auditor.md` |
+
+Shared support assets use `shared-<name>` by default; agent-specific assets use `claude-<name>` or `codex-<name>`. Skill and plugin prefixes belong on their subfolder names. Required entrypoint and manifest names such as `README.md` and `SKILL.md` stay unchanged.
 
 ## Writing guide
 
-Start a new post by copying `templates/post-template.ko.md` (for Velog) and `templates/post-template.en.md` (for Medium). The front matter includes:
+Start a new post by copying `templates/shared-post-template.ko.md` (for Velog) and `templates/shared-post-template.en.md` (for Medium). The front matter includes:
 
 - `title`, `description`, `tags`
 - `date` (YYYY-MM-DD), `status` (`draft` → updated after publishing)

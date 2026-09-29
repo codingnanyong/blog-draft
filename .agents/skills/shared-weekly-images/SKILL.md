@@ -1,11 +1,11 @@
 ---
-name: weekly-images
+name: shared-weekly-images
 description: Produce a week's five series images per language (thumbnail + 01–04) in the established pixel-art style, Korean first then English localization. Use when a weekly post needs its images generated, replaced, or localized.
 ---
 
 # Weekly images
 
-The visual rules, canonical references, and numbered templates are in `.claude/rules/images.md`.
+The visual rules, canonical references, and numbered templates are in `.agents/rules/shared-images.md`.
 
 1. **Read the drafts.** Read both `index.ko.md` and `index.en.md` and identify the exact paragraph each image supports.
 2. **Confirm the numbers.** Get the specimen number (`NO.00x`), `Lv.<week>`, current/total chapter count (progress slots), and next topic from the roadmap.
@@ -17,4 +17,4 @@ The visual rules, canonical references, and numbered templates are in `.claude/r
 7. **Localize to English.** Make the English version as a text-localization edit of the accepted Korean image: change only the listed text and keep every other pixel. Save it as `<name>.en.png` and inspect it again.
 8. **Save the accepted images** into the post's `images/`. Never overwrite an existing file; use `.v2.png` instead.
 9. **Update both Markdown files** with the image paths and meaningful alt text.
-10. **Verify:** each language has one thumbnail and exactly four numbered body images, and every reference resolves to a file. Let the `post-checker` agent confirm.
+10. **Verify:** each language has one thumbnail and exactly four numbered body images, and every reference resolves to a file. Let the `claude-post-checker` agent confirm when working in Claude Code; Codex may run the same checklist directly.

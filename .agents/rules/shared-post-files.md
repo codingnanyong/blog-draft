@@ -9,7 +9,7 @@ paths:
 ## Folders
 
 - One folder per week: `posts/YYYY/MM/#NNN_<slug>/` where `NNN` is the dex number (e.g. `#005_collaboration-workflow`). Quote these paths in shell commands, because `#` starts a comment.
-- Create a week's folder from `templates/post-template.ko.md` / `.en.md` only when that week's draft actually starts. Do not pre-create placeholder folders from the roadmap.
+- Create a week's folder from `templates/shared-post-template.ko.md` / `.en.md` only when that week's draft actually starts. Do not pre-create placeholder folders from the roadmap.
 - Each folder holds `index.ko.md` (Velog), `index.en.md` (Medium), and `images/`.
 
 ## Frontmatter

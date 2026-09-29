@@ -1,12 +1,12 @@
 # Git Branch Strategy
 
-The base policy — branch flow, branch naming, PR rules, Linear integration — follows [`.claude/rules/git-pr-policy.md`](../../.claude/rules/git-pr-policy.md) (shared with repo-template, so it isn't duplicated here).
+The base policy — branch flow, branch naming, PR rules, Linear integration — follows [`.agents/rules/shared-git-pr-policy.md`](../../.agents/rules/shared-git-pr-policy.md) (shared with repo-template, so it isn't duplicated here).
 
 ## What's specific to this repo
 
 ### PR labels, milestones, and assignees
 
-`.github/workflows/pr-metadata.yml` adds metadata to every PR (`feat/*` → `develop` and `develop` → `main`). If it cannot, the check fails. The canonical rule lives in [PR metadata in `.claude/rules/git-pr-policy.md`](../../.claude/rules/git-pr-policy.md#pr-metadata-automated).
+`.github/workflows/pr-metadata.yml` adds metadata to every PR (`feat/*` → `develop` and `develop` → `main`). If it cannot, the check fails. The canonical rule lives in [PR metadata in `.agents/rules/shared-git-pr-policy.md`](../../.agents/rules/shared-git-pr-policy.md#pr-metadata-automated).
 
 | Item | Rule |
 | --- | --- |

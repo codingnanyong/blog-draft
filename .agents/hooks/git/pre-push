@@ -1,0 +1,3 @@
+#!/bin/sh
+# Keep this required Git hook filename unprefixed.
+exec sh "$(git rev-parse --show-toplevel)/.agents/hooks/shared-run.sh" shared-git-hook pre-push

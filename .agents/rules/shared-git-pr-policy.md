@@ -32,7 +32,7 @@ This policy is shared with `codingnanyong/repo-template` and is CI-enforced by `
 
 ## Chapter release
 
-Weekly PRs have no release. When every week of a chapter is on `main`, tag `codigdex-<NN>-<slug>` on that `main` merge commit and publish a GitHub Release. Then close the chapter milestone. The `chapter-release` skill has the procedure.
+Weekly PRs have no release. When every week of a chapter is on `main`, tag `codigdex-<NN>-<slug>` on that `main` merge commit and publish a GitHub Release. Then close the chapter milestone. The `shared-chapter-release` skill has the procedure.
 
 ## Commits and PR text
 

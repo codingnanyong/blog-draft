@@ -1,5 +1,5 @@
 ---
-name: chapter-release
+name: shared-chapter-release
 description: Cut or refresh a Codigdex chapter's git tag and GitHub Release once all its weeks are on main, and roll the chapter milestone. Use after a chapter's final week lands on main, or when a chapter's drafts land on main again.
 ---
 
