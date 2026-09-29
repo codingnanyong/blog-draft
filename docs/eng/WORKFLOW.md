@@ -34,7 +34,12 @@ Publish on Velog (Korean) / Medium (English) & update the log
 - AI-generated text and images are always reviewed by a human before publishing.
 - Images are prepared separately and placed in the draft with a short lead-in sentence for context.
 - The Korean draft (`index.ko.md`) is published on Velog; the English translation (`index.en.md`) is published on Medium. The English translation isn't required every week — it can be done selectively per installment.
-- Publishing on either platform is done manually; the log (Notion Sprint Tracker) is updated right after.
+- Publishing on either platform is done manually. Merging a PR does not mark a post as published, so after publishing, finish all of the following:
+  1. Linear: set the week's `Velog·Medium 발행 & 로그 업데이트` sub-issue and the week's parent issue to Done.
+  2. Notion Sprint Tracker: set the week's row to `Status = Completed` and `Completion % = 100%`. These values are not synced from Linear.
+  3. Git: flip both drafts to `status: published`, update the ROADMAP row, and send the change through `feat` → `develop` → `main`.
+  4. On a chapter's final week, move the `codigdex-<NN>-<slug>` tag to the new `main` merge commit, refresh the release notes, and close the chapter milestone.
+  5. Check that no `feat/*` branches are left, locally or on the remote.
 - Set a draft's frontmatter `date` to the actual upcoming Monday it's scheduled to publish.
 - **Google Drive backup**: at the same point content is pushed to GitHub, save that week's `index.ko.md`/`index.en.md` as plain markdown (not converted to Google Docs — conversion breaks markdown syntax) under `My Drive/Developer/Project/codigdex-blog/2026/09/<repo folder name>/`. Images are not uploaded by Claude directly due to size — drag the local `images/` folder into the same location by hand.
 

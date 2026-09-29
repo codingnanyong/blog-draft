@@ -1,8 +1,23 @@
 # Git Branch Strategy
 
-The base policy — branch flow, branch naming, PR rules, Linear integration — follows [AGENTS.md's PR & issue policy](../../AGENTS.md#pr--issue-policy) (shared with repo-template, so it isn't duplicated here).
+The base policy — branch flow, branch naming, PR rules, Linear integration — follows [`.agents/rules/shared-git-pr-policy.md`](../../.agents/rules/shared-git-pr-policy.md) (shared with repo-template, so it isn't duplicated here).
 
 ## What's specific to this repo
+
+### PR labels, milestones, and assignees
+
+`.github/workflows/pr-metadata.yml` adds metadata to every PR (`feat/*` → `develop` and `develop` → `main`). If it cannot, the check fails. The canonical rule lives in [PR metadata in `.agents/rules/shared-git-pr-policy.md`](../../.agents/rules/shared-git-pr-policy.md#pr-metadata-automated).
+
+| Item | Rule |
+| --- | --- |
+| Type label | From the title prefix after `COD-<n>`: `content:` `docs:` `feat:` `fix:` `ci:` `chore:` `test:` → `type: …` |
+| Flow label | `flow: feature` into `develop`, `flow: sync` into `main` |
+| Milestone | The chapter in progress: the open `코딩 도감 #NN <chapter>` milestone with the nearest due date (due = the chapter's last publish Monday) |
+| Assignee | `codingnanyong` |
+
+- The mirrored GitHub issue gets the same type label, milestone, and assignee.
+- Create the next chapter's milestone as soon as its roadmap is set. Close a chapter's milestone when its chapter release is cut.
+- When a `feat/*` PR merges into `develop`, the workflow deletes its head branch. Repository-wide auto-delete stays off, because it would also delete `develop` when a sync PR merges into `main`.
 
 ### A note on committing binaries
 
@@ -19,3 +34,4 @@ A tag and GitHub Release are published once **every weekly draft of one chapter 
 - Release title: `Codigdex #NN <chapter> — Chapter Complete`
 - Release notes: a table of each week's registered specimen (dex number `NO.00x`, name, trait, post title, folder, publish date, status), operating rules that changed during the chapter, the next chapter preview, and a short English summary
 - If drafts from the same chapter land on `main` again after tagging, move the tag to the latest `main` merge commit and refresh the release notes too
+- Close the chapter's milestone when the release is published or refreshed

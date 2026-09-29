@@ -34,7 +34,12 @@ Velog(한국어) / Medium(영어) 발행 & 로그 업데이트
 - AI가 생성한 본문과 이미지는 발행 전에 반드시 사람이 검토합니다.
 - 이미지는 별도로 준비되며, 문맥에 맞는 도입 문장과 함께 본문에 배치합니다.
 - 한국어 원고(`index.ko.md`)는 Velog에, 영어 번역본(`index.en.md`)은 Medium에 발행합니다. 영어 번역은 매주 필수는 아니며, 회차별로 선별해 진행할 수 있습니다.
-- 두 플랫폼 모두 최종 발행은 수동으로 진행하며, 발행 후 로그(Notion Sprint Tracker)를 갱신합니다.
+- 두 플랫폼 모두 최종 발행은 수동으로 진행합니다. 발행 후에는 아래를 한 번에 마무리합니다. PR 병합만으로는 발행 상태가 반영되지 않습니다.
+  1. Linear: 그 주차의 `Velog·Medium 발행 & 로그 업데이트` 하위 이슈와 주차 부모 이슈를 Done으로 바꿉니다.
+  2. Notion Sprint Tracker: 해당 주차 행을 `Status = Completed`, `Completion % = 100%`로 바꿉니다. 이 값은 Linear와 동기화되지 않습니다.
+  3. Git: 한/영 원고를 `status: published`로 바꾸고 ROADMAP 행을 갱신해 `feat` → `develop` → `main` 흐름으로 반영합니다.
+  4. 챕터 마지막 주차라면 `codigdex-<NN>-<slug>` 태그를 새 `main` 병합 커밋으로 옮기고, Release 본문을 갱신한 뒤 챕터 마일스톤을 닫습니다.
+  5. 로컬과 원격에 남은 `feat/*` 브랜치가 없는지 확인합니다.
 - 초안 frontmatter의 `date`는 실제 발행 예정 월요일 날짜로 설정합니다.
 - **Google Drive 백업**: GitHub에 반영하는 시점에 같은 주차의 `index.ko.md`/`index.en.md`를 `My Drive/Developer/Project/codigdex-blog/2026/09/<저장소 폴더명>/`에 원본 마크다운 그대로 저장합니다 (Google Docs로 변환하지 않음 — 변환 시 마크다운 문법이 깨짐). 이미지는 용량 문제로 Claude가 직접 업로드하지 않고, 로컬 `images/` 폴더를 같은 위치로 드래그하여 사람이 직접 옮깁니다.
 
