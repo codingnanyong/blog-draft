@@ -1,26 +1,48 @@
-# Claude's Role in This Repository
+# blog-draft
 
-This repo is a content pipeline for **codingnanyong**'s weekly technical blog: draft in Markdown here, human review, then publish to Velog (Korean) and Medium (English).
+Content pipeline for **codingnanyong**'s weekly technical blog, the **코딩 도감 / Codigdex** series. Drafts are written in Markdown here, reviewed by the user, and published every Monday to Velog (Korean) and Medium (English).
 
-@AGENTS.md
-
-The rules above (`AGENTS.md`) are the single source of truth for how any agent — Claude or Codex — should operate in this repo: weekly workflow steps, Codigdex series voice, image deliverables, and editing constraints. Keep that file up to date rather than duplicating its content here; this file only adds Claude-specific framing that doesn't belong in a tool-agnostic rules file.
-
-## Where Claude fits in the pipeline
-
-Per [docs/kor/WORKFLOW.md](docs/kor/WORKFLOW.md) / [docs/eng/WORKFLOW.md](docs/eng/WORKFLOW.md), each week is tracked in Linear as 6 sub-issues. Claude's job is step 2:
-
-```
-주제 선정 (topic selection — human)
-   → 초안 작성 (draft writing — Claude)
-   → 사용자 검토 & 피드백 반영 (user review & feedback — human, with Claude revising)
-   → GitHub 반영 (feat branch → PR)
-   → PR 병합 (develop)
-   → Velog/Medium 발행 & 로그 업데이트 (publish — human, manual)
+```text
+주제 선정 (topic — user)
+   → 초안 작성 (draft — Claude)                  ← skill: shared-weekly-post, shared-weekly-images
+   → 사용자 검토 & 피드백 반영 (review — user, Claude revises)
+   → GitHub 반영 (feat branch → Draft PR)        ← push only with the user's go-ahead
+   → PR 병합 (develop → main)                    ← the user merges
+   → Velog/Medium 발행 & 로그 업데이트 (user)    ← skill: shared-publish-followup
 ```
 
-Branch naming and PR conventions for step 4 are in [docs/kor/GIT_WORKFLOW.md](docs/kor/GIT_WORKFLOW.md) (`feat/<slug>` → automated Draft PR → `develop` → `main`). As `AGENTS.md` states, pushing the branch (which triggers PR creation), merging, and publishing still require the user's explicit go-ahead — Claude drafts and revises, the user decides when it moves forward.
+The user decides when anything moves forward. Claude drafts, revises, and prepares; pushes, merges, tag moves, and publishing wait for the user.
 
-## Other AI tooling
+## Where things live
 
-Codex (OpenAI's CLI) is also used in this repo; it reads `AGENTS.md` directly (its cache is gitignored at `.codex-tmp/`). Claude Code does not read `AGENTS.md` automatically on its own — the `@AGENTS.md` import above is what pulls those rules into Claude's context.
+| Folder | What | Loaded |
+| --- | --- | --- |
+| `.agents/rules/` | Shared rules: `shared-authority`, `shared-series-voice`, `shared-post-files`, `shared-images`, `shared-git-pr-policy`, `shared-tracking` | Read before matching work |
+| `.agents/skills/` | Shared procedures: `shared-weekly-post`, `shared-weekly-images`, `shared-publish-followup`, `shared-chapter-release` | On demand |
+| `.agents/hooks/` | Shared guards wired in `.claude/settings.json`; the Claude adapter uses the `claude-` prefix | Every tool call |
+| `.agents/agents/` | Claude subagents: `claude-post-checker`, `claude-tracker-auditor` | Delegated |
+| `docs/kor`, `docs/eng` | Human-facing docs: `WORKFLOW`, `GIT_WORKFLOW`, `ROADMAP`, `PROJECT_STRUCTURE` | Read when needed |
+| `AGENTS.md` | Shared entry point that points Codex and other agents to the same rule files | Codex and other agents |
+
+Name shared support assets with `shared-` by default. Use `claude-` or `codex-` only for agent-specific assets. Keep required names such as `README.md` and `SKILL.md` unchanged.
+
+When a rule changes, edit the file in `.agents/rules/` (and the docs if it's user-facing). Don't restate the rule content here or in `AGENTS.md`.
+
+## Frequent commands
+
+```bash
+# Tracker state (blog-only Linear issues + Notion sprints); needs .env
+python .agents/skills/shared-publish-followup/scripts/shared-tracker.py status
+# After the user reports week N published (parent issue COD-<n>)
+python .agents/skills/shared-publish-followup/scripts/shared-tracker.py publish COD-<n> <N>
+
+# Branch/PR state
+git fetch --prune && git branch -a -vv
+gh pr list --state open
+git log --oneline origin/main..origin/develop     # anything waiting for a main sync?
+
+# Post folders start with '#', so quote them
+ls "posts/2026/09/#005_collaboration-workflow/images"
+```
+
+`.env` (gitignored) holds `LINEAR_API_KEY`, `NOTION_API_KEY`, `GH_PAT`, `SLACK_WEBHOOK_URL`, and more; never print or commit it.

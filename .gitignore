@@ -13,6 +13,10 @@ Thumbs.db
 # Logs
 *.log
 
+# Python caches
+__pycache__/
+*.py[cod]
+
 # Dependencies (if tooling is added later)
 node_modules/
 
