@@ -3,7 +3,7 @@ title: "코딩 도감 #01 — 협업 워크플로우, 그리고 Git 챕터 완�
 description: "코딩 도감 시리즈 Git 편 마지막 주차. Issue·Branch·Commit·PR·Review·Merge로 이어지는 협업 워크플로우를 관찰하고, NO.005 워크플로 수호자를 등록해 Git 챕터를 완성한다."
 tags: [git, 코딩도감, 협업, pull request]
 date: 2026-09-28
-status: draft
+status: published
 ---
 
 # 코딩 도감 #01 — 협업 워크플로우, 그리고 Git 챕터 완성

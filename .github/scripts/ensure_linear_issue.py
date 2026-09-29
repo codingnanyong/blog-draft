@@ -74,7 +74,13 @@ def main() -> None:
 
     teams = data_or_die(
         graphql(
-            "query($key: String!) { teams(filter: { key: { eq: $key } }) { nodes { id key } } }",
+            """
+            query($key: String!) {
+              teams(filter: { key: { eq: $key } }) {
+                nodes { id key activeCycle { id number } }
+              }
+            }
+            """,
             {"key": team_key},
         )
     )["teams"]["nodes"]
@@ -110,6 +116,7 @@ def main() -> None:
       team { id key }
       project { id name url }
       state { id name type }
+      cycle { id number }
     """
     issue: dict[str, Any] | None = None
     action = "reused"
@@ -156,6 +163,19 @@ def main() -> None:
             f"Source branch: `{source_branch}`\n\n"
             f"{marker}"
         )
+        issue_input: dict[str, Any] = {
+            "teamId": team["id"],
+            "projectId": project["id"],
+            "title": title,
+            "description": description,
+        }
+        # The weekly process runs on cycles, so a new issue joins the one that is
+        # running when the branch is pushed. Between cycles there is none, and the
+        # issue is simply created without one.
+        active_cycle = team.get("activeCycle") or {}
+        if active_cycle.get("id"):
+            issue_input["cycleId"] = active_cycle["id"]
+
         created = data_or_die(
             graphql(
                 f"""
@@ -166,14 +186,7 @@ def main() -> None:
                   }}
                 }}
                 """,
-                {
-                    "input": {
-                        "teamId": team["id"],
-                        "projectId": project["id"],
-                        "title": title,
-                        "description": description,
-                    }
-                },
+                {"input": issue_input},
             )
         )["issueCreate"]
         if not created["success"] or not created["issue"]:
@@ -189,6 +202,7 @@ def main() -> None:
                 "identifier": issue["identifier"],
                 "url": issue["url"],
                 "title": issue["title"],
+                "cycle": (issue.get("cycle") or {}).get("number"),
             },
             ensure_ascii=False,
         )
