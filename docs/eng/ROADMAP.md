@@ -26,13 +26,13 @@ The user has picked Linux as the chapter after Git. The user's separate game pro
 
 | Week | Topic | Publish Date | Linear | Status |
 | --- | --- | --- | --- | --- |
-| Week 1 | Linux basics — first encounter (shell & terminal, `pwd`/`ls`/`cd`) | 2026-10-05 | TBD | Proposed |
+| Week 1 | Linux basics — first encounter (shell & terminal, `pwd`/`ls`/`cd`) | 2026-10-05 | COD-343 | Draft and images ready; awaiting publication |
 | Week 2 | Paths & files (absolute/relative paths, `mkdir`/`cp`/`mv`/`rm`/`find`) | 2026-10-12 | TBD | Proposed |
 | Week 3 | Permissions & users (`rwx`, `chmod`/`chown`, `sudo`) | 2026-10-19 | TBD | Proposed |
 | Week 4 | Pipes & processes (`\|`/`>`/`>>`, `ps`/`top`/`kill`, background jobs) | 2026-10-26 | TBD | Proposed |
 | Week 5 | The kernel & the OS (kernel, system calls, boot, `systemctl`, wrap-up registration) | 2026-11-02 | TBD | Proposed |
 
-Once this 5-week breakdown is confirmed, Linear issues (parent + standard sub-issues) and Notion sprints will be created. If the actual pacing turns out different once underway, the week count may be adjusted.
+Week 1 (NO.006) has Korean and English drafts and five images per language, available for review in PR #124. The user will publish manually from these drafts; `status: draft` remains until publication is reported. The draft's existing scheduled date is 2026-10-05, while the Linear issue is due on 2026-10-12; the actual publication date will be confirmed after publication. Linear issues (parent + standard sub-issues) and Notion sprints for the remaining weeks will be created once their breakdown is confirmed. If the actual pacing turns out different once underway, the week count may be adjusted.
 
 ## #03 — Docker (draft — proposed 5 weeks, not confirmed)
 
