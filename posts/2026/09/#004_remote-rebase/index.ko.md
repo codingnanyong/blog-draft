@@ -105,4 +105,4 @@ git push --force-with-lease   # 그래도 강제로 올려야 한다면, 최소�
 
 그 전에, 네 번째 개체를 코딩 도감에 등록한다. **NO.004 원격 리베이서** — 원격과 맞추고, 이력을 다시 쌓는다.
 
-![코딩 도감 등록 카드 — NO.004 원격 리베이서, 분류: 원격·이력 재구성, 특성: 원격과 맞추고 이력을 다시 쌓는다, Git 챕터 4/5](./images/04-remote-rebaser-registration.png)
+![빈 크림 배경에 원격 리베이서 개체들만 담은 코딩 도감 등록 카드 — NO.004, Git 챕터 4/5](./images/04-remote-rebaser-registration.v2.png)

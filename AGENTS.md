@@ -8,7 +8,7 @@ The detailed shared rules live in `.agents/rules/`, one topic per file. Every ag
 | --- | --- |
 | Anything | `.agents/rules/shared-authority.md` |
 | Writing or editing a post, templates, or roadmap | `.agents/rules/shared-series-voice.md`, `.agents/rules/shared-post-files.md` |
-| Generating or replacing images | `.agents/rules/shared-images.md`, then follow `.agents/skills/shared-weekly-images/SKILL.md` |
+| Generating or replacing images | `.agents/rules/shared-images.md`, `.agents/rules/shared-image-composition-plans.md`, then follow `.agents/skills/shared-weekly-images/SKILL.md` |
 | Branches, commits, PRs, releases | `.agents/rules/shared-git-pr-policy.md` |
 | Linear, Notion, Slack, Drive | `.agents/rules/shared-tracking.md` |
 

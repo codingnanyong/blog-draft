@@ -116,4 +116,4 @@ git log --oneline --graph --all
 
 그 전에, 이번에 관찰한 개체를 코딩 도감에 등록한다. **NO.002 브랜치 쌍둥이** — 갈라지고 다시 합친다. Git 챕터도 두 칸째가 채워졌다.
 
-![코딩 도감 등록 카드 — NO.002 브랜치 쌍둥이, 분류: 평행 작업 관리, 특성: 갈라지고 다시 합친다, Git 챕터 2/5](./images/04-branch-twins-registration.png)
+![빈 크림 배경에 브랜치 쌍둥이만 담은 코딩 도감 등록 카드 — NO.002, Git 챕터 2/5](./images/04-branch-twins-registration.v2.png)

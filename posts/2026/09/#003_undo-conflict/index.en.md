@@ -139,4 +139,4 @@ Everything so far has happened entirely on my own machine. Starting next week, t
 
 Before the stage changes, this specimen goes into the Codigdex. **NO.003 Conflict Rewinder** — rewinds mistakes, resolves conflicts. The Git chapter is now past the halfway mark.
 
-![Codigdex registration card — NO.003 Conflict Rewinder, type: undo and conflicts, trait: rewinds mistakes and resolves conflicts, Git chapter 3/5](./images/04-conflict-rewinder-registration.en.png)
+![Codigdex registration card with only the Conflict Rewinder specimens on a blank cream background — NO.003, Git chapter 3/5](./images/04-conflict-rewinder-registration.en.v2.png)

@@ -139,4 +139,4 @@ git merge --abort   # merge 시작 전 상태로 완전히 복귀
 
 무대를 옮기기 전에, 이번 개체를 코딩 도감에 등록한다. **NO.003 충돌 되돌이** — 실수는 되돌리고, 충돌은 푼다. Git 챕터도 이제 절반을 넘겼다.
 
-![코딩 도감 등록 카드 — NO.003 충돌 되돌이, 분류: 되돌리기·충돌 해결, 특성: 실수는 되돌리고 충돌은 푼다, Git 챕터 3/5](./images/04-conflict-rewinder-registration.png)
+![빈 크림 배경에 충돌 되돌이 개체들만 담은 코딩 도감 등록 카드 — NO.003, Git 챕터 3/5](./images/04-conflict-rewinder-registration.v2.png)

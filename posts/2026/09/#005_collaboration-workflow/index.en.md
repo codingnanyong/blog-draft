@@ -103,4 +103,4 @@ The next chapter is Codigdex #02: Linux. All those Git commands had to run somew
 
 Before that, the last specimen of the Git chapter goes into the Codigdex. **NO.005 Workflow Guardian** — connects records, guards teamwork. With it, all five slots of the Git chapter, starting from NO.001 Git Sprout, are filled.
 
-![Codigdex registration card — NO.005 Workflow Guardian, type: team Git workflow, trait: connects records and guards teamwork, Git chapter 5/5 complete](./images/04-workflow-guardian-registration.en.png)
+![Codigdex registration card with only the Workflow Guardian on a blank cream background — NO.005, Git chapter 5/5 complete](./images/04-workflow-guardian-registration.en.v2.png)
