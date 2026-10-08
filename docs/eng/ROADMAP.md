@@ -26,13 +26,13 @@ The user has picked Linux as the chapter after Git. The user's separate game pro
 
 | Week | Topic | Publish Date | Linear | Status |
 | --- | --- | --- | --- | --- |
-| Week 1 | Linux basics — first encounter (shell & terminal, `pwd`/`ls`/`cd`) | 2026-10-05 | TBD | Proposed |
+| Week 1 | Linux basics — first encounter (shell & terminal, `pwd`/`ls`/`cd`) | 2026-10-05 | COD-343 | Published |
 | Week 2 | Paths & files (absolute/relative paths, `mkdir`/`cp`/`mv`/`rm`/`find`) | 2026-10-12 | TBD | Proposed |
 | Week 3 | Permissions & users (`rwx`, `chmod`/`chown`, `sudo`) | 2026-10-19 | TBD | Proposed |
 | Week 4 | Pipes & processes (`\|`/`>`/`>>`, `ps`/`top`/`kill`, background jobs) | 2026-10-26 | TBD | Proposed |
 | Week 5 | The kernel & the OS (kernel, system calls, boot, `systemctl`, wrap-up registration) | 2026-11-02 | TBD | Proposed |
 
-Once this 5-week breakdown is confirmed, Linear issues (parent + standard sub-issues) and Notion sprints will be created. If the actual pacing turns out different once underway, the week count may be adjusted.
+The user reported Week 1 (NO.006) published on both Velog and Medium. PR #124 includes the Korean and English posts, five images per language, and updated Git registration cards. The date remains 2026-10-05, the Monday of the publication week; publication on both platforms was reported on 2026-10-08. Linear issues (parent + standard sub-issues) and Notion sprints for the remaining weeks will be created once their breakdown is confirmed. If the actual pacing turns out different once underway, the week count may be adjusted.
 
 ## #03 — Docker (draft — proposed 5 weeks, not confirmed)
 

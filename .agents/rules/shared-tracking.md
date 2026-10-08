@@ -25,4 +25,6 @@ Linear team `COD` cycles and the Notion Sprint Tracker are shared with other pro
 
 ## After the user reports a post published
 
+When the user accepts a draft for future manual publication, update the existing weekly issue's template title and scope, record completed preparation sub-issues, and create or update the matching Notion Sprint with its Project Record relation. Reflect the same readiness in both roadmaps. Keep the parent In Progress and publication Todo until publication is reported; keep the merge sub-issue open until the PR is actually merged. Compute Notion completion from the six standard sub-issues, and record any scheduled-date mismatch without guessing the actual publication date.
+
 Run the `shared-publish-followup` skill in the same turn. It covers Linear, Notion, the Git status flip, the chapter tag and milestone, and the branch check.

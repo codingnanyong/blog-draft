@@ -136,4 +136,4 @@ Git 챕터를 채우려면 더 관찰해야 할 것이 남아 있다.
 **NO.001 깃새싹** — 변화를 기록한다.
 Git 챕터 다섯 칸 중 첫 칸이 채워졌다.
 
-![코딩 도감 등록 카드 — NO.001 깃새싹, 분류: 버전 관리 시스템, 특성: 변화를 기록한다, Git 챕터 1/5](./images/04-git-sprout-registration.png)
+![빈 크림 배경에 깃새싹만 담은 코딩 도감 등록 카드 — NO.001, Git 챕터 1/5](./images/04-git-sprout-registration.v2.png)

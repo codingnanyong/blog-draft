@@ -136,4 +136,4 @@ Before that, I'm registering what this first observation turned up in the Codigd
 **NO.001 Git Sprout** — records change.
 That fills the first of five slots in the Git chapter.
 
-![Codigdex registration card — NO.001 Git Sprout, type: version control system, trait: records change, Git chapter 1/5](./images/04-git-sprout-registration.en.png)
+![Codigdex registration card with only Git Sprout on a blank cream background — NO.001, Git chapter 1/5](./images/04-git-sprout-registration.en.v2.png)
