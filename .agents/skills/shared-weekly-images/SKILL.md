@@ -9,7 +9,7 @@ The visual rules, canonical references, and numbered templates are in `.agents/r
 
 1. **Read the drafts.** Read both `index.ko.md` and `index.en.md` and identify the exact paragraph each image supports.
 2. **Confirm the numbers.** Get the specimen number (`NO.00x`), `Lv.<week>`, current/total chapter count (progress slots), and next topic from the roadmap.
-3. **Plan all five images** (thumbnail, 01–04) before generating the first one, including every visible string verbatim.
+3. **Plan all five images** (thumbnail, 01–04) before generating the first one. Read `.agents/rules/shared-image-composition-plans.md`, preserve its role layouts, and list every visible string verbatim.
 4. **Look at the references.** Open the canonical approved images for each role; a prose description is not enough. Pass them to the image tool as strict references: their layout, whitespace, pixel density, characters, palette, typography, and UI structure are templates to preserve.
    - Codex: use the `imagegen` skill and `view_image`.
 5. **Generate the Korean images,** one asset per call. Never batch different roles into one prompt.

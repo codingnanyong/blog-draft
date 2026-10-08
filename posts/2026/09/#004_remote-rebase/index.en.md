@@ -105,4 +105,4 @@ Four observations in, the Git chapter has just one slot left. For the last obser
 
 Before that, the fourth specimen goes into the Codigdex. **NO.004 Remote Rebaser** — syncs remotes, rebuilds history.
 
-![Codigdex registration card — NO.004 Remote Rebaser, type: remote and history rebuild, trait: syncs remotes and rebuilds history, Git chapter 4/5](./images/04-remote-rebaser-registration.en.png)
+![Codigdex registration card with only the Remote Rebaser specimens on a blank cream background — NO.004, Git chapter 4/5](./images/04-remote-rebaser-registration.en.v2.png)

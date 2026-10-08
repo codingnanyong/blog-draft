@@ -6,7 +6,7 @@ paths:
 
 # Series image rules
 
-The step-by-step generation procedure is the `shared-weekly-images` skill. This file holds the rules every image must meet.
+The step-by-step generation procedure is the `shared-weekly-images` skill. This file holds the rules every image must meet. The durable role-by-role layout decisions and current specimen registry are in `shared-image-composition-plans.md`.
 
 ## Visual identity
 
@@ -25,7 +25,7 @@ When a later image is explicitly approved by the user, it becomes an additional 
 - `01`: `posts/2026/09/#001_git/images/01-git-encounter.v2.png`, `posts/2026/09/#002_branch-merge/images/01-branch-merge-encounter.png`.
 - `02`: `posts/2026/09/#001_git/images/02-git-three-areas.v2.png`, `posts/2026/09/#002_branch-merge/images/02-branch-parallel-worlds.png`.
 - `03`: `posts/2026/09/#001_git/images/03-git-basic-flow.v2.png`, `posts/2026/09/#002_branch-merge/images/03-merge-timelines.png`.
-- `04`: `posts/2026/09/#001_git/images/04-git-sprout-registration.png`, `posts/2026/09/#002_branch-merge/images/04-branch-twins-registration.png`.
+- `04`: `posts/2026/09/#001_git/images/04-git-sprout-registration.v2.png`, `posts/2026/09/#002_branch-merge/images/04-branch-twins-registration.v2.png`.
 
 ## Numbered templates
 
@@ -33,7 +33,7 @@ When a later image is explicitly approved by the user, it becomes an additional 
 - `01 — encounter`: square `1:1`, intentionally sparse classic RPG battle screen. Specimen name, `Lv.<week>`, and one HP bar at the upper left; explorer at the lower left; one or two simple topic specimens at the upper right; one large double-border dialogue box across the bottom. No scenery, infographic, command menu, desk, or extra panels.
 - `02 — first concept`: square `1:1` teaching card. One thin double-border title panel at the top, a simple two- or three-part comparison in the center, one short caption panel at the bottom. Large icons, a small explorer/specimen pair, generous cream space.
 - `03 — second concept or process`: square `1:1` timeline or flow scene. One framed title at the top, one large central timeline/process diagram with the explorer participating, one short takeaway panel at the bottom. Instructional, not another battle screen.
-- `04 — registration card`: square `1:1`; ends every weekly post. Thick black/orange outer frame, black `코딩 도감 등록` header (or its English localization), specimen window on the left, number/name plus type and trait panels on the right, an approval stamp, a progress bar with exactly the current number of chapter slots filled, the explorer recording notes, and a full-width black bottom panel declaring that week's registration complete (the whole chapter on the final week). Every `NO.00x` is an individual registered specimen; never label it an observation log. Next-topic previews belong in the prose before this image.
+- `04 — registration card`: square `1:1`; ends every weekly post. Thick black/orange outer frame, black `코딩 도감 등록` header (or its English localization), specimen window on the left, number/name plus type and trait panels on the right, an approval stamp, a progress bar with exactly the current number of chapter slots filled, and a full-width black bottom panel declaring that week's registration complete (the whole chapter on the final week). The specimen window is a clean portrait: only the registered specimen or specimen group, centered on a blank warm-cream field, with no explorer, props, ground, grass, rocks, scenery, or cast shadow. Every `NO.00x` is an individual registered specimen; never label it an observation log. Next-topic previews belong in the prose before this image.
 
 ## Text and localization
 

@@ -116,4 +116,4 @@ I still haven't really experienced what happens when two worlds touch the same s
 
 Before that, this week's specimen goes into the Codigdex. **NO.002 Branch Twins** — splits and merges again. That's the second slot of the Git chapter filled.
 
-![Codigdex registration card — NO.002 Branch Twins, type: parallel work, trait: splits and merges again, Git chapter 2/5](./images/04-branch-twins-registration.en.png)
+![Codigdex registration card with only the Branch Twins on a blank cream background — NO.002, Git chapter 2/5](./images/04-branch-twins-registration.en.v2.png)
