@@ -1,12 +1,12 @@
 ---
-title: "Codigdex #02 — First Encounter with Linux: The Shell, the Terminal, and pwd/ls/cd"
-description: "Week 1 of the Codigdex series' Linux chapter. Telling apart what the terminal and the shell each do, observing how pwd, ls, and cd show where you are and move you around, and registering NO.006 Shell Scout."
+title: "Codigdex #02 — First Encounter with Linux: The Shell, the Terminal"
+description: "Codigdex Linux week 1: telling the terminal from the shell, and finding your way with pwd, ls, and cd."
 tags: [linux, codigdex, shell, terminal]
 date: 2026-10-05
 status: published
 ---
 
-# Codigdex #02 — First Encounter with Linux: The Shell, the Terminal, and pwd/ls/cd
+# Codigdex #02 — First Encounter with Linux: The Shell, the Terminal
 
 ![Codigdex #02 Linux — the Shell Scout at the mouth of the Shell Cave](./images/thumbnail.en.png)
 
@@ -20,8 +20,8 @@ This chapter observes what's on the other side of that window. Codigdex #02 is L
 
 ## Specimen info
 
-- Dex number: NO.006 Shell Scout
-- Name: The shell and the terminal — `pwd`, `ls`, `cd`
+- Dex number: NO.006
+- Name: Shell Scout
 - Classification: Shell beginner type
 - Encounter rate: Very high (shows up everywhere: servers, containers, CI logs)
 - Danger level: ⚠️ (the three commands themselves are harmless, but type the next command without knowing where you're standing and it runs in the wrong place)

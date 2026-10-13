@@ -15,7 +15,7 @@ The detailed shared rules live in `.agents/rules/`, one topic per file. Every ag
 Step-by-step procedures are in `.agents/skills/*/SKILL.md`:
 
 - `shared-weekly-post`: draft a week.
-- `shared-weekly-images`: produce the five images per language.
+- `shared-weekly-images`: produce each language's thumbnail, body images `01`–`04`, and any extra explanatory images.
 - `shared-publish-followup`: close out a published week.
 - `shared-chapter-release`: tag a finished chapter.
 

@@ -18,8 +18,8 @@ This week's observation log starts here.
 
 ## Specimen info
 
-- Dex number: NO.002 Branch Twins
-- Name: Branch, Merge
+- Dex number: NO.002
+- Name: Branch Twins
 - Classification: Git's parallel-work management feature
 - Encounter rate: Very high (essential on collaborative projects)
 - Danger level: ⚠️⚠️ (use it without understanding it, and you'll fall into the merge conflict trap)

@@ -1,6 +1,6 @@
 ---
 title: "코딩 도감 #01 — 협업 워크플로우, 그리고 Git 챕터 완성"
-description: "코딩 도감 시리즈 Git 편 마지막 주차. Issue·Branch·Commit·PR·Review·Merge로 이어지는 협업 워크플로우를 관찰하고, NO.005 워크플로 수호자를 등록해 Git 챕터를 완성한다."
+description: "코딩 도감 Git 마지막 주차. Issue부터 Merge까지 이어지는 협업 워크플로우를 관찰하고 Git 챕터를 완성한다."
 tags: [git, 코딩도감, 협업, pull request]
 date: 2026-09-28
 status: published
@@ -16,8 +16,8 @@ status: published
 
 ## 개체 정보
 
-- 도감 번호: NO.005 워크플로 수호자
-- 이름: 협업 워크플로우 (Issue → Branch → Commit → PR → Review → Merge)
+- 도감 번호: NO.005
+- 이름: 워크플로 수호자
 - 분류: 팀 단위 Git 작업 절차
 - 출현 빈도: 매우 높음 (팀 프로젝트라면 예외 없이 등장)
 - 위험도: ⚠️⚠️ (절차를 건너뛰면 지금까지 배운 도구들이 전부 뒤엉킴)

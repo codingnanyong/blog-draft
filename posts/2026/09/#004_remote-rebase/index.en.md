@@ -1,6 +1,6 @@
 ---
 title: "Codigdex #01 — Remotes and Rebase, Rebuilding History"
-description: "Week 4 of the Codigdex series' Git chapter. Observing how to talk to a remote with fetch, pull, and push, and how to rebuild commit history with rebase."
+description: "Codigdex Git week 4: talking to a remote with fetch, pull, and push, and rebuilding history with rebase."
 tags: [git, codigdex, remote, rebase]
 date: 2026-09-21
 status: published
@@ -16,8 +16,8 @@ After facing undoing changes and merge conflicts last week, it hit me that every
 
 ## Specimen info
 
-- Dex number: NO.004 Remote Rebaser
-- Name: Remote, Rebase
+- Dex number: NO.004
+- Name: Remote Rebaser
 - Classification: Remote collaboration feature + commit-history restructuring feature
 - Encounter rate: Very high (used daily on collaborative projects)
 - Danger level: ⚠️⚠️⚠️⚠️ (rebasing already-shared history can cause real trouble for the whole team)

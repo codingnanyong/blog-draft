@@ -1,6 +1,6 @@
 ---
 title: "코딩 도감 #01 — 원격 저장소와 Rebase, 이력을 다시 쌓는 법"
-description: "코딩 도감 시리즈 Git 편 4주차. fetch·pull·push로 원격과 대화하는 법과, rebase로 커밋 이력을 다시 쌓는 법을 관찰한다."
+description: "코딩 도감 Git 4주차. fetch·pull·push로 원격과 주고받는 법과 rebase로 이력을 다시 쌓는 법을 관찰한다."
 tags: [git, 코딩도감, remote, rebase]
 date: 2026-09-21
 status: published
@@ -16,8 +16,8 @@ status: published
 
 ## 개체 정보
 
-- 도감 번호: NO.004 원격 리베이서
-- 이름: Remote, Rebase
+- 도감 번호: NO.004
+- 이름: 원격 리베이서
 - 분류: 원격 협업 기능 + 커밋 이력 재구성 기능
 - 출현 빈도: 매우 높음 (협업 프로젝트에서는 매일 사용)
 - 위험도: ⚠️⚠️⚠️⚠️ (이미 공유된 이력을 rebase하면 팀 전체가 곤란해질 수 있음)

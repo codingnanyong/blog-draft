@@ -16,7 +16,7 @@ Check each item and mark it ✅ or ❌ with a one-line reason and `file:line`:
 3. The folder number `#NNN` matches the dex number in `## 개체 정보` / `## Specimen info`, written `NO.NNN` (uppercase). There is no `No.NNN` anywhere in Markdown.
 4. The English file says `Codigdex`, never `Coding Dogam` / `코딩 도감`, and uses specimen/encounter/observation vocabulary.
 5. KO and EN have the same heading structure (same count and order of `##`/`###`) and the same code blocks.
-6. Each language references exactly one thumbnail and four numbered images `01`–`04` (EN uses `.en.png`), in the same order. Every referenced path exists (quote the `#` folder in shell). There are no unreferenced files in `images/` except versioned predecessors.
+6. Each language references exactly one thumbnail, the four role images `01`–`04`, and the same set of any extra explanatory images numbered `05`+ (EN uses `.en.png`), in the same order. Every referenced path exists (quote the `#` folder in shell). There are no unreferenced files in `images/` except versioned predecessors.
 7. The post ends with the `04` registration image; any next-topic preview comes before it.
 8. The Markdown references no temporary or absolute image paths.
 

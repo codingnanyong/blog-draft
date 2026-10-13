@@ -1,6 +1,6 @@
 ---
 title: "Codigdex #01 — The Collaboration Workflow, and a Complete Git Chapter"
-description: "The final week of the Codigdex series' Git chapter. Observing the Issue -> Branch -> Commit -> PR -> Review -> Merge workflow, and registering NO.005 Workflow Guardian to complete the Git chapter."
+description: "Codigdex Git finale: the Issue-to-Merge team workflow, and registering NO.005 to complete the Git chapter."
 tags: [git, codigdex, collaboration, pull request]
 date: 2026-09-28
 status: published
@@ -16,8 +16,8 @@ Four observations in, I've run into nearly every major Git tool: commits, branch
 
 ## Specimen info
 
-- Dex number: NO.005 Workflow Guardian
-- Name: Collaboration Workflow (Issue → Branch → Commit → PR → Review → Merge)
+- Dex number: NO.005
+- Name: Workflow Guardian
 - Classification: Team-level Git working procedure
 - Encounter rate: Very high (shows up without exception on any team project)
 - Danger level: ⚠️⚠️ (skip the procedure, and every tool learned so far gets tangled up)

@@ -23,3 +23,6 @@ node_modules/
 # Codex tool cache
 .codex-tmp/
 
+
+# Local image-generation prompt logs
+output/
