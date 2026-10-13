@@ -69,7 +69,18 @@ ls /home/lupi/notes   # absolute path: start from the root
 ls ../notes           # relative path: go up one level from here, then into notes
 ```
 
-Both commands show the same directory. But go back home with `cd ~` and type `ls ../notes` again, and this time it looks for `/home/notes` — which usually doesn't exist, so you get an error. A relative path comes as a set with "where you're standing right now."
+Both commands show the same directory. But move somewhere else and type the same relative path, and the result changes.
+
+```bash
+cd ~          # go home (/home/lupi)
+ls ../notes   # this time it looks for /home/notes
+```
+
+```text
+ls: cannot access '../notes': No such file or directory
+```
+
+One level up from home is `/home`, and there's no `notes` under it. The same `../notes` points somewhere else once you stand somewhere else. A relative path comes as a set with "where you're standing right now."
 
 So which kind is the `~/project` from last week? `~` is a marker the shell expands into your home directory's absolute path before running the command. So once it passes through the shell, `~/project` becomes the absolute path `/home/lupi/project`.
 
@@ -133,22 +144,45 @@ find ~ -type d -name notes   # only directories named notes, anywhere under home
 ./project/app.log
 ```
 
-This output is an example. You write it as `find start condition`. If the starting point is a relative path (`.`), the results come out as relative paths starting with `./`; if it's an absolute path (`/home/lupi`, which is what `~` expands to), the results are absolute too. The two kinds of address from Observation 1 carry straight through here.
+This is example output from the first command. You write it as `find start condition`. If the starting point is a relative path (`.`), the results come out as relative paths starting with `./`; if it's an absolute path (`/home/lupi`, which is what `~` expands to), the results are absolute too. The two kinds of address from Observation 1 carry straight through here.
 
-There's a reason `"*.log"` is wrapped in quotes, too. Last week I noted that the shell expands `~` ahead of time — and `*` works the same way. Type `find . -name *.log` without quotes, and if there are `.log` files in the current directory, the shell replaces `*.log` with those file names first. Then `find` receives some unrelated file names instead of a pattern. The quotes say: "Shell, don't expand this — hand it to `find` as is."
+![With app.log and debug.log in the current directory, quotes preserve the pattern for find while the unquoted wildcard expands into file names](./images/05-quoted-find-pattern.en.v2.png)
+
+There's a reason `"*.log"` is wrapped in quotes, too. Last week I noted that the shell expands `~` ahead of time — and `*` works the same way. Before running the command, the shell replaces `*.log` with the matching file names in the **current directory**.
+
+Say the current directory holds `app.log` and `debug.log`. Type `find . -name *.log` without quotes, and the command `find` actually receives turns into this.
+
+```bash
+find . -name app.log debug.log   # what's left after the shell expands *.log
+```
+
+```text
+find: paths must precede expression: `debug.log'
+find: possible unquoted pattern after predicate `-name'?
+```
+
+GNU `find` errors out and even hints that you probably forgot the quotes. The trickier case is when `app.log` is the only `.log` file there. Then it runs without any error as `find . -name app.log`, finds only files named exactly `app.log`, and quietly leaves out every other `.log` file. The result looks plausible, so it's easy to miss that it's wrong.
+
+The quotes say: "Shell, don't expand this — hand it to `find` as is." Always quote `find` patterns.
 
 Now for deleting.
 
 ```bash
-rm project/app.log      # delete a file
+rm project/today.txt    # delete a file (the today.txt moved there in Observation 2)
+rm -i project/app.log   # ask once before deleting (only y deletes it)
 rmdir notes             # delete an empty directory (fails if anything is inside)
-rm -r backup            # delete a directory and everything in it
-rm -i project/*.log     # delete, asking about each file one by one
+rm -r backup            # delete a directory and everything in it (the backup made with cp -r in Observation 2)
 ```
 
 The most important thing I recorded about `rm` (**r**e**m**ove) is that **there's no trash can**. Deleting in a file explorer usually means moving things to the trash, but `rm` deletes them on the spot. There's no undo button either. That's why `rm -rf` — `-r` for directories plus `-f` (force), which skips confirmations and error messages — is so often called out as the combination to be especially careful with.
 
-So I settled on one habit before deleting: print the targets first with `find` or `ls`, check that the list matches what I expect, and only then run `rm` on the same paths. If I'm using relative paths, I type `pwd` once before that, too.
+So I settled on one habit before deleting.
+
+1. If I'm going to use relative paths, check where I am with `pwd` first
+2. Print the targets with `find` or `ls`
+3. Only if the list matches what I expect, run `rm` on exactly the printed paths
+
+![Find app.log, check the printed path and target, then remove the verified file with rm](./images/06-find-check-remove.en.png)
 
 ---
 

@@ -69,7 +69,18 @@ ls /home/lupi/notes   # 절대 경로: 루트에서 출발
 ls ../notes           # 상대 경로: 지금 자리에서 한 단계 위로 올라간 뒤 notes로
 ```
 
-두 명령은 같은 디렉터리를 보여 준다. 하지만 `cd ~`로 홈에 돌아가서 `ls ../notes`를 다시 치면, 이번에는 `/home/notes`를 찾게 되고 보통은 그런 디렉터리가 없다는 오류를 만난다. 상대 경로는 "지금 어디 서 있는지"와 한 세트라는 뜻이다.
+두 명령은 같은 디렉터리를 보여 준다. 하지만 자리를 옮긴 뒤 같은 상대 경로를 치면 결과가 달라진다.
+
+```bash
+cd ~          # 홈(/home/lupi)으로 이동
+ls ../notes   # 이번에는 /home/notes를 찾는다
+```
+
+```text
+ls: cannot access '../notes': No such file or directory
+```
+
+홈에서 한 단계 위는 `/home`이고, 그 아래에는 `notes`가 없다. 같은 `../notes`라도 서 있는 자리가 바뀌면 가리키는 곳도 바뀐다. 상대 경로는 "지금 어디 서 있는지"와 한 세트라는 뜻이다.
 
 그럼 지난주에 쓴 `~/project`는 어느 쪽일까? `~`는 셸이 명령을 실행하기 전에 홈 디렉터리의 절대 경로로 펼쳐 주는 표시다. 그래서 `~/project`는 셸을 거치면 `/home/lupi/project`라는 절대 경로가 된다.
 
@@ -88,10 +99,10 @@ ls ../notes           # 상대 경로: 지금 자리에서 한 단계 위로 올
 ![mkdir와 cp 다음, mv로 notes 안의 todo.txt를 today.txt로 이름 변경하고 project로 이동한 뒤 rm으로 지우는 흐름](./images/03-file-commands-flow.v3.png)
 
 ```bash
-cd ~                       # 홈에서 시작
-mkdir notes                # notes 디렉터리 만들기
-cp todo.txt notes/         # todo.txt를 notes 안으로 복사 (원본은 그대로)
-ls notes                   # → todo.txt
+cd ~                                # 홈에서 시작
+mkdir notes                         # notes 디렉터리 만들기
+cp todo.txt notes/                  # todo.txt를 notes 안으로 복사 (원본은 그대로)
+ls notes                            # → todo.txt
 mv notes/todo.txt notes/today.txt   # 같은 자리에서 이름 바꾸기
 mv notes/today.txt project/         # project 안으로 옮기기
 ```
@@ -133,22 +144,45 @@ find ~ -type d -name notes   # 홈 아래에서 이름이 notes인 디렉터리�
 ./project/app.log
 ```
 
-출력은 예시다. `find 출발점 조건` 순서로 쓰고, 출발점이 상대 경로(`.`)면 결과도 `./`로 시작하는 상대 경로로, 절대 경로(`~`가 펼쳐진 `/home/lupi`)면 결과도 절대 경로로 나온다. 관찰 1의 두 주소가 여기서도 그대로 이어진다.
+첫 번째 명령의 출력 예시다. `find 출발점 조건` 순서로 쓰고, 출발점이 상대 경로(`.`)면 결과도 `./`로 시작하는 상대 경로로, 절대 경로(`~`가 펼쳐진 `/home/lupi`)면 결과도 절대 경로로 나온다. 관찰 1의 두 주소가 여기서도 그대로 이어진다.
 
-`"*.log"`를 따옴표로 감싼 데도 이유가 있다. 지난주에 셸이 `~`를 미리 펼쳐 준다고 했는데, `*`도 마찬가지다. 따옴표 없이 `find . -name *.log`라고 치면, 현재 디렉터리에 `.log` 파일이 있을 때 셸이 `*.log`를 그 파일 이름들로 먼저 바꿔 버린다. 그러면 `find`는 패턴이 아니라 엉뚱한 파일 이름을 받게 된다. 따옴표는 "이건 셸이 펼치지 말고 `find`에게 그대로 넘겨 줘"라는 표시다.
+![현재 폴더에 app.log와 debug.log가 있을 때 따옴표로 감싼 패턴은 find에 그대로 전달되고 따옴표가 없으면 셸이 파일 이름으로 펼치는 비교](./images/05-quoted-find-pattern.v4.png)
+
+`"*.log"`를 따옴표로 감싼 데도 이유가 있다. 지난주에 셸이 `~`를 미리 펼쳐 준다고 했는데, `*`도 마찬가지다. 셸은 명령을 실행하기 전에 `*.log`를 **현재 디렉터리**에서 이름이 맞는 파일들로 바꿔 놓는다.
+
+예를 들어 현재 디렉터리에 `app.log`와 `debug.log`가 있다고 해 보자. 따옴표 없이 `find . -name *.log`를 치면, `find`가 실제로 받는 명령은 이렇게 바뀐다.
+
+```bash
+find . -name app.log debug.log   # 셸이 *.log를 펼친 뒤의 모습
+```
+
+```text
+find: paths must precede expression: `debug.log'
+find: possible unquoted pattern after predicate `-name'?
+```
+
+GNU `find`는 오류를 내면서 "따옴표를 빠뜨린 것 아니냐"고 힌트까지 준다. 더 곤란한 건 `.log` 파일이 `app.log` 하나뿐일 때다. 그때는 오류 없이 `find . -name app.log`로 실행되어, 이름이 정확히 `app.log`인 파일만 찾고 다른 `.log` 파일은 조용히 빠진다. 결과가 그럴듯해 보여서 잘못된 줄 모르고 넘어가기 쉽다.
+
+따옴표는 "이건 셸이 펼치지 말고 `find`에게 그대로 넘겨 줘"라는 표시다. `find`의 패턴은 항상 따옴표로 감싼다.
 
 이제 지우기다.
 
 ```bash
-rm project/app.log      # 파일 지우기
+rm project/today.txt    # 파일 지우기 (관찰 2에서 옮겨 둔 today.txt)
+rm -i project/app.log   # 지울지 한 번 물어봄 (y를 입력해야 지워짐)
 rmdir notes             # 빈 디렉터리 지우기 (안에 뭔가 있으면 실패)
-rm -r backup            # 디렉터리와 그 안의 모든 것 지우기
-rm -i project/*.log     # 하나씩 지울지 물어보며 지우기
+rm -r backup            # 디렉터리와 그 안의 모든 것 지우기 (관찰 2에서 cp -r로 만든 backup)
 ```
 
 `rm`(**r**e**m**ove)에서 가장 중요하게 기록해 둔 건 **휴지통이 없다**는 점이다. 파일 탐색기의 삭제는 보통 휴지통으로 옮기는 것이지만, `rm`은 그 자리에서 바로 지운다. 되돌리기 버튼도 없다. 디렉터리를 지우는 `-r`에 확인과 오류 메시지까지 생략하는 `-f`(force)를 붙인 `rm -rf`가 특히 조심해야 할 조합으로 자주 언급되는 이유다.
 
-그래서 지우기 전 습관을 하나 정했다. 지울 대상을 `find`나 `ls`로 먼저 출력해 보고, 목록이 예상과 맞는지 확인한 다음에 같은 경로로 `rm`을 실행한다. 상대 경로를 쓴다면 그 전에 `pwd`도 한 번 친다.
+그래서 지우기 전 습관을 하나 정했다.
+
+1. 상대 경로를 쓸 거라면 `pwd`로 지금 자리부터 확인한다
+2. 지울 대상을 `find`나 `ls`로 먼저 출력해 본다
+3. 목록이 예상과 맞을 때만, 출력된 경로 그대로 `rm`을 실행한다
+
+![find로 app.log를 찾고 출력된 경로와 대상을 확인한 뒤 rm으로 삭제하는 세 단계](./images/06-find-check-remove.png)
 
 ---
 
