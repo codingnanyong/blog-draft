@@ -64,6 +64,7 @@ English assets reuse the same composition and replace text only. `thumbnail` fil
 | NO.004 Remote Rebaser | Remote repository and rebase topic cover | Remote and Rebase appear together | Compare `fetch`, `pull`, and `push` | Rebase moves the base point, before/after | Remote Rebaser pair alone on blank cream; 4/5 |
 | NO.005 Workflow Guardian | Final Git observation and collaboration workflow | Team workflow encounter | Issue / Branch / Commit agreements | Feature → PR → Review → Main | Workflow Guardian alone on blank cream; all 5/5 filled, Git chapter complete |
 | NO.006 Shell Scout | Shell Cave entrance; explorer meets Shell Scout | Shell Scout `Lv.1` RPG encounter | Terminal as input/output window vs shell as command interpreter | Filesystem location flow: `pwd → ls → cd` | Shell Scout alone on blank cream; Linux chapter 1/5 |
+| NO.007 Path Forager | Deeper in the Shell Cave; explorer meets the Path Forager unfolding a path map at a fork | Path Forager `Lv.2` RPG encounter | Absolute path (from `/`) vs relative path (from the working directory) reaching the same `notes` | File-handling flow: `mkdir → cp → mv → rm` | Path Forager alone on blank cream; Linux chapter 2/5 |
 
 ## Persistence and versioning
 
