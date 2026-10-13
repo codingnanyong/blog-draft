@@ -1,6 +1,6 @@
 ---
 title: "Codigdex #01 — The Collaboration Workflow, and a Complete Git Chapter"
-description: "The final week of the Codigdex series' Git chapter. Observing the Issue -> Branch -> Commit -> PR -> Review -> Merge workflow, and registering NO.005 Workflow Guardian to complete the Git chapter."
+description: "Codigdex Git finale: the Issue-to-Merge team workflow, and registering NO.005 to complete the Git chapter."
 tags: [git, codigdex, collaboration, pull request]
 date: 2026-09-28
 status: published

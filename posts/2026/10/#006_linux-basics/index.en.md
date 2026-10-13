@@ -1,6 +1,6 @@
 ---
 title: "Codigdex #02 — First Encounter with Linux: The Shell, the Terminal"
-description: "Week 1 of the Codigdex series' Linux chapter. Telling apart what the terminal and the shell each do, observing how pwd, ls, and cd show where you are and move you around, and registering NO.006 Shell Scout."
+description: "Codigdex Linux week 1: telling the terminal from the shell, and finding your way with pwd, ls, and cd."
 tags: [linux, codigdex, shell, terminal]
 date: 2026-10-05
 status: published

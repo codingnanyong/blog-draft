@@ -1,6 +1,6 @@
 ---
 title: "코딩 도감 #02 — Linux 첫 조우: 셸과 터미널"
-description: "코딩 도감 시리즈 Linux 편 첫 주차. 터미널과 셸이 각각 무슨 일을 하는지 구분하고, pwd·ls·cd로 현재 위치를 확인하고 이동하는 법을 관찰한 뒤 NO.006 셸 탐험가를 등록한다."
+description: "코딩 도감 Linux 1주차. 터미널과 셸을 구분하고 pwd·ls·cd로 위치를 확인하고 이동하는 법을 관찰한다."
 tags: [linux, 코딩도감, 셸, 터미널]
 date: 2026-10-05
 status: published
