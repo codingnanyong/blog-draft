@@ -8,7 +8,7 @@ status: draft
 
 # Codigdex #02 — Linux Paths and Files: Absolute and Relative Paths
 
-![Codigdex #02 Linux — the explorer meets the Path Forager with a map beside folder signposts](./images/thumbnail.en.png)
+![Codigdex #02 Linux — the explorer meets the Path Forager with a map at a fork in the Shell Cave](./images/thumbnail.en.v2.png)
 
 Last observation confirmed that the shell is always standing somewhere in the filesystem. We asked where with `pwd`, looked around with `ls`, and moved with `cd`.
 
@@ -44,7 +44,7 @@ Once again, I decided to sort out the questions before the commands.
 
 The first thing I pinned down was what a **path** is. A path is the address of a file or directory in the filesystem tree, written as the route to it joined by `/`. And there are two ways to write that address, depending on where it starts.
 
-![Absolute vs. relative paths — an address that starts at the root and an address that starts where you stand](./images/02-absolute-relative-paths.en.png)
+![From /home/lupi/project, the absolute path /home/lupi/notes and relative path ../notes reach the same notes folder](./images/02-absolute-relative-paths.en.v2.png)
 
 Say the tree for this observation looks like this.
 
@@ -85,7 +85,7 @@ Put together, here's how to tell them apart.
 
 Now that I can write addresses, it's time to handle some files. Pretend the `notes` directory in the tree above doesn't exist yet, and build things one at a time starting from home.
 
-![Five file commands — create with mkdir, copy with cp, move or rename with mv, remove with rm, and search with find](./images/03-file-commands-flow.en.png)
+![After mkdir and cp, rename todo.txt to today.txt inside notes, move it to project with a second mv, then remove it with rm](./images/03-file-commands-flow.en.v3.png)
 
 ```bash
 cd ~                                # start at home
@@ -171,4 +171,4 @@ The next observation meets permissions and users. Finally, I'll read strings lik
 
 Before that, the second specimen of the Linux chapter goes into the Codigdex. **NO.007 Path Forager** — follows path maps to gather and move files. The second of the Linux chapter's five slots is filled.
 
-![Codigdex registration card with only the Path Forager on a blank cream background — NO.007, File explorer type, Linux chapter 2/5](./images/04-path-forager-registration.en.png)
+![Path Forager registration card — NO.007, File explorer type, follows path maps to gather and move files, Linux chapter 2/5](./images/04-path-forager-registration.en.v3.png)
