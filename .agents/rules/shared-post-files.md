@@ -20,7 +20,7 @@ paths:
 
 ## Images
 
-- Every weekly post has five images per language: one thumbnail plus four numbered body images (`01`–`04`). English assets use the same filename with `.en.png`.
+- Every weekly post has at least five images per language: one thumbnail plus the four role images `01`–`04`. Readability comes first, so add explanatory images numbered from `05` upward wherever a picture makes a step easier to follow; there is no upper limit. Place each one next to the paragraph it explains. The `04` registration card always stays last. English assets use the same filename with `.en.png`.
 - Store images in the post's own `images/` directory; never leave a referenced final asset only in a temporary directory.
 - Never overwrite an existing image (enforced by a hook). Save a replacement as a versioned sibling such as `.v2.png`.
 - After adding images, update the Markdown image paths and meaningful alt text, and confirm every image reference resolves to an existing file.
