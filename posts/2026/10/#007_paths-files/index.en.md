@@ -1,12 +1,12 @@
 ---
-title: "Codigdex #02 — Linux Paths and Files: Absolute and Relative Paths, and mkdir/cp/mv/rm/find"
+title: "Codigdex #02 — Linux Paths and Files: Absolute and Relative Paths"
 description: "Week 2 of the Codigdex series' Linux chapter. Telling apart absolute paths that start at / from relative paths measured from where you stand, observing how mkdir, cp, mv, rm, and find create, move, find, and delete files, and registering NO.007 Path Forager."
 tags: [linux, codigdex, paths, files]
 date: 2026-10-12
 status: draft
 ---
 
-# Codigdex #02 — Linux Paths and Files: Absolute and Relative Paths, and mkdir/cp/mv/rm/find
+# Codigdex #02 — Linux Paths and Files: Absolute and Relative Paths
 
 ![Codigdex #02 Linux — the explorer meets the Path Forager with a map beside folder signposts](./images/thumbnail.en.png)
 
