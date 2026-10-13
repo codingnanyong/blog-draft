@@ -52,14 +52,46 @@ def select_project(nodes: list[dict[str, Any]], slug: str, name: str) -> dict[st
     )
 
 
-def validate_issue(issue: dict[str, Any], team_id: str, project_id: str) -> None:
+def validate_issue(issue: dict[str, Any], team_id: str, project_id: str, *, allow_completed: bool = False) -> None:
     if (issue.get("team") or {}).get("id") != team_id:
         raise SystemExit(f"Linear issue {issue['identifier']} is not in the configured team")
     if (issue.get("project") or {}).get("id") != project_id:
         raise SystemExit(f"Linear issue {issue['identifier']} is not in the configured project")
-    if (issue.get("state") or {}).get("type") in {"completed", "canceled"}:
+    state_type = (issue.get("state") or {}).get("type")
+    if state_type == "canceled" or (state_type == "completed" and not allow_completed):
         state_name = (issue.get("state") or {}).get("name", "closed")
         raise SystemExit(f"Linear issue {issue['identifier']} is already {state_name}")
+
+
+def reopen_issue(issue: dict[str, Any], team_id: str, fields: str) -> dict[str, Any]:
+    """Move a Done week issue back to In Progress for a follow-up PR on its branch."""
+    states = data_or_die(
+        graphql(
+            """
+            query($id: String!) {
+              team(id: $id) { states { nodes { id name type position } } }
+            }
+            """,
+            {"id": team_id},
+        )
+    )["team"]["states"]["nodes"]
+    started = sorted((s for s in states if s["type"] == "started"), key=lambda s: s["position"])
+    target = next((s for s in started if s["name"] == "In Progress"), started[0] if started else None)
+    if not target:
+        raise SystemExit("Linear team has no started state to reopen into")
+    updated = data_or_die(
+        graphql(
+            f"""
+            mutation($id: String!, $state: String!) {{
+              issueUpdate(id: $id, input: {{ stateId: $state }}) {{ success issue {{ {fields} }} }}
+            }}
+            """,
+            {"id": issue["id"], "state": target["id"]},
+        )
+    )["issueUpdate"]
+    if not updated["success"] or not updated["issue"]:
+        raise SystemExit(f"Linear issueUpdate failed while reopening {issue['identifier']}: {updated}")
+    return updated["issue"]
 
 
 def main() -> None:
@@ -156,7 +188,13 @@ def main() -> None:
             issue = matches[0]
 
     if issue:
-        validate_issue(issue, team["id"], project["id"])
+        # A cod-<n> branch names its week issue explicitly. When that week already
+        # merged or published, the issue is Done; a follow-up PR reopens it, and
+        # merging the PR closes it again.
+        validate_issue(issue, team["id"], project["id"], allow_completed=bool(existing_identifier))
+        if (issue.get("state") or {}).get("type") == "completed":
+            issue = reopen_issue(issue, team["id"], fields)
+            action = "reopened"
     else:
         description = (
             "Automatically created before the draft pull request.\n\n"

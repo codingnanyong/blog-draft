@@ -178,12 +178,18 @@ jobs:
               if (issueLinearId !== process.env.LINEAR_ID) {
                 throw new Error(`#${issue.number} points to ${issueLinearId || "no Linear issue"}, not ${process.env.LINEAR_ID}`);
               }
+              // A follow-up PR for the same week reuses its mirror issue: reopen it if
+              // the earlier PR closed it, and record this branch's key next to any
+              // earlier one. The Linear ID check above keeps it on the right week.
               if (issue.state !== "open") {
-                throw new Error(`#${issue.number} is closed; refusing to reuse it for a new PR`);
-              }
-              const existingMarker = (issue.body || "").match(/<!-- pr-automation-key: ([^>]+) -->/)?.[1];
-              if (existingMarker && existingMarker !== process.env.AUTOMATION_KEY) {
-                throw new Error(`#${issue.number} already belongs to ${existingMarker}`);
+                const response = await github.rest.issues.update({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issue.number,
+                  state: "open",
+                });
+                issue = response.data;
+                core.notice(`Reopened #${issue.number} for ${process.env.HEAD_BRANCH}`);
               }
               if (!(issue.body || "").includes(marker)) {
                 const body = [issue.body || "", "", marker].join("\n").trim();

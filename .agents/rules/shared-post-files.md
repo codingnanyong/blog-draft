@@ -15,6 +15,7 @@ paths:
 ## Frontmatter
 
 - Fields: `title`, `description`, `tags`, `date`, `status`.
+- `description` stays within 140 bytes in UTF-8 (Hangul counts 3 bytes, so about 45 Korean characters). Keep the week and its core topic; drop series boilerplate first. Enforced by the shared guard.
 - `date` is the Monday the post is scheduled to publish; posts publish every Monday. After a confirmed publish, `date` is the real publish Monday.
 - `status` stays `draft` until the user reports the post is published (switching to `published` asks for confirmation through a hook).
 

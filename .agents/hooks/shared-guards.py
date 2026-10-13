@@ -18,6 +18,8 @@ from pathlib import Path
 PROTECTED_BRANCHES = {"main", "develop"}
 LOWER_DEX = re.compile(r"\bNo\.\s?\d{3}\b")
 PUBLISHED = re.compile(r"^status:\s*published\s*$", re.MULTILINE)
+DESCRIPTION = re.compile(r'^description:\s*"(.*)"\s*$', re.MULTILINE)
+DESCRIPTION_MAX_BYTES = 140
 ENV_FILE = re.compile(r"(^|[\\/])\.env(\.[^\\/]*)?$")
 
 
@@ -112,6 +114,11 @@ def check_file_change(rel: str, new_text: str, old_text: str, *, overwrites_exis
         added = sorted(set(LOWER_DEX.findall(new_text)) - set(LOWER_DEX.findall(old_text)))
         if added:
             return "deny", f"Write dex numbers uppercase (NO.001); found {added}. No.001 renders oddly on Velog/Medium."
+    if re.match(r"posts/.+/index\.[a-z]{2}\.md$", rel):
+        for description in DESCRIPTION.findall(new_text):
+            size = len(description.encode("utf-8"))
+            if size > DESCRIPTION_MAX_BYTES:
+                return "deny", f"description is {size} bytes; keep it within {DESCRIPTION_MAX_BYTES} bytes (UTF-8, Hangul is 3 bytes each)."
     if re.match(r"posts/.+/index\.[a-z]{2}\.md$", rel) and PUBLISHED.search(new_text) and not PUBLISHED.search(old_text):
         return "ask", "Switching a post to status: published is only for posts the user has reported live on Velog/Medium."
     return None
