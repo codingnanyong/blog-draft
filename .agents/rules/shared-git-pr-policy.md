@@ -16,6 +16,7 @@ This policy is shared with `codingnanyong/repo-template` and is CI-enforced by `
 4. On merge into `develop`, CI closes the mirrored GitHub issue and Linear moves the issue to Done.
 
 - Provisioning is keyed by `repository:branch`, so a push or rerun reuses records after a partial failure. If automation fails, rerun `Prepare feature PR` with the existing branch. Never create a second issue pair for the same branch.
+- A follow-up to a week whose PR already merged (e.g. replacement images) reuses the **same** branch name `feat/cod-<n>-<slug>` and needs the mirrored GitHub issue reopened first. A different branch name fails, because the mirror issue is keyed to the first branch. Only open PRs count as existing, so the push opens a new Draft PR against the same issue pair.
 - If it fails at "Ensure Linear issue" with `USAGE_LIMIT_EXCEEDED`, the Linear free plan's 250 active-issue cap was hit. Archive finished issues, then rerun.
 - Secrets: `LINEAR_API_KEY`, `GH_PAT` (reads contents, writes issues/PRs; creating the PR with it lets PR checks start).
 

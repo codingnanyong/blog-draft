@@ -101,7 +101,7 @@ jobs:
         run: |
           set -euo pipefail
           url="$(gh api --method GET "repos/${GITHUB_REPOSITORY}/pulls" \
-            -f state=all \
+            -f state=open \
             -f head="${GITHUB_REPOSITORY_OWNER}:${HEAD_BRANCH}" \
             --jq '.[0].html_url // ""')"
           if [[ -n "$url" ]]; then
