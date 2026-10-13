@@ -85,7 +85,7 @@ Put together, here's how to tell them apart.
 
 Now that I can write addresses, it's time to handle some files. Pretend the `notes` directory in the tree above doesn't exist yet, and build things one at a time starting from home.
 
-![Create notes with mkdir, copy with cp while retaining the original, move to project/today.txt with mv, then remove it with rm](./images/03-file-commands-flow.en.v2.png)
+![After mkdir and cp, rename todo.txt to today.txt inside notes, move it to project with a second mv, then remove it with rm](./images/03-file-commands-flow.en.v3.png)
 
 ```bash
 cd ~                                # start at home
@@ -171,4 +171,4 @@ The next observation meets permissions and users. Finally, I'll read strings lik
 
 Before that, the second specimen of the Linux chapter goes into the Codigdex. **NO.007 Path Forager** — follows path maps to gather and move files. The second of the Linux chapter's five slots is filled.
 
-![Path Forager registration card on a blank cream background — NO.007, File explorer type, collects and moves files with path maps, Linux chapter 2/5](./images/04-path-forager-registration.en.v2.png)
+![Path Forager registration card — NO.007, File explorer type, follows path maps to gather and move files, Linux chapter 2/5](./images/04-path-forager-registration.en.v3.png)

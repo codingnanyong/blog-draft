@@ -85,7 +85,7 @@ ls ../notes           # 상대 경로: 지금 자리에서 한 단계 위로 올
 
 주소를 적을 수 있게 됐으니 이제 파일을 다뤄 볼 차례다. 앞의 나무에서 `notes` 디렉터리가 아직 없다고 치고, 홈에서부터 하나씩 만들어 본다.
 
-![mkdir로 notes를 만들고 cp로 원본을 남겨 복사한 뒤 mv로 project/today.txt로 옮기고 rm으로 지우는 흐름](./images/03-file-commands-flow.v2.png)
+![mkdir와 cp 다음, mv로 notes 안의 todo.txt를 today.txt로 이름 변경하고 project로 이동한 뒤 rm으로 지우는 흐름](./images/03-file-commands-flow.v3.png)
 
 ```bash
 cd ~                       # 홈에서 시작
@@ -171,4 +171,4 @@ rm -i project/*.log     # 하나씩 지울지 물어보며 지우기
 
 그 전에, Linux 챕터의 두 번째 개체를 코딩 도감에 등록한다. **NO.007 경로 채집가** — 경로 지도를 따라 파일을 모으고 옮긴다. Linux 챕터 다섯 칸 중 두 번째 칸이 채워졌다.
 
-![빈 크림 배경의 경로 채집가 등록 카드 — NO.007, 파일 탐색형, 경로 지도로 파일 수집·이동, Linux 챕터 2/5](./images/04-path-forager-registration.v2.png)
+![경로 채집가 등록 카드 — NO.007, 파일 탐색형, 경로 지도를 따라 파일을 모으고 옮긴다, Linux 챕터 2/5](./images/04-path-forager-registration.v3.png)
