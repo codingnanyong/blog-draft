@@ -18,8 +18,8 @@ status: published
 
 ## 개체 정보
 
-- 도감 번호: NO.003 충돌 되돌이
-- 이름: Reset, Revert, Restore, Merge Conflict
+- 도감 번호: NO.003
+- 이름: 충돌 되돌이
 - 분류: Git의 되돌리기 도구 + 협업 중 필연적으로 마주치는 충돌 상황
 - 출현 빈도: 매우 높음 (실수는 항상 일어나고, 협업하면 conflict도 언젠가 온다)
 - 위험도: ⚠️⚠️⚠️ (특히 `reset --hard`는 커밋을 진짜로 날려버릴 수 있다)

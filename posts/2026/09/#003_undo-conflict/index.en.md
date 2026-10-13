@@ -18,8 +18,8 @@ This week, it's time to face both head-on.
 
 ## Specimen info
 
-- Dex number: NO.003 Conflict Rewinder
-- Name: Reset, Revert, Restore, Merge Conflict
+- Dex number: NO.003
+- Name: Conflict Rewinder
 - Classification: Git's undo tools, plus the collision every collaborator eventually runs into
 - Encounter rate: Very high (mistakes always happen, and conflicts arrive sooner or later once you collaborate)
 - Danger level: ⚠️⚠️⚠️ (`reset --hard` in particular can genuinely wipe out commits)

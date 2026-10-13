@@ -16,8 +16,8 @@ Four observations in, I've run into nearly every major Git tool: commits, branch
 
 ## Specimen info
 
-- Dex number: NO.005 Workflow Guardian
-- Name: Collaboration Workflow (Issue → Branch → Commit → PR → Review → Merge)
+- Dex number: NO.005
+- Name: Workflow Guardian
 - Classification: Team-level Git working procedure
 - Encounter rate: Very high (shows up without exception on any team project)
 - Danger level: ⚠️⚠️ (skip the procedure, and every tool learned so far gets tangled up)

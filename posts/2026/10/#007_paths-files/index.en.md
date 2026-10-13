@@ -20,8 +20,8 @@ But just wandering around doesn't get much done. Sooner or later you have to cre
 
 ## Specimen info
 
-- Dex number: NO.007 Path Forager
-- Name: Paths and files — absolute/relative paths, `mkdir`, `cp`, `mv`, `rm`, `find`
+- Dex number: NO.007
+- Name: Path Forager
 - Classification: File explorer type
 - Encounter rate: Very high (scripts, config files, CI logs — there's hardly anywhere paths don't show up)
 - Danger level: ⚠️⚠️ (`rm` has no trash can, and `cp` and `mv` overwrite a file with the same name without asking)

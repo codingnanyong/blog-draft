@@ -21,7 +21,7 @@ paths:
 - A `#NN` series is a **chapter**; each week registers one **specimen** `NO.00x`.
 - Write dex numbers uppercase as `NO.001` in Markdown. `No.001` renders oddly on Velog/Medium (enforced by a hook). Text baked into images may still read `No. 004`.
 - Dex numbers follow the user's game repo (`github.com/codingnanyong/codigdex`, `web/lib/domain/chapters/*.ts` `dexNumber`). Git = NO.001–005, Linux = NO.006–010. Re-read the game repo before numbering later chapters, because unreleased chapters' numbers shift.
-- The first bullet of `## 개체 정보` / `## Specimen info` is `- 도감 번호: NO.00N <이름>` / `- Dex number: NO.00N <English name>`. A chapter's final week registers its last specimen and frames it as completing the chapter.
+- `## 개체 정보` / `## Specimen info` opens with two bullets: `- 도감 번호: NO.00N` / `- Dex number: NO.00N` (the number only), then `- 이름: <캐릭터 이름>` / `- Name: <English character name>`, the specimen's name from the game repo (e.g. 깃새싹 / Git Sprout). The name is never the topic or command list; the title and body carry the topic. A chapter's final week registers its last specimen and frames it as completing the chapter.
 
 ## English localization
 
