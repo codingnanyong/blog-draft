@@ -14,7 +14,7 @@ Rules that apply throughout: `.agents/rules/shared-series-voice.md`, `shared-pos
 5. **Korean draft first** (`index.ko.md`). Write the mental model before commands; end with the registration section.
 6. **English localization** (`index.en.md`). Keep the same structure, code, and image sequence.
 7. **Check accuracy.** Verify every command and technical claim, and do not invent experiences.
-8. **Images.** Run the `shared-weekly-images` skill: five images per language.
+8. **Images.** Run the `shared-weekly-images` skill: thumbnail and `01`–`04` per language, plus `05`+ explanatory images wherever they improve readability.
 9. **Review.** In Claude Code, delegate a mechanical check to the `claude-post-checker` agent; in Codex, run the same checklist directly or through an available subagent. Fix the findings, then hand the draft to the user for review.
 10. **After the user approves it for GitHub:**
     - Back up `index.ko.md` / `index.en.md` to Drive as plain Markdown (see `shared-post-files.md`), and ask the user to drag `images/` over.

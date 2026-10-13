@@ -20,8 +20,8 @@ This chapter observes what's on the other side of that window. Codigdex #02 is L
 
 ## Specimen info
 
-- Dex number: NO.006 Shell Scout
-- Name: The shell and the terminal — `pwd`, `ls`, `cd`
+- Dex number: NO.006
+- Name: Shell Scout
 - Classification: Shell beginner type
 - Encounter rate: Very high (shows up everywhere: servers, containers, CI logs)
 - Danger level: ⚠️ (the three commands themselves are harmless, but type the next command without knowing where you're standing and it runs in the wrong place)

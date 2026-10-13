@@ -42,6 +42,13 @@ Use this file with `shared-images.md`. It records the composition decisions that
 - Bottom: one short takeaway panel.
 - Keep arrows and states unambiguous; do not mix a battle UI into the diagram.
 
+### 05+ — explanatory (optional, unlimited)
+
+- Canvas: square `1:1`, laid out like `02` (comparison) or `03` (flow).
+- Purpose: make one step, comparison, or pitfall in the prose easier to read. Readability outranks a low image count.
+- Content: the post's own example names, paths, and commands; one framed title and one short takeaway panel.
+- Placement: next to the paragraph it explains, numbered in reading order, always before the `04` registration card.
+
 ### 04 — registration
 
 - Canvas: square `1:1` registration card with a thick black/orange frame.
@@ -56,15 +63,15 @@ Use this file with `shared-images.md`. It records the composition decisions that
 
 English assets reuse the same composition and replace text only. `thumbnail` files are publication covers even when older Markdown does not embed them in the body.
 
-| Specimen | Thumbnail | 01 encounter | 02 concept | 03 process | 04 registration |
-| --- | --- | --- | --- | --- | --- |
-| NO.001 Git Sprout | First Git observation with explorer, field guide, and Git Sprout | Wild Git encounter | Working tree / staging / local repository | `add → commit → push` | Git Sprout alone on blank cream; 1/5 |
-| NO.002 Branch Twins | Branch and merge topic cover | Branch and Merge appear together | Branch as parallel worlds from one starting point | Merge combines another timeline into the current branch | Branch Twins alone on blank cream; 2/5 |
-| NO.003 Conflict Rewinder | Undo and merge-conflict topic cover | Undo tools and merge conflict appear | Compare `reset`, `revert`, and `restore` targets | The moment a merge conflict occurs | Conflict Rewinder group alone on blank cream; 3/5 |
-| NO.004 Remote Rebaser | Remote repository and rebase topic cover | Remote and Rebase appear together | Compare `fetch`, `pull`, and `push` | Rebase moves the base point, before/after | Remote Rebaser pair alone on blank cream; 4/5 |
-| NO.005 Workflow Guardian | Final Git observation and collaboration workflow | Team workflow encounter | Issue / Branch / Commit agreements | Feature → PR → Review → Main | Workflow Guardian alone on blank cream; all 5/5 filled, Git chapter complete |
-| NO.006 Shell Scout | Shell Cave entrance; explorer meets Shell Scout | Shell Scout `Lv.1` RPG encounter | Terminal as input/output window vs shell as command interpreter | Filesystem location flow: `pwd → ls → cd` | Shell Scout alone on blank cream; Linux chapter 1/5 |
-| NO.007 Path Forager | Deeper in the Shell Cave; explorer meets the Path Forager unfolding a path map at a fork | Path Forager `Lv.2` RPG encounter | Absolute path (from `/`) vs relative path (from the working directory) reaching the same `notes` | File-handling flow: `mkdir → cp → mv → rm` | Path Forager alone on blank cream; Linux chapter 2/5 |
+| Specimen | Thumbnail | 01 encounter | 02 concept | 03 process | 04 registration | 05+ explanatory |
+| --- | --- | --- | --- | --- | --- | --- |
+| NO.001 Git Sprout | First Git observation with explorer, field guide, and Git Sprout | Wild Git encounter | Working tree / staging / local repository | `add → commit → push` | Git Sprout alone on blank cream; 1/5 | — |
+| NO.002 Branch Twins | Branch and merge topic cover | Branch and Merge appear together | Branch as parallel worlds from one starting point | Merge combines another timeline into the current branch | Branch Twins alone on blank cream; 2/5 | — |
+| NO.003 Conflict Rewinder | Undo and merge-conflict topic cover | Undo tools and merge conflict appear | Compare `reset`, `revert`, and `restore` targets | The moment a merge conflict occurs | Conflict Rewinder group alone on blank cream; 3/5 | — |
+| NO.004 Remote Rebaser | Remote repository and rebase topic cover | Remote and Rebase appear together | Compare `fetch`, `pull`, and `push` | Rebase moves the base point, before/after | Remote Rebaser pair alone on blank cream; 4/5 | — |
+| NO.005 Workflow Guardian | Final Git observation and collaboration workflow | Team workflow encounter | Issue / Branch / Commit agreements | Feature → PR → Review → Main | Workflow Guardian alone on blank cream; all 5/5 filled, Git chapter complete | — |
+| NO.006 Shell Scout | Shell Cave entrance; explorer meets Shell Scout | Shell Scout `Lv.1` RPG encounter | Terminal as input/output window vs shell as command interpreter | Filesystem location flow: `pwd → ls → cd` | Shell Scout alone on blank cream; Linux chapter 1/5 | — |
+| NO.007 Path Forager | Deeper in the Shell Cave; explorer meets the Path Forager unfolding a path map at a fork | Path Forager `Lv.2` RPG encounter | Absolute path (from `/`) vs relative path (from the working directory) reaching the same `notes` | File-handling flow: `mkdir → cp → mv (rename) → mv (move) → rm` | Path Forager alone on blank cream; Linux chapter 2/5 | 05 quoted vs unquoted `*.log` pattern; 06 find → check → rm before deleting |
 
 ## Persistence and versioning
 
