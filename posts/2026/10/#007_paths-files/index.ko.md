@@ -1,9 +1,9 @@
 ---
 title: "코딩 도감 #02 — Linux 경로와 파일: 절대·상대 경로"
-description: "코딩 도감 시리즈 Linux 편 2주차. /에서 시작하는 절대 경로와 현재 위치 기준의 상대 경로를 구분하고, mkdir·cp·mv·rm·find로 파일을 만들고 옮기고 찾고 지우는 법을 관찰한 뒤 NO.007 경로 채집가를 등록한다."
+description: "코딩 도감 Linux 2주차. 절대·상대 경로를 구분하고 mkdir·cp·mv·rm·find로 파일을 다루는 법을 관찰한다."
 tags: [linux, 코딩도감, 경로, 파일]
 date: 2026-10-12
-status: draft
+status: published
 ---
 
 # 코딩 도감 #02 — Linux 경로와 파일: 절대·상대 경로

@@ -27,12 +27,12 @@ The user has picked Linux as the chapter after Git. The user's separate game pro
 | Week | Topic | Publish Date | Linear | Status |
 | --- | --- | --- | --- | --- |
 | Week 1 | Linux basics — first encounter (shell & terminal, `pwd`/`ls`/`cd`) | 2026-10-05 | COD-343 | Published |
-| Week 2 | Paths & files (absolute/relative paths, `mkdir`/`cp`/`mv`/`rm`/`find`) | 2026-10-12 | COD-350 | Posts and images ready, in review |
+| Week 2 | Paths & files (absolute/relative paths, `mkdir`/`cp`/`mv`/`rm`/`find`) | 2026-10-12 | COD-350 | Published |
 | Week 3 | Permissions & users (`rwx`, `chmod`/`chown`, `sudo`) | 2026-10-19 | TBD | Proposed |
 | Week 4 | Pipes & processes (`\|`/`>`/`>>`, `ps`/`top`/`kill`, background jobs) | 2026-10-26 | TBD | Proposed |
 | Week 5 | The kernel & the OS (kernel, system calls, boot, `systemctl`, wrap-up registration) | 2026-11-02 | TBD | Proposed |
 
-The user reported Week 1 (NO.006) published on both Velog and Medium. PR #124 includes the Korean and English posts, five images per language, and updated Git registration cards. The date remains 2026-10-05, the Monday of the publication week; publication on both platforms was reported on 2026-10-08. Week 2 (NO.007) has Korean and English posts with seven images per language (thumbnail, 01–04, and explanatory 05–06), reviewed in the COD-350 draft PR; it stays `status: draft` until publication is reported. Linear issues (parent + standard sub-issues) and Notion sprints for the remaining weeks will be created once their breakdown is confirmed. If the actual pacing turns out different once underway, the week count may be adjusted.
+The user reported Week 1 (NO.006) published on both Velog and Medium. PR #124 includes the Korean and English posts, five images per language, and updated Git registration cards. The date remains 2026-10-05, the Monday of the publication week; publication on both platforms was reported on 2026-10-08. The user reported Week 2 (NO.007) published on both Velog and Medium on 2026-10-13. PRs #127, #128, and #130 include the Korean and English posts with seven images per language (thumbnail, 01–04, and explanatory 05–06); the date remains 2026-10-12, the Monday of the publication week. Linear issues (parent + standard sub-issues) and Notion sprints for the remaining weeks will be created once their breakdown is confirmed. If the actual pacing turns out different once underway, the week count may be adjusted.
 
 ## #03 — Docker (draft — proposed 5 weeks, not confirmed)
 
