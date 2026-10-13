@@ -8,7 +8,7 @@ status: draft
 
 # 코딩 도감 #02 — Linux 경로와 파일: 절대·상대 경로
 
-![코딩 도감 #02 Linux — 폴더 이정표 앞에서 경로 지도를 펼친 경로 채집가와 탐험가](./images/thumbnail.png)
+![코딩 도감 #02 Linux — 셸 동굴의 갈림길에서 경로 지도를 펼친 경로 채집가와 탐험가](./images/thumbnail.v2.png)
 
 지난 관찰에서는 셸이 늘 파일시스템 어딘가에 서 있다는 걸 확인했다. `pwd`로 위치를 묻고, `ls`로 둘러보고, `cd`로 옮겨 다녔다.
 
@@ -44,7 +44,7 @@ status: draft
 
 가장 먼저 정리한 건 **경로(path)** 가 무엇인지였다. 경로는 파일시스템 나무에서 어떤 파일이나 디렉터리까지 가는 길을 `/`로 이어 적은 주소다. 그리고 이 주소를 적는 방법은 출발점에 따라 두 가지로 나뉜다.
 
-![절대 경로와 상대 경로 — 루트에서 출발하는 주소와 현재 위치에서 출발하는 주소](./images/02-absolute-relative-paths.png)
+![현재 위치가 /home/lupi/project일 때 /home/lupi/notes와 ../notes가 같은 notes 폴더를 가리키는 경로 비교](./images/02-absolute-relative-paths.v2.png)
 
 이번 관찰에서 쓸 나무는 이렇게 생겼다고 해 보자.
 
@@ -85,7 +85,7 @@ ls ../notes           # 상대 경로: 지금 자리에서 한 단계 위로 올
 
 주소를 적을 수 있게 됐으니 이제 파일을 다뤄 볼 차례다. 앞의 나무에서 `notes` 디렉터리가 아직 없다고 치고, 홈에서부터 하나씩 만들어 본다.
 
-![파일 명령어 다섯 가지 — mkdir로 만들고, cp로 복사하고, mv로 옮기거나 이름을 바꾸고, rm으로 지우고, find로 찾는다](./images/03-file-commands-flow.png)
+![mkdir로 notes를 만들고 cp로 원본을 남겨 복사한 뒤 mv로 project/today.txt로 옮기고 rm으로 지우는 흐름](./images/03-file-commands-flow.v2.png)
 
 ```bash
 cd ~                       # 홈에서 시작
@@ -171,4 +171,4 @@ rm -i project/*.log     # 하나씩 지울지 물어보며 지우기
 
 그 전에, Linux 챕터의 두 번째 개체를 코딩 도감에 등록한다. **NO.007 경로 채집가** — 경로 지도를 따라 파일을 모으고 옮긴다. Linux 챕터 다섯 칸 중 두 번째 칸이 채워졌다.
 
-![빈 크림 배경에 경로 채집가만 담은 코딩 도감 등록 카드 — NO.007, 파일 탐색형, Linux 챕터 2/5](./images/04-path-forager-registration.png)
+![빈 크림 배경의 경로 채집가 등록 카드 — NO.007, 파일 탐색형, 경로 지도로 파일 수집·이동, Linux 챕터 2/5](./images/04-path-forager-registration.v2.png)
