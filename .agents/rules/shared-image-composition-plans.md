@@ -72,6 +72,7 @@ English assets reuse the same composition and replace text only. `thumbnail` fil
 | NO.005 Workflow Guardian | Final Git observation and collaboration workflow | Team workflow encounter | Issue / Branch / Commit agreements | Feature → PR → Review → Main | Workflow Guardian alone on blank cream; all 5/5 filled, Git chapter complete | — |
 | NO.006 Shell Scout | Shell Cave entrance; explorer meets Shell Scout | Shell Scout `Lv.1` RPG encounter | Terminal as input/output window vs shell as command interpreter | Filesystem location flow: `pwd → ls → cd` | Shell Scout alone on blank cream; Linux chapter 1/5 | — |
 | NO.007 Path Forager | Deeper in the Shell Cave; explorer meets the Path Forager unfolding a path map at a fork | Path Forager `Lv.2` RPG encounter | Absolute path (from `/`) vs relative path (from the working directory) reaching the same `notes` | File-handling flow: `mkdir → cp → mv (rename) → mv (move) → rm` | Path Forager alone on blank cream; Linux chapter 2/5 | 05 quoted vs unquoted `*.log` pattern; 06 find → check → rm before deleting |
+| NO.008 Permission Guard | Locked Shell Cave door; explorer meets the key-and-shield guard | Permission Guard `Lv.3` RPG encounter | `-rw-r--r--` split into type / owner / group / others | `./run.sh` denied → `chmod 755 run.sh` → check → run | Permission Guard alone on blank cream; Linux chapter 3/5 | 05 file vs directory rwx (deletion needs directory w+x); 06 octal 755; 07 inspect owner and identity before choosing a fix |
 
 ## Persistence and versioning
 
