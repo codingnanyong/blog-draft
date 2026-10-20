@@ -6,6 +6,7 @@ This policy is shared with `codingnanyong/repo-template` and is CI-enforced by `
 
 - `feat/<slug>` → `develop` → `main`. `main` accepts PRs only from `develop`. Never push directly to `develop` or `main` (enforced by a hook).
 - Work that belongs to the week in progress goes on `feat/cod-<n>-<slug>`, so `Prepare feature PR` reuses that week's Linear issue. Only work independent of the week uses a bare `feat/<slug>`.
+- For weekly posts, `<n>` must be the issue number of the existing automatically recurring weekly parent, whose placeholder title and description are updated in place (see `shared-tracking.md`). Resolve that parent before creating the branch; never use a bare `feat/<slug>` to provision a replacement weekly issue.
 - Publishing to Velog/Medium is the release and stays manual.
 
 ## Issue pair (automated)

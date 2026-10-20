@@ -6,6 +6,7 @@ Linear team `COD` cycles and the Notion Sprint Tracker are shared with other pro
 
 ## Linear
 
+- **Reuse the automatically recurring weekly issue.** Before starting a week's work, find that week's parent created from the recurring template in project **블로그 자동발행**, including a placeholder title such as `N주차`. Update that existing issue's title and description with the confirmed week, topic, and scope, and manage progress through its existing six sub-issues. Preserve its issue ID and history; never create a replacement parent or duplicate sub-issues just because the title is still a placeholder. If the weekly issue is missing or multiple candidates exist, resolve which recurring issue to use before creating anything.
 - Each week is one parent issue plus six standard sub-issues: 주제 선정 / 초안 작성 (Claude) / 사용자 검토 & 피드백 반영 / GitHub 반영 (feat 브랜치 → PR) / PR 병합 (develop) / Velog·Medium 발행 & 로그 업데이트. They come from the team template **주간 포스트 (코딩 도감)** through a recurring issue.
 - Cycles are one week, starting Monday 00:00 KST. The weekly parent belongs to the cycle in which its draft is written. The publish sub-issue finishes in the next cycle.
 - **Merge is not publish.** Merging the draft PR auto-closes the week's parent through Linear's GitHub integration while the post is still unpublished. Reopen the parent to In Progress and leave `Velog·Medium 발행 & 로그 업데이트` at Todo until the user reports publication.
