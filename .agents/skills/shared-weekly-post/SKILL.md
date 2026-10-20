@@ -8,6 +8,7 @@ description: Draft a week's Codigdex post (Korean first, then English), from top
 Rules that apply throughout: `.agents/rules/shared-series-voice.md`, `shared-post-files.md`, `shared-authority.md`.
 
 1. **Confirm the topic.** The user supplies or confirms it. Read the roadmap row in `docs/kor/ROADMAP.md` for the chapter, week, and publish Monday.
+   - **Reuse the recurring Linear issue.** Follow `.agents/rules/shared-tracking.md`: find the automatically generated weekly parent (even if titled `N주차`), update its title and description for this week's confirmed topic, and use its existing six sub-issues. Keep that parent's `COD-<n>` for the feature branch; do not create a replacement weekly issue.
 2. **Look up the specimen.** Take the stage's `dexNumber` and name from the game repo (`github.com/codingnanyong/codigdex`, `web/lib/domain/chapters/*.ts`).
 3. **Read before writing.** Read `docs/kor/WORKFLOW.md`, `templates/shared-post-template.ko.md`, `templates/shared-post-template.en.md`, and the most recent post in the same chapter (both languages).
 4. **Create the folder.** Create `posts/YYYY/MM/#NNN_<slug>/` from the templates and set `date` to the publish Monday and `status: draft`.
