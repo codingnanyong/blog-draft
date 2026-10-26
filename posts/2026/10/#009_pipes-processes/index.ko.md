@@ -1,12 +1,12 @@
 ---
-title: "코딩 도감 #02 — Linux 파이프와 프로세스: |와 kill"
+title: "코딩 도감 #02 — Linux 파이프와 프로세스"
 description: "코딩 도감 Linux 4주차. 파이프와 리다이렉션으로 출력을 잇고, ps·top·kill로 프로세스를 관찰한다."
 tags: [linux, 코딩도감, 파이프, 프로세스]
 date: 2026-10-26
-status: draft
+status: published
 ---
 
-# 코딩 도감 #02 — Linux 파이프와 프로세스: |와 kill
+# 코딩 도감 #02 — Linux 파이프와 프로세스
 
 ![코딩 도감 #02 Linux — 셸 동굴의 파이프 사이에서 흐름을 조종하는 파이프 엔지니어와 마주한 탐험가](./images/thumbnail.v2.png)
 

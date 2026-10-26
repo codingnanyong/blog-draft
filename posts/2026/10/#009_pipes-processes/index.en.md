@@ -1,12 +1,12 @@
 ---
-title: "Codigdex #02 — Linux Pipes and Processes: | and kill"
+title: "Codigdex #02 — Linux Pipes and Processes"
 description: "Codigdex Linux week 4: connecting output with pipes and redirection, and observing processes with ps, top, and kill."
 tags: [linux, codigdex, pipes, processes]
 date: 2026-10-26
-status: draft
+status: published
 ---
 
-# Codigdex #02 — Linux Pipes and Processes: | and kill
+# Codigdex #02 — Linux Pipes and Processes
 
 ![Codigdex #02 — Linux · Observation 4: the explorer faces the Pipe Engineer among the pipes of the Shell Cave](./images/thumbnail.en.v2.png)
 
