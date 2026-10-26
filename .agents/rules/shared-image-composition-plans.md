@@ -41,6 +41,7 @@ Use this file with `shared-images.md`. It records the composition decisions that
 - Center: one dominant timeline, path, or flow diagram. The explorer may participate in the process.
 - Bottom: one short takeaway panel.
 - Keep arrows and states unambiguous; do not mix a battle UI into the diagram.
+- Match the order and meaning of the post's numbered procedure. Do not insert a setup command as a numbered action when the prose step is a verification or decision.
 
 ### 05+ — explanatory (optional, unlimited)
 
@@ -73,6 +74,7 @@ English assets reuse the same composition and replace text only. `thumbnail` fil
 | NO.006 Shell Scout | Shell Cave entrance; explorer meets Shell Scout | Shell Scout `Lv.1` RPG encounter | Terminal as input/output window vs shell as command interpreter | Filesystem location flow: `pwd → ls → cd` | Shell Scout alone on blank cream; Linux chapter 1/5 | — |
 | NO.007 Path Forager | Deeper in the Shell Cave; explorer meets the Path Forager unfolding a path map at a fork | Path Forager `Lv.2` RPG encounter | Absolute path (from `/`) vs relative path (from the working directory) reaching the same `notes` | File-handling flow: `mkdir → cp → mv (rename) → mv (move) → rm` | Path Forager alone on blank cream; Linux chapter 2/5 | 05 quoted vs unquoted `*.log` pattern; 06 find → check → rm before deleting |
 | NO.008 Permission Guard | Locked Shell Cave door; explorer meets the key-and-shield guard | Permission Guard `Lv.3` RPG encounter | `-rw-r--r--` split into type / owner / group / others | `./run.sh` denied → `chmod 755 run.sh` → check → run | Permission Guard alone on blank cream; Linux chapter 3/5 | 05 file vs directory rwx (deletion needs directory w+x); 06 octal 755; 07 inspect owner and identity before choosing a fix |
+| NO.009 Pipe Engineer | Fourth Linux observation among copper pipes; Korean thumbnail v2, English v2 uses `Linux · Observation 4` | Pipe Engineer `Lv.4` RPG encounter | v2: `grep ERROR app.log` stdout → `wc -l` stdin → `2`; distinguish lowercase ell with `l = lines` | v2: `ps -p` target check → `kill` SIGTERM → `ps -p` recheck → investigate why if still present; Korean title uses 시그널 | Pipe Engineer alone on blank cream; Linux chapter 4/5, exactly five slots | 05 overwrite two lines vs append four; 06 stdout/stderr routing and redirect order; 07 PID vs job number, foreground/background, logout limit |
 
 ## Persistence and versioning
 

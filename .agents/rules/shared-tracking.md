@@ -11,6 +11,7 @@ Linear team `COD` cycles and the Notion Sprint Tracker are shared with other pro
 - Cycles are one week, starting Monday 00:00 KST. The weekly parent belongs to the cycle in which its draft is written. The publish sub-issue finishes in the next cycle.
 - **Merge is not publish.** Merging the draft PR auto-closes the week's parent through Linear's GitHub integration while the post is still unpublished. Reopen the parent to In Progress and leave `Velog·Medium 발행 & 로그 업데이트` at Todo until the user reports publication.
 - The free plan caps active issues at 250. Finished issues auto-archive after one month.
+- **Missing recurring instance:** Before provisioning, list the entire blog project with `includeArchived: true` and inspect placeholder parents and their children; title search and the recurring settings' linked-instance count can omit deleted issues. Check exact issue details and UI history to distinguish archived from deleted records. Restore and reuse an existing matching parent with its six children, preserving IDs. Only if that full check finds no candidate may authorized sprint setup use the existing weekly template once. Record any recovery and reconcile later instances before starting duplicate work. Do not change the recurring schedule or add another creation workflow based on an unverified cause. Keep the ongoing blog project In Progress and the Notion project's current Sprint reference up to date.
 - API access: `LINEAR_API_KEY` in the local `.env` (GraphQL at `https://api.linear.app/graphql`).
 
 ## Notion Sprint Tracker
