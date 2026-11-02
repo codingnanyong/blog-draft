@@ -4,9 +4,9 @@
 
 Like a Pokédex, each series (`#number`) is one technology **chapter**. Each week within a chapter observes a distinct specimen such as `NO.001` or `NO.002`, then formally registers that specimen in the Codigdex at the very end of the post. The final week registers its own specimen and also marks the whole chapter complete.
 
-> **Week count isn't fixed at 5.** Each chapter's week table below is the specific breakdown decided for that chapter, and it's re-decided per chapter based on its learning curve. See [Criteria for picking the next chapter](#criteria-for-picking-the-next-chapter) for details.
+> **Week count follows specimen count.** Each week registers one specimen, so a chapter with five specimens runs five weeks. See [Criteria for picking the next chapter](#criteria-for-picking-the-next-chapter) for details.
 
-The user (codingnanyong) works as a Data Engineer, and chapter selection for this blog prioritizes doubling as on-the-job study. `#01` Git → `#02` Linux → `#03` Docker → `#04` CI/CD → `#05` Kubernetes form the common foundation any developer needs (collaboration, operating system, containers, automation, orchestration); from `#06` on, the track moves into chapters that map directly onto Data Engineering work (workflow orchestration, distributed processing/streaming, analytics engineering/warehousing).
+Chapter order follows the dex numbers of the user's game, [codigdex](https://github.com/codingnanyong/codigdex) (decided 2026-11-02). The earlier plan moved Data Engineering chapters forward starting from `#03` Docker; the series now follows the game: `#01` Git → `#02` Linux → `#03` HTML/CSS → `#04` JavaScript. Docker is `#11` and data pipelines are `#18`. The user works as a Data Engineer, and that experience becomes material when the matching chapter arrives.
 
 ## #01 — Git (5-week breakdown)
 
@@ -20,9 +20,9 @@ The user (codingnanyong) works as a Data Engineer, and chapter selection for thi
 
 Each week follows the same process defined in [Git branch strategy](GIT_WORKFLOW.md) and [Content & publishing workflow](WORKFLOW.md). NO.001 through NO.005 are registered individually at the end of their respective posts; once week 5 is registered, the Git chapter is complete and the series moves on to the next chapter, `#02` Linux.
 
-## #02 — Linux (draft — proposed 5 weeks, not confirmed)
+## #02 — Linux (5-week chapter, published)
 
-The user has picked Linux as the chapter after Git. The user's separate game project, [codigdex](https://github.com/codingnanyong/codigdex), sets `CH.01 Git → CH.02 Terminal · Linux` as the **junior common path** for every role, and leaves Docker out of that common path because containers are much easier to learn once you understand the terminal, processes, and networking. So that the blog shares the same common foundation, Linux takes the `#02` slot and Docker moves back one slot to `#03`. The weekly breakdown below mirrors the game's CH.02 Lv.1-Lv.5 stages and is a proposal, not yet confirmed.
+The user has picked Linux as the chapter after Git. The user's separate game project, [codigdex](https://github.com/codingnanyong/codigdex), sets `CH.01 Git → CH.02 Terminal · Linux` as the **junior common path** for every role, and leaves Docker out of that common path because containers are much easier to learn once you understand the terminal, processes, and networking. So that the blog shares the same common foundation, Linux takes the `#02` slot. Following the game's CH.02 Lv.1–Lv.5 stages, the blog observed NO.006–NO.010 and published all five weeks in both languages.
 
 | Week | Topic | Publish Date | Linear | Status |
 | --- | --- | --- | --- | --- |
@@ -30,69 +30,91 @@ The user has picked Linux as the chapter after Git. The user's separate game pro
 | Week 2 | Paths & files (absolute/relative paths, `mkdir`/`cp`/`mv`/`rm`/`find`) | 2026-10-12 | COD-350 | Published |
 | Week 3 | Permissions & users (`rwx`, `chmod`/`chown`, `sudo`) | 2026-10-19 | COD-360 | Published |
 | Week 4 | Pipes & processes (`\|`/`>`/`>>`, `ps`/`top`/`kill`, background jobs) | 2026-10-26 | COD-369 | Published |
-| Week 5 | The kernel & the OS (kernel, system calls, boot, `systemctl`, wrap-up registration) | 2026-11-02 | TBD | Proposed |
+| Week 5 | The kernel & the OS (kernel, system calls, boot, `systemctl`, wrap-up registration) | 2026-11-02 | COD-402 | Published |
 
 The user reported Week 1 (NO.006) published on both Velog and Medium. PR #124 includes the Korean and English posts, five images per language, and updated Git registration cards. The date remains 2026-10-05, the Monday of the publication week; publication on both platforms was reported on 2026-10-08. The user reported Week 2 (NO.007) published on both Velog and Medium on 2026-10-13. PRs #127, #128, and #130 include the Korean and English posts with seven images per language (thumbnail, 01–04, and explanatory 05–06); the date remains 2026-10-12, the Monday of the publication week. The user reported Week 3 (NO.008) published on both Velog and Medium on 2026-10-19. The `feat/cod-360-permissions-users` PR includes the Korean and English posts with eight images per language (thumbnail, 01–04, and explanatory 05–07); the date is 2026-10-19, the publication Monday itself. Linear issues (parent + standard sub-issues) and Notion sprints for the remaining weeks will be created once their breakdown is confirmed. If the actual pacing turns out different once underway, the week count may be adjusted.
 
-The user confirmed Week 4 from the roadmap on 2026-10-26. Recurring issue COD-369 and its six standard sub-issues were automatically created on 2026-10-20 at 00:32 KST, then deleted at 08:33 KST that day. The original parent and children were restored and reused. Drafting Cycle 8 (2026-10-26–11-01) and Notion Sprint 09 are In Progress at 2/6 (topic selection and drafting complete). Actual Claude Code authored the Korean and English drafts; Codex generated, inspected, and linked eight images per language, sixteen total. The user reported both Velog and Medium published on 2026-10-26, the same as the planned date. The roadmap retains 2026-10-26 as the existing planned publication date and records that it overlaps the drafting start week. Actual publication remains unconfirmed until the user reports it. Week 5 remains proposed.
+The user confirmed Week 4 from the roadmap on 2026-10-26. Recurring issue COD-369 and its six standard sub-issues were automatically created on 2026-10-20 at 00:32 KST, then deleted at 08:33 KST that day. The original parent and children were restored and reused. Drafting Cycle 8 (2026-10-26–11-01) and Notion Sprint 09 are In Progress at 2/6 (topic selection and drafting complete). Actual Claude Code authored the Korean and English drafts; Codex generated, inspected, and linked eight images per language, sixteen total. The user reported both Velog and Medium published on 2026-10-26, the same as the planned date. The roadmap retains 2026-10-26 as the existing planned publication date and records that it overlaps the drafting start week. Actual publication remains unconfirmed until the user reports it.
 
-## #03 — Docker (draft — proposed 5 weeks, not confirmed)
+Week 5 (NO.010) uses the existing recurring issue COD-402. Actual Claude Code wrote the Korean and English articles; Codex generated, inspected, and linked seven images per language, fourteen total. The user reported both Velog and Medium published on 2026-11-02, matching the planned publication date. Both articles are `status: published`. Deliverables are in `posts/2026/11/#010_kernel-os/`. Checks confirmed nineteen matching code blocks, matching heading structures, and valid image paths. The final NO.010 registration card completes the Linux chapter at 5/5.
 
-Originally proposed as `#02`, now moved back one slot to follow Linux (`#02`). Images and containers ultimately run on top of Linux processes and filesystems, so meeting Docker after observing the shell, permissions, and processes is the more natural order. Below is a proposed curriculum following the same "basics → applied → collaboration/real-world" three-stage structure as Git — not yet confirmed.
+## #03 — HTML/CSS (order confirmed, 5-week curriculum proposed)
 
-| Week | Topic | Publish Date | Linear | Status |
+On 2026-11-02 the user decided to take every chapter after Linux (`#02`) in the game's dex-number order. NO.011–015, the numbers after NO.010, are the specimens of the game's `ch03.html-css`. The weekly breakdown below follows the game's specimen and concept order as a proposal and is not yet confirmed.
+
+| Week | Dex number · specimen | Topic | Publish Date | Linear | Status |
+| --- | --- | --- | --- | --- | --- |
+| Week 1 | NO.011 Structure Sprout | HTML/CSS basics — first encounter (semantic HTML) | 2026-11-09 | TBD | Proposed |
+| Week 2 | NO.012 Style Shell | The box model | 2026-11-16 | TBD | Proposed |
+| Week 3 | NO.013 Cascade Weaver | The cascade (specificity and source order) | 2026-11-23 | TBD | Proposed |
+| Week 4 | NO.014 Breakpoint Knight | Media queries | 2026-11-30 | TBD | Proposed |
+| Week 5 | NO.015 Responsive Layout Paladin | Accessibility (wrap-up registration) | 2026-12-07 | TBD | Proposed |
+
+## #04 onward — game order (order confirmed, weekly breakdowns confirmed before each chapter)
+
+Blog `#NN` uses the same number as game `CH.NN`, and each week registers one specimen. Publish windows assume every chapter runs 5 weeks with no gaps. Core concepts follow the game's Lv.1–Lv.5 order. Some specimen names don't line up with their topics (for example, NO.054 Registry Carrier's concept is Volume), so recheck them when each chapter starts.
+
+| Chapter | Topic | Dex numbers | Core concepts | Publish window (estimate) |
 | --- | --- | --- | --- | --- |
-| Week 1 | Docker basics — first encounter (images, containers, Dockerfile) | 2026-11-09 | TBD | Proposed |
-| Week 2 | Building images & layers (writing a Dockerfile, layer caching, multi-stage builds) | 2026-11-16 | TBD | Proposed |
-| Week 3 | Volumes & networking (data persistence, container-to-container communication) | 2026-11-23 | TBD | Proposed |
-| Week 4 | Docker Compose (multi-container orchestration) | 2026-11-30 | TBD | Proposed |
-| Week 5 | Real-world collaboration workflow (registries, CI/CD integration, wrap-up registration) | 2026-12-07 | TBD | Proposed |
+| #04 | JavaScript | NO.016–020 | Variable → Function → Event → Promise → async/await | 2026-12-14 – 2027-01-11 |
+| #05 | HTTP/API | NO.021–025 | Request/Response → Status code → Header → REST endpoint → API token | 2027-01-18 – 02-15 |
+| #06 | Python | NO.026–030 | Indentation → Collection → Function/Module → Exception → Virtual environment | 2027-02-22 – 03-22 |
+| #07 | SQL | NO.031–035 | SELECT/WHERE → Primary key → JOIN → Index → Transaction | 2027-03-29 – 04-26 |
+| #08 | Networking | NO.036–040 | IP address → DNS → TCP → Router → Load balancer | 2027-05-03 – 05-31 |
+| #09 | Testing | NO.041–045 | Unit test → Assertion → Mock → Integration test → Regression test | 2027-06-07 – 07-05 |
+| #10 | Security/Auth | NO.046–050 | Hash → Authentication → Authorization → Input validation → Least privilege | 2027-07-12 – 08-09 |
+| #11 | Docker | NO.051–055 | Image → Container → Dockerfile → Volume → Registry | 2027-08-16 – 09-13 |
+| #12 | CI/CD | NO.056–060 | Build → Automated test → Pipeline → Deployment → Rollback | 2027-09-20 – 10-18 |
+| #13 | Kubernetes | NO.061–065 | Pod → Deployment → Service → ConfigMap/Secret → Autoscaling | 2027-10-25 – 11-22 |
+| #14 | Cloud/IaC | NO.066–070 | Resource → State → Plan → Module → Immutable infrastructure | 2027-11-29 – 12-27 |
+| #15 | Monitoring | NO.071–075 | Metric → Log → Trace → Alert → SLI/SLO | 2028-01-03 – 01-31 |
+| #16 | React | NO.076–080 | Component → Props → State → Hook → Key | 2028-02-07 – 03-06 |
+| #17 | Server framework | NO.081–085 | Route → Middleware → Controller → Service layer → Dependency injection | 2028-03-13 – 04-10 |
+| #18 | Data pipeline | NO.086–090 | Extract → Transform → Load → Batch/Stream → Data quality | 2028-04-17 – 05-15 |
+| #19 | Workflow orchestration | NO.091–095 | DAG → Task → Dependency → Schedule → Retry | 2028-05-22 – 06-19 |
+| #20 | Basic statistics | NO.096–100 | Sample → Probability → Distribution → Variance → Inference | 2028-06-26 – 07-24 |
+| #21 | Data visualization | NO.101–105 | Chart selection → Scale → Color → Annotation → Visual story | 2028-07-31 – 08-28 |
+| #22 | BI tools | NO.106–110 | Metric → Dimension → Semantic model → Filter/Drill → Dashboard governance | 2028-09-04 – 10-02 |
+| #23 | Platform & SRE (tier two) | NO.111–115 | Integrating deployment, signals, promises, and incident response | 2028-10-09 – 11-06 |
+| #24 | Full stack (tier two) | NO.116–120 | API contracts → Request state → Transactions → Tracing → Integration checks | 2028-11-13 – 12-11 |
+| #25 | ML serving (tier two) | NO.121–125 | Sample quality → Feature parity → Evaluation → Inference contracts → Integration checks | 2028-12-18 – 2029-01-15 |
+| #26 | MLOps (tier two) | NO.126–130 | Lineage → Training pipelines → Model registration → Drift detection → Retraining | 2029-01-22 – 02-19 |
+| #27 | Analytics (tier two) | NO.131–135 | Table grain → Data tests → Metric definitions → Dependencies → Analytical delivery | 2029-02-26 – 03-26 |
 
-## #04 — CI/CD (GitHub Actions) (order confirmed, curriculum and week count TBD)
+### Open-source expeditions (NO.136–173)
 
-Confirmed as the chapter after Docker (#03). Automating the build/deploy of the images made in Docker follows naturally right after it, and it also picks up directly where the Git series' last week (PR → Review → Merge) left off. This repo's own automation (Linear/GitHub integration, PR policy) can serve as real material. Weekly curriculum not yet discussed, and likewise won't be forced into 5 weeks — it'll be sized to the chapter.
+After `#27` come the game's expedition chapters `EX.01`–`EX.09`. Each tool is one specimen, for 38 weeks in total; with no gaps that runs 2029-04-02 – 2029-12-17. Their blog chapter numbers and grouping will be decided before they start.
 
-## #05 candidate (under consideration)
+- **EX.01 Hadoop ecosystem**: Hadoop, HDFS, YARN, MapReduce, Hive, HBase, ZooKeeper, Parquet, Avro
+- **EX.02 Workflows**: Airflow
+- **EX.03 Ingestion & streaming**: Kafka, Kafka Connect, Debezium, Flink
+- **EX.04 Lakes & queries**: Spark, Iceberg, Delta Lake, Hudi, DuckDB, Trino
+- **EX.05 Quality & lineage**: dbt Core, Great Expectations, OpenLineage, Marquez
+- **EX.06 Analytics & visualization**: Superset
+- **EX.07 Machine learning**: MLflow, DVC, Feast, scikit-learn
+- **EX.08 Platform & observability**: Prometheus, Grafana, OpenTelemetry, OpenTofu, Argo CD
+- **EX.09 Applications**: PostgreSQL, Playwright, TanStack Query, Zod
 
-- Kubernetes — the user is considering this as the chapter after CI/CD (#04). Not yet confirmed; the weekly breakdown will be discussed once #04 wraps up. Given how much ground it covers, running longer than 5 weeks is a natural option to consider.
+### Real-world material
 
-## #06+ candidates — Data Engineer track (under consideration)
-
-Building on the common infrastructure foundation through `#05` Kubernetes, the chapters under consideration for the following slots map directly onto Data Engineering work. The user actually uses Airflow, Kafka, and dbt on the job, has implemented a Medallion Architecture on PostgreSQL + TimescaleDB in-house, and migrated that infrastructure from Docker to Kubernetes — so this track draws on real work experience rather than hypothetical study. Order, confirmation, and week counts are all still undiscussed — the notes below are directional.
-
-- **Workflow orchestration (Airflow)** — batch/ETL scheduling, DAG-based pipeline management. A natural next step that carries the "automation/orchestration" thread from CI/CD and Kubernetes into the data-pipeline context.
-- **Streaming & messaging (Kafka)** — event-driven architecture, real-time data ingestion.
-- **Analytics engineering (dbt)** — the transform (T) layer, data modeling, query optimization.
-- **Data warehouse architecture — Medallion Architecture (PostgreSQL + TimescaleDB)** — a capstone case study tying the earlier chapters (orchestration, streaming, transformation) together. Covers Raw → Bronze → Silver → Gold layering and time-series-specific data characteristics.
-
-## #10+ broader candidate pool — real-world experience (under consideration)
-
-The topics below are also under consideration, and the user has actually applied them on the job (not hypothetical study material). Order, whether each becomes its own chapter, and week counts are all undecided — the specific tools covered will be confirmed again when each chapter is actually drafted.
-
-- **Storage/warehouse layer** — data lake vs. warehouse vs. lakehouse concepts, table formats (Iceberg/Delta Lake/Hudi), file formats (Parquet/ORC/Avro), partitioning & clustering strategy
-- **Ingestion & integration** — Change Data Capture (CDC), ELT tools (Fivetran/Airbyte/Singer-style), API-based ingestion pipeline design
-- **Orchestration alternatives/comparison** — Dagster, Prefect, etc. vs. Airflow, data lineage & cataloging
-- **Quality, testing & governance** — data quality testing (Great Expectations, dbt test), data contracts, PII masking & access control
-- **Distributed/large-scale processing** — Spark (batch), Flink (stream processing)
-- **SQL/performance deep-dive** — query optimization, execution plan analysis, indexing strategy, advanced SQL patterns (window functions, etc.)
-- **Monitoring & operations** — pipeline monitoring/alerting (Airflow SLAs, Prometheus+Grafana), incident response & backfill strategy
-- **Infrastructure/cloud** — Terraform (IaC), cloud data services
-- **Data modeling** — dimensional modeling (star/snowflake schema), SCD (Slowly Changing Dimension)
+The user actually uses Airflow, Kafka, and dbt on the job, has implemented a Medallion Architecture on PostgreSQL + TimescaleDB in-house, and migrated infrastructure from Docker to Kubernetes. The order follows the game, and this experience becomes material when the matching chapter arrives. Topics with no matching specimen, such as Medallion Architecture, have no dex number, so whether they become posts outside the regular chapters will be decided then. Other candidate topics such as data modeling, CDC, partitioning, query optimization, and backfill strategy follow the same rule: work them into a related chapter or cover them in a separate post.
 
 ## Estimated yearly coverage (rough estimate, not confirmed)
 
-Posts publish weekly on Monday. The timeline below assumes each chapter runs 5 weeks, purely for estimation — once `#04`/`#05`'s actual week counts are confirmed, everything after shifts accordingly.
+Posts publish weekly on Monday. The estimate below uses the gap-free schedule above, and any skipped week pushes everything after it back. The game's numbers can change during development, so recheck the game repo when each chapter starts.
 
-- **Within 2026**: `#01` Git (published/drafted, through ~09-28) → `#02` Linux (through ~11-02) → `#03` Docker (through ~12-07) → `#04` CI/CD weeks 1-3 (~12-14 to ~12-28, with the rest rolling into the next year under a 5-week assumption)
-- **From 2027 on**: `#04` CI/CD wraps up (~01-11) → `#05` Kubernetes (through ~02-15, assuming 5 weeks) → then the Data Engineer track proceeds in sequence (`#06` Airflow → `#07` Kafka → `#08` dbt → `#09` Medallion Architecture on PostgreSQL+TimescaleDB). Track chapters may run longer than 5 weeks (especially the closing capstone), so exact completion dates will be recalculated once each chapter is confirmed.
-- **Total material on hand (estimate)**: assuming 5 weeks each, `#01`-`#09` (confirmed/proposed) add up to roughly 45 weeks (2026-09 through 2027-07). Adding the `#10`+ broader candidate pool (9 categories), each turned into its own 3-5 week chapter, adds roughly another 27-45 weeks — putting **enough weekly material on hand to run through roughly early-to-mid 2028** (about 1.4-1.7 years from today). How many chapters the `#10`+ categories end up splitting (or merging) into is still undecided, so the actual total will shift.
+- **2026**: `#01` Git → `#02` Linux → `#03` HTML/CSS → `#04` JavaScript begins
+- **2027**: `#04` JavaScript wraps up → `#05` HTTP/API → `#06` Python → `#07` SQL → `#08` Networking → `#09` Testing → `#10` Security/Auth → `#11` Docker → `#12` CI/CD → `#13` Kubernetes → `#14` Cloud/IaC
+- **2028**: `#15` Monitoring → `#16` React → `#17` Server framework → `#18` Data pipeline → `#19` Workflow orchestration → `#20` Basic statistics → `#21` Data visualization → `#22` BI tools → `#23` Platform & SRE → `#24` Full stack → `#25` ML serving begins
+- **2029**: `#25` ML serving wraps up → `#26` MLOps → `#27` Analytics → open-source expeditions `EX.01`–`EX.09`
+- **Total material**: NO.011 through NO.173 is 163 weeks, about three years.
 
 ## Criteria for picking the next chapter
 
-- A technology or tool used repeatedly in practice, worth revisiting from the basics
-- A topic that naturally splits into a "basics → applied → collaboration/real-world" three-stage structure, like Git
-- **Week count isn't fixed at 5** — scale it to the chapter's actual learning curve (more than 5 weeks is fine for a bigger topic, and fewer than 5 is fine for a simpler one). #01 Git and #02 Linux / #03 Docker (draft) happening to be 5 weeks is just the outcome for those specific chapters, not a rule future chapters must follow.
-- **Prioritize topics that genuinely map onto the user's job (Data Engineer)** — so that writing the blog doubles as job-relevant study. Once the common foundation (Git/Linux/Docker/CI-CD/Kubernetes) is covered, prioritize tools the user actually uses on the job (Airflow, Kafka, dbt, a Medallion Architecture on PostgreSQL+TimescaleDB, etc.).
+- **Follow the game's dex-number order** — the next chapter is the game chapter holding the number after the last registered one. Blog `#NN` matches game `CH.NN`.
+- **Week count follows specimen count** — each week registers one specimen, so a chapter with five specimens runs five weeks.
+- **Confirm weekly topics before a chapter starts** — the game's concept order is the default, adjusted with the user to fit the writing.
+- **Use job-related experience as material** — it doesn't move a chapter earlier; the matching chapter draws on the user's real experience.
 
 ## Where it's tracked
 

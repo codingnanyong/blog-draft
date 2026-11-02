@@ -2,7 +2,7 @@
 
 [codingnanyong/codigdex](https://github.com/codingnanyong/codigdex) 게임 저장소의 `web/public/assets/monsters/`를 그대로 복사한 참고용 이미지입니다 (원본 커밋 `b953681`, 2026-09-14).
 
-- 폴더는 게임 챕터 번호(`chNN.<기술>`)를 따르며, 블로그 개체 번호(`#NN`)와는 다릅니다. 예: 게임 `ch11.docker` = 블로그 `#03` Docker.
+- 폴더는 게임 챕터 번호(`chNN.<기술>`)를 따르며, 블로그 챕터 번호(`#NN`)와 같습니다. 예: 게임 `ch11.docker` = 블로그 `#11` Docker.
 - 챕터마다 대표 표본(`*-specimen.png`)과 Lv.1~Lv.5 진화 단계가 있고, 일부 챕터에는 진화 시트(`*-evolution-sheet-v1.png`)가 함께 있습니다.
 - 전체 한눈에 보기: `all-monster-evolution-guide-v1.png`
 
