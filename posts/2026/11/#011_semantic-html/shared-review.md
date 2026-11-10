@@ -38,3 +38,11 @@ Korean registration v2 removes the handheld tool from the clean portrait. The or
 ## Remaining review
 
 User review of the prose, English localization, and selected images. Before publication, open the complete HTML example in a browser and follow the keyboard checks. The branch upload is authorized for review. Drive/tracker follow-up, PR merge, and publication remain deferred; the weekly issue and children should be reused.
+
+## Claude review (2026-11-10)
+
+Prose revised in both languages: classification `문서 구조형` / `Document structure type` (aligned with Linux-chapter `…형` naming), frequency in the `매우 높음 (…)` form, the reader-facing note about bilingual editions removed, a warmer field-log voice in a few passages, and the closing registration line matched to earlier chapters. No next-week preview: week 2 is still only proposed in the roadmap.
+
+Image follow-ups are specified in `shared-image-prompts.md`: registration v3 (classification text), new `05-html-page-regions`, new `06-link-vs-button`. Optional: in `01`, the explorer's open book shows scribble glyphs; leave as is unless re-rolled.
+
+Publish date: 2026-11-09 has passed. Adjust `date` to the actual publish Monday when the user decides.

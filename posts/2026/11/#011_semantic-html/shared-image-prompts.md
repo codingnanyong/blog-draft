@@ -71,3 +71,30 @@ English edit instruction: Change ONLY the listed text. Preserve all scene, layou
 Korean registration uses `04-structure-sprout-registration.v2.png`; the first version remains as a predecessor. The English registration is localized from v2 and uses `04-structure-sprout-registration.en.png`.
 
 Correction prompt: Fix ONLY the left portrait. Remove the handheld trowel/spade/tool completely, leaving the Structure Sprout creature alone. Preserve its body, long ears, cream chest, four feet, tail and orange/cream shell anatomy. Put the small front arm naturally beside its chest, holding NOTHING. Keep the portrait background blank warm cream without props, ground, shadow or extra objects. Preserve all Korean text, borders, stamp, completion panel and the five slots with only the first filled.
+
+## Requested follow-up images (Claude review, 2026-11-10)
+
+Not generated yet. The prose already uses the new classification; the Markdown still references the current files until these exist.
+
+### 04-structure-sprout-registration v3 (classification text only)
+
+Edit `04-structure-sprout-registration.v2.png` → save as `04-structure-sprout-registration.v3.png`; localize to `04-structure-sprout-registration.en.v2.png`. Change ONLY the type value; preserve everything else.
+
+Korean: "HTML/CSS 학습형" → "문서 구조형"
+English: "HTML/CSS learning" → "Document structure"
+
+After saving, update both `04` image paths and replace "HTML/CSS 학습형" / "HTML/CSS learning type" in the alt text.
+
+### 05-html-page-regions (new, place after the Observation 3 paragraph that ends with the `region` landmark sentence)
+
+Role reference: 02-html-meaning.png (teaching card). Square 1:1. Framed title top. One large browser-window outline center, split into stacked blocks: thin top band `header` containing a small `nav` pill on its right; a large middle block `main` containing one inner block `article` that holds two smaller blocks `section`, `section`; thin bottom band `footer`. Labels are the element names exactly. `main`/`article` in orange, others cream with near-black outlines. Tiny explorer and Structure Sprout bottom-left pointing at the page. One short takeaway panel bottom.
+
+Korean strings: ["페이지의 지도","header","nav","main","article","section","section","footer","필요한 영역만 골라 쓴다"]
+English replacements in the same order: ["A map of the page","header","nav","main","article","section","section","footer","Use only the regions you need"]
+
+### 06-link-vs-button (new, place after the `<a>` / `<button>` code block in Observation 6)
+
+Role reference: 02-html-meaning.png. Square 1:1. Framed title top. Two panels side by side. Left: an underlined link pill `a href` with a curved arrow jumping to a second small page outline (navigation). Right: a raised button `button` with a small panel unfolding beneath it (action). Labels under each panel. Explorer under the left panel, Structure Sprout under the right. One short takeaway panel bottom.
+
+Korean strings: ["이동과 동작","a href","button","다른 곳으로 이동","여기서 동작 실행","이동은 링크, 동작은 버튼"]
+English replacements in the same order: ["Navigate or act","a href","button","Go somewhere else","Do something here","Links navigate, buttons act"]

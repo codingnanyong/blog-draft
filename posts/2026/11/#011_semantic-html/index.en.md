@@ -24,8 +24,8 @@ At the entrance to the new chapter, an orange creature waited with pieces of a d
 
 - Dex number: NO.011
 - Name: Structure Sprout
-- Classification: HTML/CSS learning type
-- Encounter frequency: Whenever a web page opens (the appearance changes, but a document structure sits underneath)
+- Classification: Document structure type
+- Encounter frequency: Very high (every time a web page opens; the appearance changes, but a document structure sits underneath)
 - Danger level: ⚠️ (a page can look convincing while its headings and controls lack their intended roles)
 
 ---
@@ -38,7 +38,7 @@ Three questions go at the top of the field notes.
 - If a page displays when everything is wrapped in `div`, why use other tags?
 - Can looking at the screen tell us whether the structure is right?
 
-The goal is a small page of field notes. We will start with one HTML file, without a framework or server. The sample text stays in English so both editions of this post can follow the same code.
+The goal is to build a small page of field notes. No framework, no server: just one HTML file.
 
 ---
 
@@ -148,7 +148,7 @@ Create a file called `field-notes.html` in a new folder and save the following a
 </html>
 ```
 
-Rather than memorizing everything at once, read from the outside in.
+It looks like a lot of lines, but there is no need to memorize them all at once. Read it from the outside in, one layer at a time.
 
 1. [`<!doctype html>`](https://developer.mozilla.org/en-US/docs/Glossary/Doctype) is the document type declaration. It makes a normal HTML document render in standards mode.
 2. `html` wraps the whole document. [`lang="en"`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/lang) says the example's main content is English. Use `ko` for a page written in Korean.
@@ -159,7 +159,7 @@ Rather than memorizing everything at once, read from the outside in.
 
 ![Four steps: decide the content, choose regions, add headings, then check in a browser](./images/03-html-structure-flow.en.png)
 
-There are no colors or card borders of our own, but it is a readable page. Browsers have default styles, so headings may appear larger and links underlined. **Not having written CSS yet does not mean there are no styles.** For now, look at content order and roles before appearance.
+Open it and you get a plain page with no colors or borders, but it reads just fine. Browsers have default styles, so headings may appear larger and links underlined. **Not having written CSS yet does not mean there are no styles.** For now, look at content order and roles before appearance.
 
 ---
 
@@ -173,7 +173,7 @@ h1 Meeting the Structure Sprout
   h2 Next observation
 ```
 
-Ideally, reading just the headings gives a map of the writing. [W3C's headings tutorial](https://www.w3.org/WAI/tutorials/page-structure/headings/) recommends nesting heading levels according to their relationships and avoiding skipped levels when opening a new subsection. This example chooses a simple structure with one `h1` as the page's main heading.
+If reading just the headings gives you a map of the writing, the heading structure is in good shape. [W3C's headings tutorial](https://www.w3.org/WAI/tutorials/page-structure/headings/) recommends nesting heading levels according to their relationships and avoiding skipped levels when opening a new subsection. This example chooses a simple structure with one `h1` as the page's main heading.
 
 Choosing `h4` instead of `h2` to get smaller text mixes structure with appearance. Choose levels for content relationships and adjust size in CSS. Do not expect putting a heading in a `section` to fix its level automatically, either. Write the intended `h2` or `h3` explicitly ([MDN heading elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements)).
 
@@ -199,7 +199,7 @@ Here is a first pass through the field notes.
 - Does Tab move to a link with a visible focus indicator, and does Enter navigate to its target? Browser or operating system settings may require enabling tab navigation.
 - Is any heading only plain text, or is something meant to navigate presented as a fake button?
 
-This is an initial checklist. Accessibility review also includes actual screen reader navigation, color contrast, image alternatives, form labels, and more. This observation covers **the starting point of expressing content meaning in HTML**.
+Of course, this list is not a full accessibility review. Navigating with a real screen reader, color contrast, image alternatives, and form labels all belong in one too. What we observed today is the starting point: **expressing the meaning of content in HTML**.
 
 ---
 
@@ -216,10 +216,10 @@ This is an initial checklist. Accessibility review also includes actual screen r
 
 ## Codigdex notes
 
-In the Linux chapter, we read exactly what a word on the screen said about the system's state. The first observation of this chapter asks a related question. Is this text a heading? Is this group the main content? Does this control lead somewhere?
+In the Linux chapter, we read exactly what a word on the screen said about the system's state. The first observation of this chapter asks a related question. Is this text a heading? Is this group the main content? Where does this link lead?
 
 The note beside the Structure Sprout can be short. **Choose the content's role before styling it.** Even with one file, reading in that order makes the page's structure clearer.
 
-**NO.011 Structure Sprout** goes into the first slot. The HTML/CSS chapter is now at 1/5.
+Now it is time to register the first specimen of the HTML/CSS chapter in the Codigdex. **NO.011 Structure Sprout** — chooses elements that match the meaning of content. The first of the HTML/CSS chapter's five slots is filled.
 
 ![NO.011 Structure Sprout registration card — HTML/CSS learning type, chooses elements to match content meaning, first of five slots filled](./images/04-structure-sprout-registration.en.png)
