@@ -88,16 +88,14 @@ This meaning helps people reading the code and gives assistive technology a basi
 
 Before turning the notes into a page, I listed its regions. This is a simplified map based on the [HTML standard's section elements](https://html.spec.whatwg.org/multipage/sections.html) and the meaning of `main`.
 
-| Element | Role in this page |
-| --- | --- |
-| `header` | Site name and introduction |
-| `nav` | A group of major navigation links |
-| `main` | The page's main content |
-| `article` | One observation that can be read independently |
-| `section` | A thematic part of that observation |
-| `footer` | Closing information for the site |
+- `header`: Site name and introduction
+- `nav`: A group of major navigation links
+- `main`: The page's main content
+- `article`: One observation that can be read independently
+- `section`: A thematic part of that observation
+- `footer`: Closing information for the site
 
-This table is not a mandatory top-to-bottom stack. An `article` can have its own `header` and `footer`, and a page does not need regions it has no use for. Similarly, `nav` is for major navigation, rather than a wrapper for every link.
+This list is not a mandatory top-to-bottom stack. An `article` can have its own `header` and `footer`, and a page does not need regions it has no use for. Similarly, `nav` is for major navigation, rather than a wrapper for every link.
 
 `article` and `section` took me the longest, because both seemed to do nothing more than group content. The complete observation can stand on its own as a piece of writing, so it becomes an [`article`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/article). “Today's discovery” is a named subtopic within it, so it becomes a [`section`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/section). If a wrapper were needed only to add a border, a `div` could be more appropriate.
 
