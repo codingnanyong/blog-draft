@@ -101,6 +101,8 @@ English replacements in the same order: ["Navigate or act","a href","button","Go
 
 ## Requested for Codex: 07-html-element-anatomy (Claude review, 2026-11-10)
 
+Done by Claude on 2026-11-10 with the same script method as 05/06 (Linear Codex had no environment). English labels use opening/closing tag to match the English prose. Linked after the void-element sentence in both manuscripts.
+
 Why: Observation 1 explains start tag, content, end tag, element and void element in prose only. It is the first concept a beginner meets, and the only observation without a picture.
 
 Place: in both manuscripts, directly after the paragraph that ends with "`meta`는 내용과 종료 태그가 없는 빈 요소다." / its English counterpart in Observation 1. Files: `images/07-html-element-anatomy.png`, `images/07-html-element-anatomy.en.png` (1254×1254). Do not touch any other image.

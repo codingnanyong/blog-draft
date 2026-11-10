@@ -45,4 +45,6 @@ Prose revised in both languages: classification `문서 구조형` / `Document s
 
 Image follow-ups are done and linked: registration v3 / en.v2 (classification text), new `05-html-page-regions` after the Observation 3 landmark paragraph, new `06-link-vs-button` after the link/button code block. Method is recorded in `shared-image-prompts.md`. Optional: in `01`, the explorer's open book shows scribble glyphs; leave as is unless re-rolled.
 
+`07-html-element-anatomy` added after the void-element sentence in Observation 1. Image order in both languages: thumbnail, 01, 07, 02, 05, 03, 06, 04; all references resolve.
+
 Publish date: 2026-11-09 has passed. Adjust `date` to the actual publish Monday when the user decides.

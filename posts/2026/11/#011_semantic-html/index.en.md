@@ -52,6 +52,8 @@ HTML stands for **HyperText Markup Language**. It is a markup language that wrap
 
 `<p>` is the opening tag, `</p>` the closing tag, and the content goes between them. Together they form a paragraph element. Attributes add information to the opening tag. Not every element has this pair: `meta`, used later, is a void element with no content or closing tag.
 
+![Anatomy of an element — the p opening tag, content, and p closing tag form a p element; meta is a void element with no content or closing tag](./images/07-html-element-anatomy.en.png)
+
 CSS can add colors, spacing, fonts, and layout. JavaScript can respond to input or change the document. This observation focuses on HTML.
 
 If a heading is just large text, choosing its font size comes first. If **a heading names the content that follows**, choosing `h1` or `h2` comes first. CSS can set its size afterward. That order is our starting point for reading this specimen.
