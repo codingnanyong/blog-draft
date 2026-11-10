@@ -44,7 +44,7 @@ status: draft
 
 ## 관찰 1 — HTML은 내용의 역할을 적는 언어다
 
-HTML은 **HyperText Markup Language**다. 내용을 요소로 감싸 구조와 의미를 나타내는 마크업 언어다. [MDN의 HTML 기초](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax)에서 설명하는 요소의 모양부터 보면 이렇다.
+HTML은 **HyperText Markup Language**다. 내용을 요소로 감싸 구조와 의미를 나타내는 마크업 언어다. 구조 새싹의 등에서 문서 조각 하나를 집어 [MDN의 HTML 기초](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax)와 나란히 놓고, 요소의 모양부터 살펴봤다.
 
 ```html
 <p>Today I met the Structure Sprout.</p>
@@ -52,17 +52,17 @@ HTML은 **HyperText Markup Language**다. 내용을 요소로 감싸 구조와 �
 
 `<p>`는 시작 태그, `</p>`는 종료 태그이고, 그 사이에 내용이 들어간다. 전체가 문단 요소다. 속성은 시작 태그에 추가 정보를 붙인다. 모든 요소가 이처럼 짝을 이루지는 않는다. 뒤에서 쓸 `meta`는 내용과 종료 태그가 없는 빈 요소다.
 
-![요소의 생김새 — p 시작 태그, 내용, p 종료 태그가 모여 p 요소가 되고, meta 요소는 내용과 종료 태그가 없는 빈 요소다](./images/07-html-element-anatomy.png)
+![탐험가와 구조 새싹이 살펴보는 요소의 생김새 — 시작 태그, 내용, 종료 태그 전체가 p 요소이며, meta는 내용과 종료 태그가 없는 빈 요소다](./images/07-html-element-anatomy.v3.png)
 
-여기에 CSS가 더해지면 색, 간격, 글꼴, 배치를 정할 수 있다. JavaScript는 사용자 입력에 반응하거나 문서를 바꾸는 동작을 맡을 수 있다. 이번 관찰은 HTML에 집중한다.
+여기에 CSS가 더해지면 색, 간격, 글꼴, 배치를 정할 수 있다. JavaScript는 사용자 입력에 반응하거나 문서를 바꾸는 동작을 맡을 수 있다. 이번 관찰에서는 HTML만 따라가 보기로 했다.
 
-제목을 큰 글씨라고만 생각하면 글자 크기를 먼저 고르게 된다. **제목은 뒤에 오는 내용의 이름**이라고 생각하면 `h1`이나 `h2`를 먼저 고르게 된다. 그다음 크기를 CSS로 정한다. 이 순서가 이번 개체를 읽는 출발점이다.
+처음엔 제목을 그저 큰 글씨라고 생각했다. 그러면 글자 크기부터 고르게 된다. 그런데 노트에 **제목은 뒤에 오는 내용의 이름**이라고 고쳐 적고 나니, `h1`이냐 `h2`냐를 먼저 고르게 됐다. 크기는 그다음에 CSS로 정하면 된다. 이 순서가 이번 개체를 읽는 출발점이다.
 
 ---
 
 ## 관찰 2 — 시맨틱 HTML: 보이는 모양에 의미를 더한다
 
-시맨틱(semantic)은 의미에 관한 말이다. 시맨틱 HTML은 콘텐츠의 역할에 맞는 요소를 고르는 방식이다. 아래 두 조각을 비교해 본다.
+시맨틱(semantic)은 의미에 관한 말이다. 시맨틱 HTML은 콘텐츠의 역할에 맞는 요소를 고르는 방식이다. 아래 두 조각을 나란히 놓고 들여다봤다.
 
 ```html
 <div class="title">Field notes</div>
@@ -74,9 +74,9 @@ HTML은 **HyperText Markup Language**다. 내용을 요소로 감싸 구조와 �
 <p>Today I met the Structure Sprout.</p>
 ```
 
-첫 예제의 `title`은 작성자가 붙인 클래스 이름이다. 이름만으로 브라우저에 제목이라는 의미가 생기지는 않는다. 둘째 예제는 요소 자체에 제목과 문단의 역할이 들어 있다. CSS로 비슷하게 꾸며도 이 차이는 남는다.
+첫 조각을 봤을 때는 `class="title"`이라고 적었으니 제목으로 통할 줄 알았다. 하지만 `title`은 작성자가 붙인 클래스 이름일 뿐이고, 이름만으로 브라우저에 제목이라는 의미가 생기지는 않는다. 둘째 조각은 요소 자체에 제목과 문단의 역할이 들어 있다. CSS로 비슷하게 꾸며도 이 차이는 남는다.
 
-`div`도 필요하다. [HTML 표준의 div 정의](https://html.spec.whatwg.org/multipage/grouping-content.html#the-div-element)처럼, 특별한 의미 없이 자식 요소를 묶을 때 쓴다. 예를 들어 배치를 위해 여러 요소를 함께 감쌀 수 있다. 다만 내용이 이미 문단이나 제목이라면 그 역할을 먼저 표현하면 된다.
+그렇다고 `div`가 틀린 답은 아니었다. [HTML 표준의 div 정의](https://html.spec.whatwg.org/multipage/grouping-content.html#the-div-element)처럼, 특별한 의미 없이 자식 요소를 묶을 때 쓴다. 예를 들어 배치를 위해 여러 요소를 함께 감쌀 수 있다. 다만 내용이 이미 문단이나 제목이라면 그 역할을 먼저 표현하면 된다.
 
 ![div의 클래스 이름과 h1·p 요소를 비교한 카드 — 같은 글에도 역할을 표현하는 HTML이 있다](./images/02-html-meaning.png)
 
@@ -86,7 +86,7 @@ HTML은 **HyperText Markup Language**다. 내용을 요소로 감싸 구조와 �
 
 ## 관찰 3 — 페이지를 영역으로 나눈다
 
-관찰 노트를 페이지로 옮기기 전에 영역부터 적어 본다. 아래는 [HTML 표준의 구획 요소](https://html.spec.whatwg.org/multipage/sections.html)와 `main`의 의미를 따라 단순화한 지도다.
+관찰 노트를 페이지로 옮기기 전에 영역부터 적어 봤다. 아래는 [HTML 표준의 구획 요소](https://html.spec.whatwg.org/multipage/sections.html)와 `main`의 의미를 따라 단순화한 지도다.
 
 | 요소 | 이번 페이지에서 맡을 역할 |
 | --- | --- |
@@ -99,11 +99,11 @@ HTML은 **HyperText Markup Language**다. 내용을 요소로 감싸 구조와 �
 
 이 표는 위에서 아래로 반드시 쌓아야 하는 공식이 아니다. `header`와 `footer`는 `article` 안에도 둘 수 있고, 페이지에 필요 없는 영역을 억지로 만들 필요도 없다. `nav` 역시 모든 링크의 포장지가 아니라 주요 탐색을 위한 영역이다.
 
-`article`과 `section`은 특히 헷갈리기 쉽다. 관찰 기록 전체는 따로 떼어 읽어도 하나의 글이어서 [`article`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/article)로, 그 안의 ‘오늘의 발견’은 제목을 가진 하위 주제여서 [`section`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/section)으로 잡았다. 단순히 테두리를 넣을 묶음이 필요했다면 `div`가 더 적절할 수 있다.
+가장 오래 망설인 건 `article`과 `section`이었다. 둘 다 그저 내용을 묶는 요소처럼 보였기 때문이다. 관찰 기록 전체는 따로 떼어 읽어도 하나의 글이어서 [`article`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/article)로, 그 안의 ‘오늘의 발견’은 제목을 가진 하위 주제여서 [`section`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/section)으로 잡았다. 단순히 테두리를 넣을 묶음이 필요했다면 `div`가 더 적절할 수 있다.
 
-[`main`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/main)은 문서의 주된 내용이다. 이번 예제에서는 하나만 두고, 반복되는 사이트 소개와 바닥글은 밖에 놓는다. [W3C의 영역 안내](https://www.w3.org/WAI/tutorials/page-structure/regions/)처럼 이런 구분은 보조 기술이 주요 영역으로 이동할 때도 도움이 된다. HTML의 모든 구획 요소가 언제나 같은 랜드마크로 노출되는 것은 아니다. 예를 들어 [`section`은 접근 가능한 이름이 있어야](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/section#technical_summary) `region` 랜드마크가 된다.
+[`main`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/main)은 문서의 주된 내용이다. 이번 예제에서는 하나만 두고, 반복되는 사이트 소개와 바닥글은 밖에 놓는다. [W3C의 영역 안내](https://www.w3.org/WAI/tutorials/page-structure/regions/)처럼 이런 구분은 보조 기술이 주요 영역으로 이동할 때도 도움이 된다. 의외였던 점도 있다. HTML의 모든 구획 요소가 언제나 같은 랜드마크로 노출되는 것은 아니다. 예를 들어 [`section`은 접근 가능한 이름이 있어야](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/section#technical_summary) `region` 랜드마크가 된다.
 
-![페이지의 지도 — 브라우저 창 안에 header와 nav, main 안의 article과 두 section, footer가 쌓인 구조. 필요한 영역만 골라 쓴다](./images/05-html-page-regions.png)
+![탐험가와 구조 새싹이 살펴보는 페이지 지도 — header 안의 nav, main 안의 article과 위아래 두 section, main 밖의 footer로 포함 관계를 구분한다](./images/05-html-page-regions.v2.png)
 
 ---
 
@@ -163,7 +163,7 @@ HTML은 **HyperText Markup Language**다. 내용을 요소로 감싸 구조와 �
 
 ![내용을 먼저 정하고 영역과 제목을 고른 뒤 브라우저에서 확인하는 네 단계 흐름](./images/03-html-structure-flow.png)
 
-열어 보면 색도 테두리도 없는 밋밋한 페이지지만, 읽는 데는 문제가 없다. 브라우저에는 기본 스타일이 있어서 제목은 크고 링크에는 밑줄이 보일 수 있다. **CSS를 아직 쓰지 않았다는 말이 스타일이 전혀 없다는 뜻은 아니다.** 지금 볼 것은 모양보다 내용의 순서와 역할이다.
+열어 보니 색도 테두리도 없는 밋밋한 페이지였지만, 읽는 데는 문제가 없었다. 그런데 CSS를 한 줄도 쓰지 않았는데 제목은 크고 링크에는 밑줄이 있었다. 브라우저에 기본 스타일이 있기 때문이다. **CSS를 아직 쓰지 않았다는 말이 스타일이 전혀 없다는 뜻은 아니다.** 지금 볼 것은 모양보다 내용의 순서와 역할이다.
 
 ---
 
@@ -192,17 +192,17 @@ h1 Meeting the Structure Sprout
 <button type="button">Open field notes</button>
 ```
 
-![이동과 동작 — 왼쪽은 a href 링크가 다른 페이지로 이동하고, 오른쪽은 button이 그 자리에서 패널을 펼친다](./images/06-link-vs-button.png)
+![탐험가와 구조 새싹의 이동·동작 비교 — 링크는 목적지로 이동하고 버튼은 같은 자리에서 동작한다. 오른쪽 버튼 패널 안의 안내는 동작을 별도로 구현해야 함을 뜻한다](./images/06-link-vs-button.v3.png)
 
 두 번째 줄은 요소 선택을 비교하기 위한 조각이다. **이 버튼에는 동작을 연결하지 않았으므로 눌러도 노트가 열리지 않는다.** 완성 예제에는 넣지 않았다. 실제로 열리게 하려면 JavaScript 등으로 동작을 구현해야 한다.
 
 [MDN의 button 안내](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button)처럼 기본 버튼은 키보드나 보조 기술을 통한 활성화를 지원한다. `div`에 클릭 처리를 붙여 같은 역할을 만들려면 포커스와 키보드 처리까지 직접 챙겨야 한다. 폼 제출용이 아닌 버튼에는 `type="button"`을 적어 의도를 분명히 한다.
 
-관찰 노트를 확인할 때는 다음 순서로 훑어보면 된다.
+완성한 관찰 노트는 다음 순서로 훑어보기로 했다.
 
 - 제목만 읽어도 주제와 하위 주제를 이해할 수 있는가?
 - 개발자 도구의 요소 패널에서 `main`과 `article`의 경계를 찾을 수 있는가?
-- Tab 키로 링크에 이동했을 때 포커스가 보이고 Enter로 목적지에 갈 수 있는가? 브라우저·운영체제 설정에 따라 탭 탐색 설정이 필요할 수 있다.
+- Tab 키로 링크에 이동했을 때 포커스가 보이고 Enter로 목적지에 갈 수 있는가? 페이지가 짧으면 스크롤이 없을 수 있으니 주소 끝의 `#observation`도 확인한다. 브라우저·운영체제 설정에 따라 탭 탐색 설정이 필요할 수 있다.
 - 제목이 필요한 곳에 일반 텍스트만 넣거나, 이동할 곳에 가짜 버튼을 만들지는 않았는가?
 
 물론 이 목록이 접근성 검토의 전부는 아니다. 화면 낭독기로 실제 탐색해 보기, 색 대비, 이미지 대체 텍스트, 폼 레이블도 모두 검토 대상이다. 오늘 관찰한 것은 그 출발점, **내용의 의미를 HTML로 표현하는 일**이다.

@@ -122,3 +122,41 @@ Code strings (identical in both languages): ["<p>","</p>","<meta charset=\"utf-8
 Text must be exact; image_gen garbled small text before. If any string comes out wrong, draw the card with a script (PIL: draw on a 418px canvas with anti-aliasing off, upscale ×3 nearest) instead of re-rolling, as was done for 05/06.
 
 Then: add meaningful alt text, run the 8-item post checklist (KO/EN image order must match: thumbnail, 01, 07, 02, 05, 03, 06, 04), record the result in `shared-review.md`, commit on `feat/cod-441-semantic-html`. Pushing needs the user's go-ahead.
+
+## Current-week visual improvement (2026-11-10, Codex)
+
+Scope: improve only 05, 06 and 07 in both languages, retaining all predecessors. The newer explanatory cards should match the existing 02/03 pixel-art cards: warm cream, sparse 16-bit sprites, notched double-outline title and footer, burnt orange/brown, consistent pixel density and legible text. Use built-in image_gen, Korean master then English text-only edits. Keep the thumbnail, encounter, 02, 03, and registration as selected. Source facts and example names come from both manuscripts. NO.011 / Lv.1 / HTML/CSS chapter 1/5 remain unchanged. The revisions remain local drafts; no upload or publication.
+
+### 05 v2 — nested regions
+
+Reference/edit target: original 05; strict series/style/character reference: 02-html-meaning.png. Rebuild the rigid boxes as one clean pixel-art browser map, centered and generously spaced. Within the browser: header contains nav; main contains article; article contains two stacked sibling section blocks; footer is outside main. The two sections follow the manuscript's vertical document order. Preserve clear containment with separated borders and padding. One small explorer/Structure Sprout pair beside the diagram, never covering labels. No furniture or scenery, no invented tiny copy. One thin notched double-border title and one short framed footer. No gradients.
+
+Exact Korean strings: ["페이지의 지도", "header", "nav", "main", "article", "section", "section", "footer", "필요한 영역만 골라 쓴다"]
+
+Exact English replacements: ["A map of the page", "header", "nav", "main", "article", "section", "section", "footer", "Use only the regions you need"]
+
+### 06 v2 — navigation versus implemented action
+
+Reference/edit target: original 06; strict series/style/character reference: 02-html-meaning.png. Two equally weighted pixel-art comparison panels. Left: underlined `a href` and one directional path to a distinct document outline. Right: `button` plus two small states of the SAME panel (closed then open), a short arrow between them; a visible note says behavior requires implementation. This is a conceptual comparison, not a claim the article's inert example already opens anything. One small explorer on the left and Structure Sprout on the right, consistent with 02. Keep characters subordinate to diagrams, blank cream, thin notched double-border title/footer, no extra labels or scenery.
+
+Exact Korean strings: ["이동과 동작", "a href", "button", "다른 곳으로 이동", "여기서 동작 실행", "동작 구현 필요", "이동은 링크, 동작은 버튼"]
+
+Exact English replacements: ["Navigate or act", "a href", "button", "Go somewhere else", "Do something here", "Behavior needs implementation", "Links navigate, buttons act"]
+
+### 07 v3 — element anatomy with characters
+
+Reference/edit target: 07 v2, retained as an intermediate predecessor; strict series/style/character reference: 02-html-meaning.png. Per the user's follow-up, add a small explorer and Structure Sprout beneath the specimens, above the footer. Reduce diagram height enough to create a dedicated character lane, without covering labels, brackets or code. Use one dominant code specimen showing `<p>` + content + `</p>`. Under each piece one short bracket to its label; one wide brace spans all three and names the entire element. Second smaller specimen is only `<meta charset="utf-8">`, with no content or closing tag. Separate the two specimens by generous cream space. Use exact angle brackets/slash/quotes, not placeholder code. Pixel-art panel corners and consistent typography matching 02, restrained orange/cream fills, no gradients. One thin notched double-border title/footer.
+
+Exact Korean strings: ["요소의 생김새", "<p>", "내용", "</p>", "시작 태그", "내용", "종료 태그", "p 요소 = 문단", "<meta charset=\"utf-8\">", "빈 요소: 내용·종료 태그 없음", "태그가 내용을 감싸 역할을 붙인다"]
+
+Exact English replacements: ["Anatomy of an element", "<p>", "content", "</p>", "Opening tag", "Content", "Closing tag", "p element = paragraph", "<meta charset=\"utf-8\">", "Void element: no content or closing tag", "Tags wrap content and give it a role"]
+
+For each English edit, change only the listed strings; preserve all borders, diagram geometry, colors, arrows, and characters. Inspect Hangul/code before localization, then inspect English again. Update manuscript image paths/alt text only after acceptance. Verify eight images per language in the established order, registration last, paths resolving, unchanged code blocks and draft frontmatter. Record selected versions and check results in shared-review.md. The prompt specifications above and shared constraints are the complete prompt set; per-call wording may reiterate these constraints.
+
+### 06 v3 — scope the implementation note to the button (user review)
+
+Edit target: 06-link-vs-button.v2.png. Preserve title, palette, pixel density, two comparison diagrams, explorer and Structure Sprout. Remove the standalone wide implementation-note panel below the characters. Move its exact Korean text `동작 구현 필요` INSIDE the right-hand button panel, below its action caption, leaving enough padding to make ownership unambiguous. Expand the right panel slightly and move its character downward if needed; no overlap. Keep exactly ONE full-width takeaway panel at the bottom: `이동은 링크, 동작은 버튼`. There is no implementation note in or beneath the left link panel, or across both panels.
+
+All visible Korean strings, verbatim: ["이동과 동작", "a href", "button", "다른 곳으로 이동", "여기서 동작 실행", "동작 구현 필요", "이동은 링크, 동작은 버튼"]. No additional text.
+
+English is a text-only localization of accepted Korean v3. Exact replacements: ["Navigate or act", "a href", "button", "Go somewhere else", "Do something here", "Behavior needs implementation", "Links navigate, buttons act"]. The note may wrap into two lines, wholly inside the right panel. Preserve all diagram geometry and both characters. Save as 06-link-vs-button.v3.png and 06-link-vs-button.en.v3.png; retain all predecessors. Verify note containment and one bottom takeaway visually before changing manuscript references.

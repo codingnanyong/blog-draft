@@ -25,12 +25,12 @@ At the entrance to the new chapter, an orange creature waited with pieces of a d
 - Dex number: NO.011
 - Name: Structure Sprout
 - Classification: Document structure type
-- Encounter frequency: Very high (every time a web page opens; the appearance changes, but a document structure sits underneath)
+- Encounter rate: Very high (every time a web page opens; the appearance changes, but a document structure sits underneath)
 - Danger level: ⚠️ (a page can look convincing while its headings and controls lack their intended roles)
 
 ---
 
-## First impressions
+## First impression
 
 Three questions go at the top of the field notes.
 
@@ -44,7 +44,7 @@ The goal is to build a small page of field notes. No framework, no server: just 
 
 ## Observation 1 — HTML describes the role of content
 
-HTML stands for **HyperText Markup Language**. It is a markup language that wraps content in elements to express structure and meaning. Start with the shape of an element, as described in [MDN's HTML basics](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax).
+HTML stands for **HyperText Markup Language**. It is a markup language that wraps content in elements to express structure and meaning. I picked one fragment off the Structure Sprout's back, set it beside [MDN's HTML basics](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax), and started with the shape of an element.
 
 ```html
 <p>Today I met the Structure Sprout.</p>
@@ -52,17 +52,17 @@ HTML stands for **HyperText Markup Language**. It is a markup language that wrap
 
 `<p>` is the opening tag, `</p>` the closing tag, and the content goes between them. Together they form a paragraph element. Attributes add information to the opening tag. Not every element has this pair: `meta`, used later, is a void element with no content or closing tag.
 
-![Anatomy of an element — the p opening tag, content, and p closing tag form a p element; meta is a void element with no content or closing tag](./images/07-html-element-anatomy.en.png)
+![The explorer and Structure Sprout inspect element anatomy: the opening tag, content, and closing tag together form a p element; meta is a void element with no content or closing tag](./images/07-html-element-anatomy.en.v3.png)
 
-CSS can add colors, spacing, fonts, and layout. JavaScript can respond to input or change the document. This observation focuses on HTML.
+CSS can add colors, spacing, fonts, and layout. JavaScript can respond to input or change the document. For this observation, I decided to follow only the HTML.
 
-If a heading is just large text, choosing its font size comes first. If **a heading names the content that follows**, choosing `h1` or `h2` comes first. CSS can set its size afterward. That order is our starting point for reading this specimen.
+At first, I thought of a heading as just large text, which meant picking a font size first. After I rewrote my notes to say that **a heading names the content that follows**, the first choice became `h1` or `h2`. CSS can set its size afterward. That order is our starting point for reading this specimen.
 
 ---
 
 ## Observation 2 — semantic HTML adds meaning to appearance
 
-“Semantic” concerns meaning. Semantic HTML means choosing elements that match the role of the content. Compare these fragments.
+“Semantic” concerns meaning. Semantic HTML means choosing elements that match the role of the content. I set these two fragments side by side.
 
 ```html
 <div class="title">Field notes</div>
@@ -74,9 +74,9 @@ If a heading is just large text, choosing its font size comes first. If **a head
 <p>Today I met the Structure Sprout.</p>
 ```
 
-In the first example, `title` is a class name chosen by the author. The name alone does not give the browser heading semantics. In the second, the elements themselves express a heading and a paragraph. Styling them similarly with CSS does not remove that difference.
+Looking at the first fragment, I assumed `class="title"` would make it count as a title. But `title` is only a class name chosen by the author, and the name alone does not give the browser heading semantics. In the second fragment, the elements themselves express a heading and a paragraph. Styling them similarly with CSS does not remove that difference.
 
-`div` has a place too. As the [HTML standard's div definition](https://html.spec.whatwg.org/multipage/grouping-content.html#the-div-element) explains, it groups children without a special meaning of its own. It can wrap elements for layout, for example. But when content already has a role such as paragraph or heading, express that role first.
+That does not make `div` the wrong answer. As the [HTML standard's div definition](https://html.spec.whatwg.org/multipage/grouping-content.html#the-div-element) explains, it groups children without a special meaning of its own. It can wrap elements for layout, for example. But when content already has a role such as paragraph or heading, express that role first.
 
 ![Comparing div class names with h1 and p — elements can express the roles of the same words](./images/02-html-meaning.en.png)
 
@@ -86,7 +86,7 @@ This meaning helps people reading the code and gives assistive technology a basi
 
 ## Observation 3 — divide the page into regions
 
-Before turning the notes into a page, list its regions. This is a simplified map based on the [HTML standard's section elements](https://html.spec.whatwg.org/multipage/sections.html) and the meaning of `main`.
+Before turning the notes into a page, I listed its regions. This is a simplified map based on the [HTML standard's section elements](https://html.spec.whatwg.org/multipage/sections.html) and the meaning of `main`.
 
 | Element | Role in this page |
 | --- | --- |
@@ -99,11 +99,11 @@ Before turning the notes into a page, list its regions. This is a simplified map
 
 This table is not a mandatory top-to-bottom stack. An `article` can have its own `header` and `footer`, and a page does not need regions it has no use for. Similarly, `nav` is for major navigation, rather than a wrapper for every link.
 
-`article` and `section` can be particularly confusing. The complete observation can stand on its own as a piece of writing, so it becomes an [`article`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/article). “Today's discovery” is a named subtopic within it, so it becomes a [`section`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/section). If a wrapper were needed only to add a border, a `div` could be more appropriate.
+`article` and `section` took me the longest, because both seemed to do nothing more than group content. The complete observation can stand on its own as a piece of writing, so it becomes an [`article`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/article). “Today's discovery” is a named subtopic within it, so it becomes a [`section`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/section). If a wrapper were needed only to add a border, a `div` could be more appropriate.
 
-[`main`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/main) represents the document's main content. This example uses one, leaving the repeated site introduction and footer outside. As [W3C's regions tutorial](https://www.w3.org/WAI/tutorials/page-structure/regions/) explains, these distinctions also help assistive technology navigate major regions. Not every HTML section element is always exposed as the same landmark. For example, a [`section` needs an accessible name](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/section#technical_summary) to become a `region` landmark.
+[`main`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/main) represents the document's main content. This example uses one, leaving the repeated site introduction and footer outside. As [W3C's regions tutorial](https://www.w3.org/WAI/tutorials/page-structure/regions/) explains, these distinctions also help assistive technology navigate major regions. One thing surprised me: not every HTML section element is always exposed as the same landmark. For example, a [`section` needs an accessible name](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/section#technical_summary) to become a `region` landmark.
 
-![A map of the page — inside a browser window: header with nav, main holding an article with two sections, and footer. Use only the regions you need](./images/05-html-page-regions.en.png)
+![The explorer and Structure Sprout inspect a page map: nav inside header, article with two stacked sibling sections inside main, and footer outside main](./images/05-html-page-regions.en.v2.png)
 
 ---
 
@@ -163,7 +163,7 @@ It looks like a lot of lines, but there is no need to memorize them all at once.
 
 ![Four steps: decide the content, choose regions, add headings, then check in a browser](./images/03-html-structure-flow.en.png)
 
-Open it and you get a plain page with no colors or borders, but it reads just fine. Browsers have default styles, so headings may appear larger and links underlined. **Not having written CSS yet does not mean there are no styles.** For now, look at content order and roles before appearance.
+Opening it, I got a plain page with no colors or borders, but it read just fine. And without a single line of CSS, the headings were larger and the links underlined. Browsers have default styles. **Not having written CSS yet does not mean there are no styles.** For now, look at content order and roles before appearance.
 
 ---
 
@@ -192,17 +192,17 @@ Choosing roles does not end with large regions. “Back to the observation” **
 <button type="button">Open field notes</button>
 ```
 
-![Navigate or act — on the left, an a href link jumps to another page; on the right, a button opens a panel in place](./images/06-link-vs-button.en.png)
+![The explorer and Structure Sprout compare navigation and actions: links navigate to a destination; buttons act in place. The note inside the right-hand button panel means the behavior must be implemented separately](./images/06-link-vs-button.en.v3.png)
 
 The second line is a fragment for comparing element choices. **No behavior is connected to this button, so pressing it does not open any notes.** It is left out of the complete example. Opening something requires implementing the behavior, for example with JavaScript.
 
 As [MDN's button guide](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button) explains, native buttons support activation through keyboards and assistive technology. Recreating that role with a click handler on a `div` also means managing focus and keyboard behavior yourself. For a button that does not submit a form, write `type="button"` to make the intent explicit.
 
-Here is a first pass through the field notes.
+I decided to give the finished field notes a first pass in this order.
 
 - Do the headings alone explain the topic and subtopics?
 - Can you find the boundaries of `main` and `article` in the developer tools' elements panel?
-- Does Tab move to a link with a visible focus indicator, and does Enter navigate to its target? Browser or operating system settings may require enabling tab navigation.
+- Does Tab move to a link with a visible focus indicator, and does Enter navigate to its target? A short page may not scroll, so also check for `#observation` at the end of the address. Browser or operating system settings may require enabling tab navigation.
 - Is any heading only plain text, or is something meant to navigate presented as a fake button?
 
 Of course, this list is not a full accessibility review. Navigating with a real screen reader, color contrast, image alternatives, and form labels all belong in one too. What we observed today is the starting point: **expressing the meaning of content in HTML**.
