@@ -98,3 +98,25 @@ Role reference: 02-html-meaning.png. Square 1:1. Framed title top. Two panels si
 
 Korean strings: ["이동과 동작","a href","button","다른 곳으로 이동","여기서 동작 실행","이동은 링크, 동작은 버튼"]
 English replacements in the same order: ["Navigate or act","a href","button","Go somewhere else","Do something here","Links navigate, buttons act"]
+
+## Requested for Codex: 07-html-element-anatomy (Claude review, 2026-11-10)
+
+Why: Observation 1 explains start tag, content, end tag, element and void element in prose only. It is the first concept a beginner meets, and the only observation without a picture.
+
+Place: in both manuscripts, directly after the paragraph that ends with "`meta`는 내용과 종료 태그가 없는 빈 요소다." / its English counterpart in Observation 1. Files: `images/07-html-element-anatomy.png`, `images/07-html-element-anatomy.en.png` (1254×1254). Do not touch any other image.
+
+Style match: copy the look of `05-html-page-regions.png` and `06-link-vs-button.png` (flat teaching card: cream `#FCF2E5` background, notched double-border title frame top, notched double-border takeaway panel bottom, near-black outlines, burnt orange `#C44E16`, peach `#F2D6BA`, monospace code labels, small orange plus-sparkles). Characters are optional; if used, reuse the explorer / Structure Sprout sprites from `02-html-meaning.png`, never redraw them.
+
+Layout (square):
+1. Title frame: string 1.
+2. Main row, large: three adjacent blocks reading as one line of code: `<p>` (orange block, cream mono text) · `내용`/`content` (peach block) · `</p>` (orange block). Under each block a short bracket with its label (strings 2–4). One wide brace under all three with label string 5.
+3. Second row, smaller: one orange block `<meta charset="utf-8">` with label string 6 under it. No end-tag block next to it.
+4. Takeaway panel: string 7.
+
+Korean strings: ["요소의 생김새","시작 태그","내용","종료 태그","p 요소 = 문단","빈 요소: 내용·종료 태그 없음","태그가 내용을 감싸 역할을 붙인다"]
+English strings: ["Anatomy of an element","start tag","content","end tag","p element = paragraph","Void element: no content, no end tag","Tags wrap content and give it a role"]
+Code strings (identical in both languages): ["<p>","</p>","<meta charset=\"utf-8\">"]. The middle block shows string 3 (`내용` / `content`).
+
+Text must be exact; image_gen garbled small text before. If any string comes out wrong, draw the card with a script (PIL: draw on a 418px canvas with anti-aliasing off, upscale ×3 nearest) instead of re-rolling, as was done for 05/06.
+
+Then: add meaningful alt text, run the 8-item post checklist (KO/EN image order must match: thumbnail, 01, 07, 02, 05, 03, 06, 04), record the result in `shared-review.md`, commit on `feat/cod-441-semantic-html`. Pushing needs the user's go-ahead.
