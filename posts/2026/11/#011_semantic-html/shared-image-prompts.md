@@ -74,7 +74,7 @@ Correction prompt: Fix ONLY the left portrait. Remove the handheld trowel/spade/
 
 ## Requested follow-up images (Claude review, 2026-11-10)
 
-Not generated yet. The prose already uses the new classification; the Markdown still references the current files until these exist.
+Done by Claude on 2026-11-10 with a deterministic script instead of image_gen, so text stays exact: Korean `04-structure-sprout-registration.v3.png`, English `04-structure-sprout-registration.en.v2.png` (classification text replaced in place on v2 / en), and `05-html-page-regions(.en).png`, `06-link-vs-button(.en).png` (shapes and text drawn on a 418px canvas without anti-aliasing, upscaled x3 nearest; explorer and Structure Sprout sprites cut from `02-html-meaning.png`). All are linked in both manuscripts.
 
 ### 04-structure-sprout-registration v3 (classification text only)
 

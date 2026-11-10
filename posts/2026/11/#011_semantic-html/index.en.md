@@ -101,6 +101,8 @@ This table is not a mandatory top-to-bottom stack. An `article` can have its own
 
 [`main`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/main) represents the document's main content. This example uses one, leaving the repeated site introduction and footer outside. As [W3C's regions tutorial](https://www.w3.org/WAI/tutorials/page-structure/regions/) explains, these distinctions also help assistive technology navigate major regions. Not every HTML section element is always exposed as the same landmark. For example, a [`section` needs an accessible name](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/section#technical_summary) to become a `region` landmark.
 
+![A map of the page — inside a browser window: header with nav, main holding an article with two sections, and footer. Use only the regions you need](./images/05-html-page-regions.en.png)
+
 ---
 
 ## Observation 4 — build the field notes in one file
@@ -188,6 +190,8 @@ Choosing roles does not end with large regions. “Back to the observation” **
 <button type="button">Open field notes</button>
 ```
 
+![Navigate or act — on the left, an a href link jumps to another page; on the right, a button opens a panel in place](./images/06-link-vs-button.en.png)
+
 The second line is a fragment for comparing element choices. **No behavior is connected to this button, so pressing it does not open any notes.** It is left out of the complete example. Opening something requires implementing the behavior, for example with JavaScript.
 
 As [MDN's button guide](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button) explains, native buttons support activation through keyboards and assistive technology. Recreating that role with a click handler on a `div` also means managing focus and keyboard behavior yourself. For a button that does not submit a form, write `type="button"` to make the intent explicit.
@@ -222,4 +226,4 @@ The note beside the Structure Sprout can be short. **Choose the content's role b
 
 Now it is time to register the first specimen of the HTML/CSS chapter in the Codigdex. **NO.011 Structure Sprout** — chooses elements that match the meaning of content. The first of the HTML/CSS chapter's five slots is filled.
 
-![NO.011 Structure Sprout registration card — HTML/CSS learning type, chooses elements to match content meaning, first of five slots filled](./images/04-structure-sprout-registration.en.png)
+![NO.011 Structure Sprout registration card — Document structure type, chooses elements to match content meaning, first of five slots filled](./images/04-structure-sprout-registration.en.v2.png)

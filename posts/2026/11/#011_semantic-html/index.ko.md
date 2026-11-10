@@ -101,6 +101,8 @@ HTML은 **HyperText Markup Language**다. 내용을 요소로 감싸 구조와 �
 
 [`main`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/main)은 문서의 주된 내용이다. 이번 예제에서는 하나만 두고, 반복되는 사이트 소개와 바닥글은 밖에 놓는다. [W3C의 영역 안내](https://www.w3.org/WAI/tutorials/page-structure/regions/)처럼 이런 구분은 보조 기술이 주요 영역으로 이동할 때도 도움이 된다. HTML의 모든 구획 요소가 언제나 같은 랜드마크로 노출되는 것은 아니다. 예를 들어 [`section`은 접근 가능한 이름이 있어야](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/section#technical_summary) `region` 랜드마크가 된다.
 
+![페이지의 지도 — 브라우저 창 안에 header와 nav, main 안의 article과 두 section, footer가 쌓인 구조. 필요한 영역만 골라 쓴다](./images/05-html-page-regions.png)
+
 ---
 
 ## 관찰 4 — 파일 하나로 관찰 노트를 만든다
@@ -188,6 +190,8 @@ h1 Meeting the Structure Sprout
 <button type="button">Open field notes</button>
 ```
 
+![이동과 동작 — 왼쪽은 a href 링크가 다른 페이지로 이동하고, 오른쪽은 button이 그 자리에서 패널을 펼친다](./images/06-link-vs-button.png)
+
 두 번째 줄은 요소 선택을 비교하기 위한 조각이다. **이 버튼에는 동작을 연결하지 않았으므로 눌러도 노트가 열리지 않는다.** 완성 예제에는 넣지 않았다. 실제로 열리게 하려면 JavaScript 등으로 동작을 구현해야 한다.
 
 [MDN의 button 안내](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button)처럼 기본 버튼은 키보드나 보조 기술을 통한 활성화를 지원한다. `div`에 클릭 처리를 붙여 같은 역할을 만들려면 포커스와 키보드 처리까지 직접 챙겨야 한다. 폼 제출용이 아닌 버튼에는 `type="button"`을 적어 의도를 분명히 한다.
@@ -222,4 +226,4 @@ Linux 챕터에서는 화면에 나온 단어가 정확히 무슨 상태를 말�
 
 그럼 HTML/CSS 챕터의 첫 개체를 코딩 도감에 등록한다. **NO.011 구조 새싹** — 내용의 의미에 맞는 요소를 고른다. HTML/CSS 챕터 다섯 칸 중 첫 칸이 채워졌다.
 
-![NO.011 구조 새싹 등록 카드 — HTML/CSS 학습형, 콘텐츠의 의미에 맞는 요소 선택, 다섯 칸 중 첫 칸 등록 완료](./images/04-structure-sprout-registration.v2.png)
+![NO.011 구조 새싹 등록 카드 — 문서 구조형, 의미에 맞는 요소 선택, HTML/CSS 챕터 다섯 칸 중 첫 칸 등록 완료](./images/04-structure-sprout-registration.v3.png)

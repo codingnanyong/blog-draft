@@ -43,6 +43,6 @@ User review of the prose, English localization, and selected images. Before publ
 
 Prose revised in both languages: classification `문서 구조형` / `Document structure type` (aligned with Linux-chapter `…형` naming), frequency in the `매우 높음 (…)` form, the reader-facing note about bilingual editions removed, a warmer field-log voice in a few passages, and the closing registration line matched to earlier chapters. No next-week preview: week 2 is still only proposed in the roadmap.
 
-Image follow-ups are specified in `shared-image-prompts.md`: registration v3 (classification text), new `05-html-page-regions`, new `06-link-vs-button`. Optional: in `01`, the explorer's open book shows scribble glyphs; leave as is unless re-rolled.
+Image follow-ups are done and linked: registration v3 / en.v2 (classification text), new `05-html-page-regions` after the Observation 3 landmark paragraph, new `06-link-vs-button` after the link/button code block. Method is recorded in `shared-image-prompts.md`. Optional: in `01`, the explorer's open book shows scribble glyphs; leave as is unless re-rolled.
 
 Publish date: 2026-11-09 has passed. Adjust `date` to the actual publish Monday when the user decides.
