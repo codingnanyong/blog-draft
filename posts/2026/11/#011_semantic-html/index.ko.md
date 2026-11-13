@@ -3,7 +3,7 @@ title: "코딩 도감 #03 — HTML/CSS 첫 조우, 시맨틱 HTML"
 description: "HTML/CSS 1주차. 시맨틱 HTML로 제목·본문·탐색의 의미를 나누고 구조 새싹을 관찰한다."
 tags: [html, css, 코딩도감, 시맨틱HTML, 웹접근성]
 date: 2026-11-09
-status: draft
+status: published
 ---
 
 # 코딩 도감 #03 — HTML/CSS 첫 조우, 시맨틱 HTML
