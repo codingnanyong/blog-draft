@@ -3,7 +3,7 @@ title: "Codigdex #03 — First Encounter with HTML/CSS: Semantic HTML"
 description: "HTML/CSS week 1. Observe the Structure Sprout and give headings, content, and navigation meaning with semantic HTML."
 tags: [html, css, codigdex, semantic-html, accessibility]
 date: 2026-11-09
-status: draft
+status: published
 ---
 
 # Codigdex #03 — First Encounter with HTML/CSS: Semantic HTML
