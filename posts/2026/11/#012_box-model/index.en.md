@@ -49,7 +49,7 @@ With [MDN's box model guide](https://developer.mozilla.org/en-US/docs/Learn_web_
 - **border**: the boundary around the padding
 - **margin**: the space outside the border
 
-![Content, padding, border, and margin from inside to outside — margin is outside the border](./images/02-box-layers.en.png)
+![Content, padding, border, and margin from inside to outside — margin is outside the border](./images/02-box-layers.en.v2.png)
 
 If content is too close to its border, inspect `padding` first. If neighboring cards are too close, inspect `margin`. Both may look like empty space, but they belong to different boundaries. [Padding](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/padding) creates inside space; [margin](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/margin) sets outside space. A normal background color also paints the padding area, but does not paint the margin.
 
@@ -85,7 +85,7 @@ border box width + horizontal margins = 244 + 10 + 10 = 264px
 
 What if 200 should reach the outer edges of the border? Switch to [`box-sizing: border-box`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/box-sizing). Padding and border now fit inside that 200. With the same values, content width becomes `200 - 40 - 4 = 156px`; adding horizontal margins gives `220px`. **Margin is still outside.**
 
-![With width 200px, content-box has a 244px border box; border-box has a 200px border box and 156px content width](./images/03-box-sizing-comparison.en.png)
+![With width 200px, content-box has a 244px border box; border-box has a 200px border box and 156px content width](./images/03-box-sizing-comparison.en.v2.png)
 
 The difference to record is which boundary the number measures. The [CSS sizing specification](https://www.w3.org/TR/css-sizing-3/#box-sizing) describes this property as choosing the box to which sizing properties apply. `border-box` does not remove padding: the space padding takes comes out of the content area. If padding and borders together exceed the declared width, content width cannot become negative, so the border box can exceed that declared width.
 

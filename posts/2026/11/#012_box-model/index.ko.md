@@ -49,7 +49,7 @@ HTML/CSS 지역의 두 번째 길목에는 등을 여러 겹으로 감싼 **스�
 - **border**: 안쪽 여백을 둘러싼 테두리
 - **margin**: 테두리 바깥의 여백
 
-![content, padding, border, margin을 안에서 밖으로 구분한 카드 — margin은 테두리 바깥에 있다](./images/02-box-layers.png)
+![content, padding, border, margin을 안에서 밖으로 구분한 카드 — margin은 테두리 바깥에 있다](./images/02-box-layers.v2.png)
 
 내용이 테두리에 너무 붙으면 먼저 `padding`을 살핀다. 이웃 카드와 너무 붙으면 `margin`을 살핀다. 둘 다 빈 공간처럼 보여도 어느 경계에 붙어 있는지가 다르다. [padding](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/padding)은 안쪽 공간을 만들고, [margin](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/margin)은 바깥 공간을 정한다. 일반적인 배경색은 padding 영역에도 칠해지지만 margin에는 칠해지지 않는다.
 
@@ -85,7 +85,7 @@ border box width + horizontal margins = 244 + 10 + 10 = 264px
 
 그럼 `200px`을 테두리 바깥까지의 너비로 삼고 싶으면 어떻게 할까? [`box-sizing: border-box`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/box-sizing)로 바꾸면 된다. padding과 border가 그 200 안으로 들어간다. 같은 수치에서 내용 너비는 `200 - 40 - 4 = 156px`, 좌우 margin까지 더한 값은 `220px`이다. **margin은 여전히 밖에 있다.**
 
-![같은 width 200px에서 content-box의 테두리 너비는 244px, border-box는 200px이며 내용 너비가 156px으로 줄어드는 비교](./images/03-box-sizing-comparison.v2.png)
+![같은 width 200px에서 content-box의 테두리 너비는 244px, border-box는 200px이며 내용 너비가 156px으로 줄어드는 비교](./images/03-box-sizing-comparison.v3.png)
 
 노트에 적는 차이는 ‘더 좋은 상자’보다 ‘어디까지 포함해 센 값인가’다. [CSS 크기 명세](https://www.w3.org/TR/css-sizing-3/#box-sizing)에서도 이 속성은 크기 속성이 적용되는 상자의 경계를 정한다. `border-box`가 padding을 없애 주는 것은 아니다. padding이 차지하는 만큼 내용 자리가 줄어든다. 지정 너비보다 padding과 border의 합이 더 크면 내용 너비는 음수가 되지 않으므로, 테두리 상자가 지정 너비보다 커질 수도 있다.
 
