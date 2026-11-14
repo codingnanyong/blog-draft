@@ -77,8 +77,8 @@ The boundary measured by [`width`](https://developer.mozilla.org/en-US/docs/Web/
 
 ```text
 content width = 200px
-border-box width = 200 + 20 + 20 + 2 + 2 = 244px
-border-box width + horizontal margins = 244 + 10 + 10 = 264px
+border box width = 200 + 20 + 20 + 2 + 2 = 244px
+border box width + horizontal margins = 244 + 10 + 10 = 264px
 ```
 
 244 reaches the outer edges of the visible border. 264 also adds this example's left and right margins. This is not a universal formula for the space an element occupies in every layout. We are reading the horizontal dimensions of one normal block box with a fixed width and no transforms.
@@ -93,7 +93,7 @@ The difference to record is which boundary the number measures. The [CSS sizing 
 
 ## Observation 3 — put the two boundaries into the same HTML
 
-Create `box-model.html` in an empty folder, save the complete example below as UTF-8, and open it in a browser. Both cards are `article` elements from the last observation. The example text stays in English so both editions can follow the same code.
+Create `box-model.html` in an empty folder, save the complete example below as UTF-8, and open it in a browser. Both cards are `article` elements from the last observation.
 
 ```html
 <!doctype html>
@@ -205,6 +205,8 @@ Return to the last question. Consider two neighboring boxes in normal block flow
 ```
 
 Under these conditions, the gap between the borders is **30px rather than 50px**. Adjacent vertical margins undergo **margin collapsing**. When positive margins collapse like this, the larger value remains. Having a border on each card does not stop these siblings' outside margins from collapsing. [MDN's margin collapsing guide](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing) explains the conditions.
+
+For the same reason, the gap between the two cards in Observation 3 is 10px rather than 20px. The first card's 10px bottom margin collapses with the second card's 10px top margin.
 
 ![In normal block flow, a 30px bottom margin and a 20px top margin collapse into a 30px gap between borders](./images/05-margin-collapse.en.png)
 

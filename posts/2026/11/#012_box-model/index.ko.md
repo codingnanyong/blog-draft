@@ -77,8 +77,8 @@ HTML/CSS 지역의 두 번째 길목에는 등을 여러 겹으로 감싼 **스�
 
 ```text
 content width = 200px
-border-box width = 200 + 20 + 20 + 2 + 2 = 244px
-border-box width + horizontal margins = 244 + 10 + 10 = 264px
+border box width = 200 + 20 + 20 + 2 + 2 = 244px
+border box width + horizontal margins = 244 + 10 + 10 = 264px
 ```
 
 244는 눈에 보이는 테두리의 바깥 경계까지다. 264는 이 예제의 좌우 margin까지 더한 값이다. 모든 배치에서 요소의 점유 공간을 이 공식 하나로 설명할 수 있다는 뜻은 아니다. 지금은 너비가 정해져 있고, 변형도 없는 일반 블록 상자 하나의 가로 치수를 읽고 있다.
@@ -93,7 +93,7 @@ border-box width + horizontal margins = 244 + 10 + 10 = 264px
 
 ## 관찰 3 — 같은 HTML에 두 경계를 나란히 놓는다
 
-빈 폴더에 `box-model.html`을 만들고 아래 전체를 UTF-8로 저장해 브라우저에서 연다. 두 카드 모두 지난 관찰의 `article`이다. 영어 예제 문구는 한·영 원고에서 같은 코드를 따라가기 위해 유지했다.
+빈 폴더에 `box-model.html`을 만들고 아래 전체를 UTF-8로 저장해 브라우저에서 연다. 두 카드 모두 지난 관찰의 `article`이다.
 
 ```html
 <!doctype html>
@@ -205,6 +205,8 @@ border-box width + horizontal margins = 244 + 10 + 10 = 264px
 ```
 
 이 조건에서 두 테두리 사이의 간격은 **50px가 아니라 30px**이다. 인접한 세로 margin이 겹쳐지는 **margin collapsing** 때문이다. 이처럼 양수끼리 겹칠 때는 큰 값이 남는다. 카드 자체에 border가 있어도 두 형제의 바깥 margin이 겹치는 것을 막지는 않는다. [MDN의 margin collapsing 안내](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing)에 정리된 조건을 함께 읽으면 좋다.
+
+관찰 3의 두 카드 사이도 같은 이유로 20px가 아니라 10px이다. 첫 카드의 아래 margin 10px과 둘째 카드의 위 margin 10px이 겹친다.
 
 ![일반 블록 흐름에서 아래 margin 30px과 위 margin 20px이 겹쳐 테두리 사이 간격 30px이 되는 예제](./images/05-margin-collapse.v2.png)
 
