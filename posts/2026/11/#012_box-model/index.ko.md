@@ -8,13 +8,13 @@ status: draft
 
 # 코딩 도감 #03 — 박스 모델, 스타일 셸의 네 겹
 
-![HTML/CSS 두 번째 관찰 — 탐험가와 스타일 셸이 카드 주위의 네 겹을 살펴보는 코딩 도감 표지](./images/thumbnail.png)
+![HTML/CSS 두 번째 관찰 — 탐험가와 스타일 셸이 카드 주위의 네 겹을 살펴보는 코딩 도감 표지](./images/thumbnail.v2.png)
 
 지난 관찰에서 구조 새싹과 문서의 역할을 나눴다. 제목은 `h1`, 관찰 기록 한 편은 `article`로 적었다. 이제 그 기록에 테두리를 두르고 여백을 주려니 새로운 질문이 생긴다. 너비를 `200px`이라고 적으면 테두리 바깥까지 200일까?
 
 HTML/CSS 지역의 두 번째 길목에는 등을 여러 겹으로 감싼 **스타일 셸**이 기다린다. 이번에는 겉모습을 바꾸기 전에, 그 겉모습이 차지하는 공간부터 펼쳐 보기로 했다.
 
-![스타일 셸 Lv.2와 조우 — 탐험가가 카드의 크기와 여백을 관찰하는 RPG 화면](./images/01-style-shell-encounter.png)
+![스타일 셸 Lv.2와 조우 — 탐험가가 카드의 크기와 여백을 관찰하는 RPG 화면](./images/01-style-shell-encounter.v2.png)
 
 ---
 
@@ -22,7 +22,8 @@ HTML/CSS 지역의 두 번째 길목에는 등을 여러 겹으로 감싼 **스�
 
 - 도감 번호: NO.012
 - 이름: 스타일 셸
-- 분류: 박스 구조형
+- 분류: HTML/CSS 학습형
+- 특성: 요소를 content, padding, border, margin으로 계산한다
 - 출현 빈도: 매우 높음 (내용에 테두리와 여백을 줄 때마다 만남)
 - 위험도: ⚠️⚠️ (너비와 실제 바깥 크기를 혼동하면 카드가 부모 밖으로 밀려날 수 있음)
 
@@ -49,7 +50,7 @@ HTML/CSS 지역의 두 번째 길목에는 등을 여러 겹으로 감싼 **스�
 - **border**: 안쪽 여백을 둘러싼 테두리
 - **margin**: 테두리 바깥의 여백
 
-![content, padding, border, margin을 안에서 밖으로 구분한 카드 — margin은 테두리 바깥에 있다](./images/02-box-layers.png)
+![content, padding, border, margin을 안에서 밖으로 구분한 카드 — margin은 테두리 바깥에 있다](./images/02-box-layers.v3.png)
 
 내용이 테두리에 너무 붙으면 먼저 `padding`을 살핀다. 이웃 카드와 너무 붙으면 `margin`을 살핀다. 둘 다 빈 공간처럼 보여도 어느 경계에 붙어 있는지가 다르다. [padding](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/padding)은 안쪽 공간을 만들고, [margin](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/margin)은 바깥 공간을 정한다. 일반적인 배경색은 padding 영역에도 칠해지지만 margin에는 칠해지지 않는다.
 
@@ -85,7 +86,7 @@ border box width + horizontal margins = 244 + 10 + 10 = 264px
 
 그럼 `200px`을 테두리 바깥까지의 너비로 삼고 싶으면 어떻게 할까? [`box-sizing: border-box`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/box-sizing)로 바꾸면 된다. padding과 border가 그 200 안으로 들어간다. 같은 수치에서 내용 너비는 `200 - 40 - 4 = 156px`, 좌우 margin까지 더한 값은 `220px`이다. **margin은 여전히 밖에 있다.**
 
-![같은 width 200px에서 content-box의 테두리 너비는 244px, border-box는 200px이며 내용 너비가 156px으로 줄어드는 비교](./images/03-box-sizing-comparison.v2.png)
+![같은 width 200px에서 content-box의 테두리 너비는 244px, border-box는 200px이며 내용 너비가 156px으로 줄어드는 비교](./images/03-box-sizing-comparison.v4.png)
 
 노트에 적는 차이는 ‘더 좋은 상자’보다 ‘어디까지 포함해 센 값인가’다. [CSS 크기 명세](https://www.w3.org/TR/css-sizing-3/#box-sizing)에서도 이 속성은 크기 속성이 적용되는 상자의 경계를 정한다. `border-box`가 padding을 없애 주는 것은 아니다. padding이 차지하는 만큼 내용 자리가 줄어든다. 지정 너비보다 padding과 border의 합이 더 크면 내용 너비는 음수가 되지 않으므로, 테두리 상자가 지정 너비보다 커질 수도 있다.
 
@@ -208,7 +209,7 @@ border box width + horizontal margins = 244 + 10 + 10 = 264px
 
 관찰 3의 두 카드 사이도 같은 이유로 20px가 아니라 10px이다. 첫 카드의 아래 margin 10px과 둘째 카드의 위 margin 10px이 겹친다.
 
-![일반 블록 흐름에서 아래 margin 30px과 위 margin 20px이 겹쳐 테두리 사이 간격 30px이 되는 예제](./images/05-margin-collapse.v2.png)
+![일반 블록 흐름에서 아래 margin 30px과 위 margin 20px이 겹쳐 테두리 사이 간격 30px이 되는 예제](./images/05-margin-collapse.v3.png)
 
 이 규칙을 모든 여백에 적용하지는 않는다. 가로 margin은 이렇게 겹치지 않으며, flex나 grid 항목의 margin도 겹치지 않는다. 부모와 자식 사이에서 겹치는 조건도 따로 있고, 음수 margin이 섞이면 단순히 큰 값 하나를 고르는 계산이 아니다. 오늘은 위의 **양수 세로 margin을 가진 일반 흐름의 두 형제**까지만 등록 노트에 남긴다.
 
@@ -235,4 +236,4 @@ border box width + horizontal margins = 244 + 10 + 10 = 264px
 
 그럼 두 번째 개체를 코딩 도감에 등록한다. **NO.012 스타일 셸** — 내용과 여백, 테두리를 나눠 크기를 읽는다. HTML/CSS 챕터 다섯 칸 중 두 칸이 채워졌다.
 
-![NO.012 스타일 셸 등록 카드 — 박스 구조형, 내용과 여백을 나눠 크기 계산, HTML/CSS 챕터 2/5 완료](./images/04-style-shell-registration.png)
+![NO.012 스타일 셸 등록 카드 — HTML/CSS 학습형, content·padding·border·margin으로 요소 계산, HTML/CSS 챕터 2/5 완료](./images/04-style-shell-registration.v2.png)

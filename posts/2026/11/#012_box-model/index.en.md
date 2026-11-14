@@ -8,13 +8,13 @@ status: draft
 
 # Codigdex #03 — The Box Model: Four Layers of the Style Shell
 
-![HTML/CSS observation two — the explorer and Style Shell inspect the four layers around a card](./images/thumbnail.en.png)
+![HTML/CSS observation two — the explorer and Style Shell inspect the four layers around a card](./images/thumbnail.en.v2.png)
 
 In the last observation, the Structure Sprout helped us identify roles in a document. A heading became `h1`, and a complete field note became `article`. Now, adding a border and some space raises another question. If the width says `200px`, does that include the border?
 
 At the second checkpoint of the HTML/CSS region waits the **Style Shell**, its back wrapped in layers. Before changing its appearance, I want to unfold the space that appearance takes up.
 
-![An encounter with the Style Shell, Lv.2 — the explorer observes a card's size and spacing](./images/01-style-shell-encounter.en.png)
+![An encounter with the Style Shell, Lv.2 — the explorer observes a card's size and spacing](./images/01-style-shell-encounter.en.v2.png)
 
 ---
 
@@ -22,7 +22,8 @@ At the second checkpoint of the HTML/CSS region waits the **Style Shell**, its b
 
 - Dex number: NO.012
 - Name: Style Shell
-- Classification: Box structure type
+- Classification: HTML/CSS learning type
+- Trait: calculates an element from content, padding, border and margin
 - Encounter rate: Very high (whenever borders and spacing surround content)
 - Danger level: ⚠️⚠️ (confusing the declared width with the outside size can push a card beyond its parent)
 
@@ -49,7 +50,7 @@ With [MDN's box model guide](https://developer.mozilla.org/en-US/docs/Learn_web_
 - **border**: the boundary around the padding
 - **margin**: the space outside the border
 
-![Content, padding, border, and margin from inside to outside — margin is outside the border](./images/02-box-layers.en.png)
+![Content, padding, border, and margin from inside to outside — margin is outside the border](./images/02-box-layers.en.v3.png)
 
 If content is too close to its border, inspect `padding` first. If neighboring cards are too close, inspect `margin`. Both may look like empty space, but they belong to different boundaries. [Padding](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/padding) creates inside space; [margin](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/margin) sets outside space. A normal background color also paints the padding area, but does not paint the margin.
 
@@ -85,7 +86,7 @@ border box width + horizontal margins = 244 + 10 + 10 = 264px
 
 What if 200 should reach the outer edges of the border? Switch to [`box-sizing: border-box`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/box-sizing). Padding and border now fit inside that 200. With the same values, content width becomes `200 - 40 - 4 = 156px`; adding horizontal margins gives `220px`. **Margin is still outside.**
 
-![With width 200px, content-box has a 244px border box; border-box has a 200px border box and 156px content width](./images/03-box-sizing-comparison.en.png)
+![With width 200px, content-box has a 244px border box; border-box has a 200px border box and 156px content width](./images/03-box-sizing-comparison.en.v3.png)
 
 The difference to record is which boundary the number measures. The [CSS sizing specification](https://www.w3.org/TR/css-sizing-3/#box-sizing) describes this property as choosing the box to which sizing properties apply. `border-box` does not remove padding: the space padding takes comes out of the content area. If padding and borders together exceed the declared width, content width cannot become negative, so the border box can exceed that declared width.
 
@@ -208,7 +209,7 @@ Under these conditions, the gap between the borders is **30px rather than 50px**
 
 For the same reason, the gap between the two cards in Observation 3 is 10px rather than 20px. The first card's 10px bottom margin collapses with the second card's 10px top margin.
 
-![In normal block flow, a 30px bottom margin and a 20px top margin collapse into a 30px gap between borders](./images/05-margin-collapse.en.png)
+![In normal block flow, a 30px bottom margin and a 20px top margin collapse into a 30px gap between borders](./images/05-margin-collapse.en.v2.png)
 
 Do not apply this rule to every gap. Horizontal margins do not collapse this way, nor do the margins of flex or grid items. Parent-child collapsing has its own conditions, and negative margins make the calculation more than simply picking the largest value. Today's registration notes stop at **two normal-flow siblings with positive vertical margins**, as shown above.
 
@@ -235,4 +236,4 @@ The border might look like the end, but margin remains outside it. When appearan
 
 Time to register the second specimen. **NO.012 Style Shell** — reads size by separating content, spacing, and borders. Two of the HTML/CSS chapter's five slots are now filled.
 
-![NO.012 Style Shell registration card — Box structure type, calculates size by separating content and spacing, HTML/CSS chapter 2/5](./images/04-style-shell-registration.en.v2.png)
+![NO.012 Style Shell registration card — HTML/CSS learning type, calculates an element from content, padding, border and margin, HTML/CSS chapter 2/5](./images/04-style-shell-registration.en.v3.png)
