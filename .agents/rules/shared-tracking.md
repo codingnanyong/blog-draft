@@ -13,6 +13,7 @@ Linear team `COD` cycles and the Notion Sprint Tracker are shared with other pro
 - The free plan caps active issues at 250. Finished issues auto-archive after one month.
 - **Missing recurring instance:** Before provisioning, list the entire blog project with `includeArchived: true` and inspect placeholder parents and their children; title search and the recurring settings' linked-instance count can omit deleted issues. Check exact issue details and UI history to distinguish archived from deleted records. Restore and reuse an existing matching parent with its six children, preserving IDs. Only if that full check finds no candidate may authorized sprint setup use the existing weekly template once. Record any recovery and reconcile later instances before starting duplicate work. Do not change the recurring schedule or add another creation workflow based on an unverified cause. Keep the ongoing blog project In Progress and the Notion project's current Sprint reference up to date.
 - API access: `LINEAR_API_KEY` in the local `.env` (GraphQL at `https://api.linear.app/graphql`).
+- If the local tracker helper returns HTTP 401, use the connected Linear/Notion tools for the authorized workflow rather than retrying the stale credential or printing `.env`. A returned `archivedAt` can also describe a deleted issue: verify the UI history and restore the original parent/children before proceeding; never replace that issue pair.
 
 ## Notion Sprint Tracker
 
