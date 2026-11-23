@@ -3,7 +3,7 @@ title: "코딩 도감 #03 — 박스 모델, 스타일 셸의 네 겹"
 description: "HTML/CSS 2주차. 박스 모델의 네 겹과 box-sizing을 살피고 스타일 셸을 등록한다."
 tags: [html, css, 코딩도감, 박스모델, box-sizing]
 date: 2026-11-16
-status: draft
+status: published
 ---
 
 # 코딩 도감 #03 — 박스 모델, 스타일 셸의 네 겹

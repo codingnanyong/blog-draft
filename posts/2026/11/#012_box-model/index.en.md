@@ -3,7 +3,7 @@ title: "Codigdex #03 — The Box Model: Four Layers of the Style Shell"
 description: "HTML/CSS week 2. Observe the box model's four layers and box-sizing, then register the Style Shell."
 tags: [html, css, codigdex, box-model, box-sizing]
 date: 2026-11-16
-status: draft
+status: published
 ---
 
 # Codigdex #03 — The Box Model: Four Layers of the Style Shell
