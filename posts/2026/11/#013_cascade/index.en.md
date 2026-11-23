@@ -3,7 +3,7 @@ title: "Codigdex #03 — The Cascade: Which CSS Declaration Wins?"
 description: "HTML/CSS week 3. Observe specificity, source order, and inheritance with the Cascade Weaver."
 tags: [html, css, codigdex, cascade, specificity]
 date: 2026-11-23
-status: draft
+status: published
 ---
 
 # Codigdex #03 — The Cascade: Which CSS Declaration Wins?
