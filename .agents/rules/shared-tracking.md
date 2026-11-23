@@ -31,3 +31,10 @@ Linear team `COD` cycles and the Notion Sprint Tracker are shared with other pro
 When the user accepts a draft for future manual publication, update the existing weekly issue's template title and scope, record completed preparation sub-issues, and create or update the matching Notion Sprint with its Project Record relation. Reflect the same readiness in both roadmaps. Keep the parent In Progress and publication Todo until publication is reported; keep the merge sub-issue open until the PR is actually merged. Compute Notion completion from the six standard sub-issues, and record any scheduled-date mismatch without guessing the actual publication date.
 
 Run the `shared-publish-followup` skill in the same turn. It covers Linear, Notion, the Git status flip, the chapter tag and milestone, and the branch check.
+
+## Reconciliation at GitHub and weekly handoffs
+
+- A successful push is not the end of the weekly workflow. In the same handoff, reconcile the six existing Linear children, the Notion Sprint properties AND body, the project's current-Sprint text, and both roadmaps against actual evidence.
+- Record the initial draft PR and later correction PRs separately. A merged initial draft can complete its standard merge task while a later correction remains OPEN; explicitly list that outstanding PR in Linear and Notion. Never describe that follow-up as merged based on the earlier PR.
+- Calculate completion from the six current child states. Never leave an old 2/6 narrative after completed review, upload or merge work, and never mark publication complete without the user's report.
+- At a new week, find the existing Sprint using the Sprint Tracker data source before creating one; title search alone is insufficient. Reuse it or create the missing row with its Project Record relation, and update the project's current-Sprint text in the same handoff.
