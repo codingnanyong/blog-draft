@@ -36,8 +36,14 @@ When a later image is explicitly approved by the user, it becomes an additional 
 - `04 — registration card`: square `1:1`; ends every weekly post. Thick black/orange outer frame, black `코딩 도감 등록` header (or its English localization), specimen window on the left, number/name plus type and trait panels on the right, an approval stamp, a progress bar with exactly the current number of chapter slots filled, and a full-width black bottom panel declaring that week's registration complete (the whole chapter on the final week). The specimen window is a clean portrait: only the registered specimen or specimen group, centered on a blank warm-cream field, with no explorer, props, ground, grass, rocks, scenery, or cast shadow. Every `NO.00x` is an individual registered specimen; never label it an observation log. Next-topic previews belong in the prose before this image.
 - `05+ — explanatory`: optional and unlimited, added wherever a picture makes the prose easier to follow (a step sequence, a before/after, a common pitfall). Square `1:1`, built like `02` or `03`: one framed title, one comparison or flow using the post's own example names and commands, one short takeaway panel. Number them in reading order from `05`; they sit before the `04` registration card. Use the series' own terms exactly (e.g. 셸, never 셀).
 
+## Game character verification
+
+- Resolve the actual game assetKey and inspect that asset before generation; compare the prepared character set too. Preserve fixed character gear in every role, including registration.
+- NO.013 (2026-11-23): verified game asset `monsters/ch03.html-css/cascade-weaver-lv3.png`, snapshot `references/codigdex-monsters/ch03.html-css/shared-cascade-weaver-lv3.game.png` (SHA-256 `dcaa5a34da910f05dcd4a3c923ada84a9429722c5ebcc01ab008a272b859f2fe`). Keep staff, orange/cream cape, layered shell and blue/orange magical ribbons in every role including registration. No helmet, mallet, trowel or blueprint. NO.013: Korean is `캐스케이드 위버`, English `Cascade Weaver`, Lv.3, chapter 3/5.
+
 ## Text and localization
 
 - The Korean asset comes first. The English asset is a text-localization edit of the accepted Korean image that changes only the requested text and preserves every other design decision.
 - List every visible string verbatim in the prompt and require no other readable text. Keep captions to one short sentence or phrase.
+- Cross-check every selector/value label in explanatory images against the runnable example, not just the final color. For NO.013, `#245a81` belongs to `.highlight`; `.note` declares `#6a4a2c`.
 - Reject and regenerate when text is misspelled, Hangul is malformed, the English composition drifts from Korean, the wrong number of progress slots is filled, or the numbered template is not followed.
