@@ -38,15 +38,15 @@ The user confirmed Week 4 from the roadmap on 2026-10-26. Recurring issue COD-36
 
 Week 5 (NO.010) uses the existing recurring issue COD-402. Actual Claude Code wrote the Korean and English articles; Codex generated, inspected, and linked seven images per language, fourteen total. The user reported both Velog and Medium published on 2026-11-02, matching the planned publication date. Both articles are `status: published`. Deliverables are in `posts/2026/11/#010_kernel-os/`. Checks confirmed nineteen matching code blocks, matching heading structures, and valid image paths. The final NO.010 registration card completes the Linux chapter at 5/5.
 
-## #03 — HTML/CSS (week 1 published, week 2 topic confirmed)
+## #03 — HTML/CSS (weeks 1–3 published)
 
-On 2026-11-02 the user decided to take every chapter after Linux (`#02`) in the game's dex-number order. NO.011–015, the numbers after NO.010, are the specimens of the game's `ch03.html-css`. On 2026-11-07 the user confirmed semantic HTML for the next post. Week 1 is published. On 2026-11-13 the user also confirmed week 2, the box model; Codex prepared both drafts and six selected images per language. Weeks 3–5 remain proposals in the game's specimen and concept order.
+On 2026-11-02 the user decided to take every chapter after Linux (`#02`) in the game's dex-number order. NO.011–015, the numbers after NO.010, are the specimens of the game's `ch03.html-css`. On 2026-11-07 the user confirmed semantic HTML for the next post. Week 1 is published. On 2026-11-13 the user also confirmed week 2, the box model; Codex prepared both drafts and six selected images per language. On 2026-11-23 the user confirmed week 3, the cascade; Codex prepared both drafts and six selected images per language. The user confirmed NO.013 published on both Velog and Medium that day. Weeks 4–5 remain proposals in the game's specimen and concept order.
 
 | Week | Dex number · specimen | Topic | Publish Date | Linear | Status |
 | --- | --- | --- | --- | --- | --- |
 | Week 1 | NO.011 Structure Sprout | HTML/CSS basics — first encounter (semantic HTML) | 2026-11-09 | COD-441 | Published |
 | Week 2 | NO.012 Style Shell | The box model | 2026-11-16 | COD-470 | Published (image follow-up PR separately pending) |
-| Week 3 | NO.013 Cascade Weaver | The cascade (specificity and source order) | 2026-11-23 | TBD | Proposed |
+| Week 3 | NO.013 Cascade Weaver | The cascade (specificity and source order) | 2026-11-23 | COD-477 | Published |
 | Week 4 | NO.014 Breakpoint Knight | Media queries | 2026-11-30 | TBD | Proposed |
 | Week 5 | NO.015 Responsive Layout Paladin | Accessibility (wrap-up registration) | 2026-12-07 | TBD | Proposed |
 
