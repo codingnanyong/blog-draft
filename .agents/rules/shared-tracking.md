@@ -38,3 +38,5 @@ Run the `shared-publish-followup` skill in the same turn. It covers Linear, Noti
 - Record the initial draft PR and later correction PRs separately. A merged initial draft can complete its standard merge task while a later correction remains OPEN; explicitly list that outstanding PR in Linear and Notion. Never describe that follow-up as merged based on the earlier PR.
 - Calculate completion from the six current child states. Never leave an old 2/6 narrative after completed review, upload or merge work, and never mark publication complete without the user's report.
 - At a new week, find the existing Sprint using the Sprint Tracker data source before creating one; title search alone is insufficient. Reuse it or create the missing row with its Project Record relation, and update the project's current-Sprint text in the same handoff.
+
+- At closeout, also compare published frontmatter and roadmap headings/rows with tracker completion. A correction existing only on an unpushed branch is still pending delivery; report its local and remote state separately.

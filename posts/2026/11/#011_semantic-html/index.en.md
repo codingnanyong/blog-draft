@@ -8,7 +8,7 @@ status: published
 
 # Codigdex #03 — First Encounter with HTML/CSS: Semantic HTML
 
-![HTML/CSS observation one — the explorer and Structure Sprout inspect the structure of a web document](./images/thumbnail.en.png)
+![HTML/CSS observation one — the explorer and Structure Sprout inspect the structure of a web document](./images/thumbnail.en.v2.png)
 
 The last chapter took us from the shell down to the kernel. We observed the side that starts processes and reads files in response to commands. This time, it is the document on the screen that needs reading.
 
@@ -16,7 +16,7 @@ When I think about putting words in a browser, colors and layout come to mind fi
 
 At the entrance to the new chapter, an orange creature waited with pieces of a document on its back. Our first specimen is the **Structure Sprout**. Before styling a page, I want to record what the page is saying.
 
-![An encounter with the Structure Sprout, Lv.1 — the explorer starts looking for meaning in a document](./images/01-structure-sprout-encounter.en.png)
+![An encounter with the Structure Sprout, Lv.1 — the explorer starts looking for meaning in a document](./images/01-structure-sprout-encounter.en.v2.png)
 
 ---
 
@@ -24,7 +24,8 @@ At the entrance to the new chapter, an orange creature waited with pieces of a d
 
 - Dex number: NO.011
 - Name: Structure Sprout
-- Classification: Document structure type
+- Classification: HTML/CSS learning type
+- Trait: uses HTML elements that match the meaning of content
 - Encounter rate: Very high (every time a web page opens; the appearance changes, but a document structure sits underneath)
 - Danger level: ⚠️ (a page can look convincing while its headings and controls lack their intended roles)
 
@@ -52,7 +53,7 @@ HTML stands for **HyperText Markup Language**. It is a markup language that wrap
 
 `<p>` is the opening tag, `</p>` the closing tag, and the content goes between them. Together they form a paragraph element. Attributes add information to the opening tag. Not every element has this pair: `meta`, used later, is a void element with no content or closing tag.
 
-![The explorer and Structure Sprout inspect element anatomy: the opening tag, content, and closing tag together form a p element; meta is a void element with no content or closing tag](./images/07-html-element-anatomy.en.v3.png)
+![The explorer and Structure Sprout inspect element anatomy: the opening tag, content, and closing tag together form a p element; meta is a void element with no content or closing tag](./images/07-html-element-anatomy.en.v4.png)
 
 CSS can add colors, spacing, fonts, and layout. JavaScript can respond to input or change the document. For this observation, I decided to follow only the HTML.
 
@@ -78,7 +79,7 @@ Looking at the first fragment, I assumed `class="title"` would make it count as 
 
 That does not make `div` the wrong answer. As the [HTML standard's div definition](https://html.spec.whatwg.org/multipage/grouping-content.html#the-div-element) explains, it groups children without a special meaning of its own. It can wrap elements for layout, for example. But when content already has a role such as paragraph or heading, express that role first.
 
-![Comparing div class names with h1 and p — elements can express the roles of the same words](./images/02-html-meaning.en.png)
+![Comparing div class names with h1 and p — elements can express the roles of the same words](./images/02-html-meaning.en.v2.png)
 
 This meaning helps people reading the code and gives assistive technology a basis for navigation. [W3C's page structure tutorial](https://www.w3.org/WAI/tutorials/page-structure/) explains how well-structured content supports navigation and understanding. Changing a few tags, however, does not complete accessibility work.
 
@@ -101,7 +102,7 @@ This list is not a mandatory top-to-bottom stack. An `article` can have its own 
 
 [`main`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/main) represents the document's main content. This example uses one, leaving the repeated site introduction and footer outside. As [W3C's regions tutorial](https://www.w3.org/WAI/tutorials/page-structure/regions/) explains, these distinctions also help assistive technology navigate major regions. One thing surprised me: not every HTML section element is always exposed as the same landmark. For example, a [`section` needs an accessible name](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/section#technical_summary) to become a `region` landmark.
 
-![The explorer and Structure Sprout inspect a page map: nav inside header, article with two stacked sibling sections inside main, and footer outside main](./images/05-html-page-regions.en.v2.png)
+![The explorer and Structure Sprout inspect a page map: nav inside header, article with two stacked sibling sections inside main, and footer outside main](./images/05-html-page-regions.en.v3.png)
 
 ---
 
@@ -159,7 +160,7 @@ It looks like a lot of lines, but there is no need to memorize them all at once.
 
 `aria-label="Primary"` names the navigation region. The link's `#observation` points to the element whose `id` is `observation` in the same document. Here, that is the start of the observation.
 
-![Four steps: decide the content, choose regions, add headings, then check in a browser](./images/03-html-structure-flow.en.png)
+![Four steps: decide the content, choose regions, add headings, then check in a browser](./images/03-html-structure-flow.en.v2.png)
 
 Opening it, I got a plain page with no colors or borders, but it read just fine. And without a single line of CSS, the headings were larger and the links underlined. Browsers have default styles. **Not having written CSS yet does not mean there are no styles.** For now, look at content order and roles before appearance.
 
@@ -190,7 +191,7 @@ Choosing roles does not end with large regions. “Back to the observation” **
 <button type="button">Open field notes</button>
 ```
 
-![The explorer and Structure Sprout compare navigation and actions: links navigate to a destination; buttons act in place. The note inside the right-hand button panel means the behavior must be implemented separately](./images/06-link-vs-button.en.v3.png)
+![The explorer and Structure Sprout compare navigation and actions: links navigate to a destination; buttons act in place. The note inside the right-hand button panel means the behavior must be implemented separately](./images/06-link-vs-button.en.v4.png)
 
 The second line is a fragment for comparing element choices. **No behavior is connected to this button, so pressing it does not open any notes.** It is left out of the complete example. Opening something requires implementing the behavior, for example with JavaScript.
 
@@ -226,4 +227,4 @@ The note beside the Structure Sprout can be short. **Choose the content's role b
 
 Now it is time to register the first specimen of the HTML/CSS chapter in the Codigdex. **NO.011 Structure Sprout** — chooses elements that match the meaning of content. The first of the HTML/CSS chapter's five slots is filled.
 
-![NO.011 Structure Sprout registration card — Document structure type, chooses elements to match content meaning, first of five slots filled](./images/04-structure-sprout-registration.en.v2.png)
+![NO.011 Structure Sprout registration card — HTML/CSS learning type, uses HTML elements that match the meaning of content, first of five slots filled](./images/04-structure-sprout-registration.en.v3.png)

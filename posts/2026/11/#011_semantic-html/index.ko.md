@@ -8,7 +8,7 @@ status: published
 
 # 코딩 도감 #03 — HTML/CSS 첫 조우, 시맨틱 HTML
 
-![HTML/CSS 첫 번째 관찰 — 탐험가와 구조 새싹이 웹 문서의 구조를 살펴보는 코딩 도감 표지](./images/thumbnail.png)
+![HTML/CSS 첫 번째 관찰 — 탐험가와 구조 새싹이 웹 문서의 구조를 살펴보는 코딩 도감 표지](./images/thumbnail.v2.png)
 
 지난 챕터에서는 셸에서 시작해 커널까지 내려갔다. 명령을 받아 프로세스를 띄우고 파일을 읽게 해 주는 쪽을 살폈다면, 이번에는 화면에 도착한 문서를 읽어 볼 차례다.
 
@@ -16,7 +16,7 @@ status: published
 
 새 챕터의 입구에서 주황빛 개체가 문서 조각을 등에 얹은 채 기다리고 있었다. 첫 관찰 대상은 **구조 새싹**이다. 이번에는 페이지를 꾸미기 전에, 페이지가 무슨 말을 하는지부터 기록해 보기로 했다.
 
-![구조 새싹 Lv.1과 조우하는 탐험가 — 문서의 의미를 찾아가는 RPG 배틀 화면](./images/01-structure-sprout-encounter.png)
+![구조 새싹 Lv.1과 조우하는 탐험가 — 문서의 의미를 찾아가는 RPG 배틀 화면](./images/01-structure-sprout-encounter.v2.png)
 
 ---
 
@@ -24,7 +24,8 @@ status: published
 
 - 도감 번호: NO.011
 - 이름: 구조 새싹
-- 분류: 문서 구조형
+- 분류: HTML/CSS 학습형
+- 특성: 콘텐츠의 의미에 맞는 HTML 요소를 사용한다
 - 출현 빈도: 매우 높음 (웹 페이지를 열 때마다 등장. 겉모습은 달라도 그 아래에는 문서 구조가 있음)
 - 위험도: ⚠️ (그럴듯하게 보여도 제목과 버튼의 역할이 빠져 있을 수 있음)
 
@@ -52,7 +53,7 @@ HTML은 **HyperText Markup Language**다. 내용을 요소로 감싸 구조와 �
 
 `<p>`는 시작 태그, `</p>`는 종료 태그이고, 그 사이에 내용이 들어간다. 전체가 문단 요소다. 속성은 시작 태그에 추가 정보를 붙인다. 모든 요소가 이처럼 짝을 이루지는 않는다. 뒤에서 쓸 `meta`는 내용과 종료 태그가 없는 빈 요소다.
 
-![탐험가와 구조 새싹이 살펴보는 요소의 생김새 — 시작 태그, 내용, 종료 태그 전체가 p 요소이며, meta는 내용과 종료 태그가 없는 빈 요소다](./images/07-html-element-anatomy.v3.png)
+![탐험가와 구조 새싹이 살펴보는 요소의 생김새 — 시작 태그, 내용, 종료 태그 전체가 p 요소이며, meta는 내용과 종료 태그가 없는 빈 요소다](./images/07-html-element-anatomy.v4.png)
 
 여기에 CSS가 더해지면 색, 간격, 글꼴, 배치를 정할 수 있다. JavaScript는 사용자 입력에 반응하거나 문서를 바꾸는 동작을 맡을 수 있다. 이번 관찰에서는 HTML만 따라가 보기로 했다.
 
@@ -78,7 +79,7 @@ HTML은 **HyperText Markup Language**다. 내용을 요소로 감싸 구조와 �
 
 그렇다고 `div`가 틀린 답은 아니었다. [HTML 표준의 div 정의](https://html.spec.whatwg.org/multipage/grouping-content.html#the-div-element)처럼, 특별한 의미 없이 자식 요소를 묶을 때 쓴다. 예를 들어 배치를 위해 여러 요소를 함께 감쌀 수 있다. 다만 내용이 이미 문단이나 제목이라면 그 역할을 먼저 표현하면 된다.
 
-![div의 클래스 이름과 h1·p 요소를 비교한 카드 — 같은 글에도 역할을 표현하는 HTML이 있다](./images/02-html-meaning.png)
+![div의 클래스 이름과 h1·p 요소를 비교한 카드 — 같은 글에도 역할을 표현하는 HTML이 있다](./images/02-html-meaning.v2.png)
 
 이 의미는 코드를 읽는 사람에게도 도움이 되고, 보조 기술이 내용을 탐색하는 기반도 된다. [W3C의 페이지 구조 안내](https://www.w3.org/WAI/tutorials/page-structure/)는 잘 구조화된 콘텐츠가 탐색과 이해를 돕는다고 설명한다. 다만 태그 몇 개를 바꿨다고 접근성 전체가 완성되는 것은 아니다.
 
@@ -103,7 +104,7 @@ HTML은 **HyperText Markup Language**다. 내용을 요소로 감싸 구조와 �
 
 [`main`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/main)은 문서의 주된 내용이다. 이번 예제에서는 하나만 두고, 반복되는 사이트 소개와 바닥글은 밖에 놓는다. [W3C의 영역 안내](https://www.w3.org/WAI/tutorials/page-structure/regions/)처럼 이런 구분은 보조 기술이 주요 영역으로 이동할 때도 도움이 된다. 의외였던 점도 있다. HTML의 모든 구획 요소가 언제나 같은 랜드마크로 노출되는 것은 아니다. 예를 들어 [`section`은 접근 가능한 이름이 있어야](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/section#technical_summary) `region` 랜드마크가 된다.
 
-![탐험가와 구조 새싹이 살펴보는 페이지 지도 — header 안의 nav, main 안의 article과 위아래 두 section, main 밖의 footer로 포함 관계를 구분한다](./images/05-html-page-regions.v2.png)
+![탐험가와 구조 새싹이 살펴보는 페이지 지도 — header 안의 nav, main 안의 article과 위아래 두 section, main 밖의 footer로 포함 관계를 구분한다](./images/05-html-page-regions.v3.png)
 
 ---
 
@@ -161,7 +162,7 @@ HTML은 **HyperText Markup Language**다. 내용을 요소로 감싸 구조와 �
 
 `aria-label="Primary"`는 탐색 영역에 이름을 준다. 링크의 `#observation`은 같은 문서 안에서 `id="observation"`인 요소를 가리킨다. 이 예제에서는 관찰 기록의 시작점이다.
 
-![내용을 먼저 정하고 영역과 제목을 고른 뒤 브라우저에서 확인하는 네 단계 흐름](./images/03-html-structure-flow.png)
+![내용을 먼저 정하고 영역과 제목을 고른 뒤 브라우저에서 확인하는 네 단계 흐름](./images/03-html-structure-flow.v2.png)
 
 열어 보니 색도 테두리도 없는 밋밋한 페이지였지만, 읽는 데는 문제가 없었다. 그런데 CSS를 한 줄도 쓰지 않았는데 제목은 크고 링크에는 밑줄이 있었다. 브라우저에 기본 스타일이 있기 때문이다. **CSS를 아직 쓰지 않았다는 말이 스타일이 전혀 없다는 뜻은 아니다.** 지금 볼 것은 모양보다 내용의 순서와 역할이다.
 
@@ -192,7 +193,7 @@ h1 Meeting the Structure Sprout
 <button type="button">Open field notes</button>
 ```
 
-![탐험가와 구조 새싹의 이동·동작 비교 — 링크는 목적지로 이동하고 버튼은 같은 자리에서 동작한다. 오른쪽 버튼 패널 안의 안내는 동작을 별도로 구현해야 함을 뜻한다](./images/06-link-vs-button.v3.png)
+![탐험가와 구조 새싹의 이동·동작 비교 — 링크는 목적지로 이동하고 버튼은 같은 자리에서 동작한다. 오른쪽 버튼 패널 안의 안내는 동작을 별도로 구현해야 함을 뜻한다](./images/06-link-vs-button.v4.png)
 
 두 번째 줄은 요소 선택을 비교하기 위한 조각이다. **이 버튼에는 동작을 연결하지 않았으므로 눌러도 노트가 열리지 않는다.** 완성 예제에는 넣지 않았다. 실제로 열리게 하려면 JavaScript 등으로 동작을 구현해야 한다.
 
@@ -228,4 +229,4 @@ Linux 챕터에서는 화면에 나온 단어가 정확히 무슨 상태를 말�
 
 그럼 HTML/CSS 챕터의 첫 개체를 코딩 도감에 등록한다. **NO.011 구조 새싹** — 내용의 의미에 맞는 요소를 고른다. HTML/CSS 챕터 다섯 칸 중 첫 칸이 채워졌다.
 
-![NO.011 구조 새싹 등록 카드 — 문서 구조형, 의미에 맞는 요소 선택, HTML/CSS 챕터 다섯 칸 중 첫 칸 등록 완료](./images/04-structure-sprout-registration.v3.png)
+![NO.011 구조 새싹 등록 카드 — HTML/CSS 학습형, 콘텐츠의 의미에 맞는 HTML 요소 사용, HTML/CSS 챕터 다섯 칸 중 첫 칸 등록 완료](./images/04-structure-sprout-registration.v4.png)

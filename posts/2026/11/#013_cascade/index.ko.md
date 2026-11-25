@@ -1,6 +1,6 @@
 ---
 title: "코딩 도감 #03 — 캐스케이드, 어떤 CSS가 남을까"
-description: "HTML/CSS 3주차. 명시도와 선언 순서를 비교하고 캐스케이드 위버를 관찰한다."
+description: "HTML/CSS 3주차. 명시도·선언 순서·상속을 살피고 캐스케이드 위버를 관찰한다."
 tags: [html, css, 코딩도감, 캐스케이드, 명시도]
 date: 2026-11-23
 status: published
