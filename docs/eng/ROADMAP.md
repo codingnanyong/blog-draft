@@ -45,14 +45,14 @@ On 2026-11-02 the user decided to take every chapter after Linux (`#02`) in the 
 | Week | Dex number · specimen | Topic | Publish Date | Linear | Status |
 | --- | --- | --- | --- | --- | --- |
 | Week 1 | NO.011 Structure Sprout | HTML/CSS basics — first encounter (semantic HTML) | 2026-11-09 | COD-441 | Published |
-| Week 2 | NO.012 Style Shell | The box model | 2026-11-16 | COD-470 | Published (image follow-up PR separately pending) |
+| Week 2 | NO.012 Style Shell | The box model | 2026-11-16 | COD-470 | Published |
 | Week 3 | NO.013 Cascade Weaver | The cascade (specificity and source order) | 2026-11-23 | COD-477 | Published |
 | Week 4 | NO.014 Breakpoint Knight | Media queries | 2026-11-30 | TBD | Proposed |
 | Week 5 | NO.015 Responsive Layout Paladin | Accessibility (wrap-up registration) | 2026-12-07 | TBD | Proposed |
 
 For week 1 (NO.011), the user reported both Velog and Medium published on 2026-11-13. The final drafts reviewed with Claude and eight selected images per language are published; both manuscripts now use `status: published`. The date remains 2026-11-09, the Monday of the publication week. The report date is recorded separately; the exact day of publication has not been asserted.
 
-Week 2 (NO.012) reuses recurring parent COD-470 and its six standard children. UI history confirmed creation and deletion on 2026-11-10; the original parent and children were restored on 2026-11-13. The recurrence schedule was left unchanged. Drafting is in Cycle 10 (Nov 9–15), publication is planned for Nov 16, and the 2026-11-23 reconciliation records 5/6 standard steps complete, including the initial draft merges in PR #155 (develop) and #156 (main). Later on 2026-11-23 the user confirmed both Velog and Medium published, completing all 6/6 standard steps. The report date is recorded separately; the manuscript date remains 2026-11-16, the Monday of the publication week. Image follow-up PR #157 remains OPEN/Draft and awaits its own merge.
+Week 2 (NO.012) reuses recurring parent COD-470 and its six standard children. UI history confirmed creation and deletion on 2026-11-10; the original parent and children were restored on 2026-11-13. The recurrence schedule was left unchanged. Drafting is in Cycle 10 (Nov 9–15), publication is planned for Nov 16, and the 2026-11-23 reconciliation records 5/6 standard steps complete, including the initial draft merges in PR #155 (develop) and #156 (main). Later on 2026-11-23 the user confirmed both Velog and Medium published, completing all 6/6 standard steps. The report date is recorded separately; the manuscript date remains 2026-11-16, the Monday of the publication week. Game-faithful image corrections are tracked separately in PR #157. Updating images on the publication sites is separate from repository delivery.
 
 ## #04 onward — game order (order confirmed, weekly breakdowns confirmed before each chapter)
 
