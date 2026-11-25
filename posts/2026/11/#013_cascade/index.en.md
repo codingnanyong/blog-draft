@@ -66,12 +66,10 @@ The padding from our Style Shell observation remains. Changing a color does not 
 
 I record **specificity**, the selector comparison weight, in three columns. For the simple selectors used here, count IDs, classes, and element types.
 
-| Selector | IDs | Classes | Types | Specificity |
-| --- | --- | --- | --- | --- |
-| `p` | 0 | 0 | 1 | `0-0-1` |
-| `.note` | 0 | 1 | 0 | `0-1-0` |
-| `.field-note .note` | 0 | 2 | 0 | `0-2-0` |
-| `#specimen` | 1 | 0 | 0 | `1-0-0` |
+- `p`: 0 IDs, 0 classes, 1 type → `0-0-1`
+- `.note`: 0 IDs, 1 class, 0 types → `0-1-0`
+- `.field-note .note`: 0 IDs, 2 classes, 0 types → `0-2-0`
+- `#specimen`: 1 ID, 0 classes, 0 types → `1-0-0`
 
 Do not add the columns into a decimal score. Compare from the left: **the first unequal column decides**. The ID is only a comparison example; it is not added to the runnable page. The space in `.field-note .note` selects matching descendants of a `field-note` element. The space itself adds no specificity.
 
@@ -137,10 +135,8 @@ Save the complete example as `cascade.html` in UTF-8 and open it in a browser. B
 
 Write down the expected results first.
 
-| Paragraph | Chosen color | Reason |
-| --- | --- | --- |
-| `Inside the field note.` | `#9b3e16` | `.field-note .note` has higher specificity, `0-2-0` |
-| `Outside the field note.` | `#245a81` | `.note` and `.highlight` tie, so the later `.highlight` wins |
+- `Inside the field note.` → `#9b3e16`: `.field-note .note` has higher specificity, `0-2-0`.
+- `Outside the field note.` → `#245a81`: `.note` and `.highlight` tie, so the later `.highlight` wins.
 
 Both paragraphs receive `.note`'s 16px padding and 2px border. The first paragraph's color survives despite appearing earlier. The `p` selector matches the second paragraph too, but its specificity is lower than a class selector's.
 
